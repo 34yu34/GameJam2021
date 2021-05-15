@@ -235,6 +235,7 @@ GameObject:
   - component: {fileID: 241514372482997082}
   - component: {fileID: 5150526544214136736}
   - component: {fileID: 6686865034644673734}
+  - component: {fileID: 7283702035925709265}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -382,6 +383,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 0}
+--- !u!114 &7283702035925709265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2844436848525014087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2f47008eba3f0418af0a9ac744831a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3330971071101561314
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,7 +535,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 3d8129ce9dd4b3c4780fe8e2cbc60dae, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -597,7 +610,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: f3b27a7e532c8cc4bada16d4b72acdcc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -692,9 +705,9 @@ Canvas:
   m_GameObject: {fileID: 8107345985752065397}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 2844436847507411008}
-  m_PlaneDistance: 0.5
+  m_PlaneDistance: 0.3
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
