@@ -32,12 +32,19 @@ public class ShotComponent : MonoBehaviour
             return;
         }
 
-        var hitInfo = new HitInfo();
-        hitInfo.Damage = _damage;
-        hitInfo.Origin = transform.position;
-        hitInfo.HitPosition = hit.point;
+        var hitInfo = CreateHitInfo(hit);
 
-        hit.rigidbody.GetComponent<Targetable>()?.Hit(hit, _damage);
+        hit.rigidbody.GetComponent<Targetable>()?.Hit(hitInfo);
+    }
+
+    private HitInfo CreateHitInfo(RaycastHit hit)
+    {
+        return new HitInfo
+        {
+            Damage = _damage,
+            Origin = transform.position,
+            HitPosition = hit.point
+        };
     }
 
     private void CreateShotEffect()
