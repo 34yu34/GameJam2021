@@ -22,7 +22,7 @@ public class AutoShoot : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(next_shoot_timestamp.IsAfter())
+        if(next_shoot_timestamp.HasPassed())
         {
             Shooter.SetShoot();
             reset_next_shoot_timestamp();
