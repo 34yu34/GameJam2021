@@ -4,16 +4,20 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(NavMeshAgent))]
 public class EnemyFollow : MonoBehaviour
 {
-    [SerializeField]
     private NavMeshAgent _nav_mesh_agent;
+    protected NavMeshAgent NavMeshAgent => _nav_mesh_agent ??= GetComponent<NavMeshAgent>();
+
+    [SerializeField] 
+    private float _follow_up_distance;
+
+    [SerializeField]
+    private float _stop_distance;
 
     [SerializeField]
     private GameObject _player;
-
-    [SerializeField]
-    private Collider _collider_player;
 
     enum State { Calm, Chase };
 
@@ -26,10 +30,10 @@ public class EnemyFollow : MonoBehaviour
         switch (_state)
         {
             case State.Calm:
-                _nav_mesh_agent.ResetPath();
+                NavMeshAgent.ResetPath();
                 break;
             case State.Chase:
-                _nav_mesh_agent.SetDestination(_player.transform.position);
+                NavMeshAgent.SetDestination(_player.transform.position);
                 break;
             default:
                 break;
@@ -66,16 +70,19 @@ public class EnemyFollow : MonoBehaviour
         RaycastHit hit;
         var begin = transform.position;
         begin.y = _player.transform.position.y;
-        bool ray = Physics.Raycast(begin, _player.transform.position, out hit);
-        Debug.Log(ray);
-        //Debug.Break();
+
+        if (!Physics.Raycast(begin, _player.transform.position - begin, out hit, _follow_up_distance))
+        {
+            return false;
+        }
+
+
         return Vector3.Angle(transform.forward, _player.transform.position - transform.position) < 181 &&
-            ray &&
-            hit.collider == _collider_player;
+            hit.collider.gameObject == _player;
     }
 
     private bool is_far_from_player()
     {
-        return Vector3.Distance(transform.position, _player.transform.position) > 10f;
+        return Vector3.Distance(transform.position, _player.transform.position) > _stop_distance;
     }
 }

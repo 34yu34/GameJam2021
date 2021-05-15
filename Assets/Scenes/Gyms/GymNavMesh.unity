@@ -1011,7 +1011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58027ae26007f5645935231297ac521f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animatior: {fileID: 0}
+  _animator: {fileID: 1828858331}
   _nav_mesh_agent: {fileID: 1790000634}
 --- !u!195 &1790000634 stripped
 NavMeshAgent:
