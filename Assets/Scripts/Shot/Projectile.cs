@@ -7,9 +7,7 @@ public class Projectile : MonoBehaviour
     private float _speed;
     private Vector3 Speed { get; set; }
 
-    private float _hit_in_time;
-    public float HitInTime => _hit_in_time;
-
+    private float _time_until_hit;
 
     private void FixedUpdate()
     {
@@ -20,8 +18,8 @@ public class Projectile : MonoBehaviour
     {
         Speed = direction_vector * _speed;
 
-        _hit_in_time = (transform.position - target_pos).magnitude / _speed;
+        _time_until_hit = (transform.position - target_pos).magnitude / _speed;
 
-        Destroy(gameObject, _hit_in_time);
+        Destroy(gameObject, _time_until_hit);
     }
 }
