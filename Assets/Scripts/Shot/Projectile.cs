@@ -1,60 +1,27 @@
 using UnityEngine;
 
 
-[RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(BoxCollider))]
 public class Projectile : MonoBehaviour
 {
-    private Rigidbody _rigidbody;
-    public Rigidbody Rigidbody => _rigidbody ??= GetComponent<Rigidbody>();
-
-    private Vector3 _direction_vector;
-    public Vector3 DirectionVector => _direction_vector;
-
     [SerializeField]
     private float _speed;
-    public float Speed => _speed;
+    private Vector3 Speed { get; set; }
 
-    [SerializeField]
-    private int _damage;
-    public int Damage => _damage;
+    private float _hit_in;
+    public float HitIn => _hit_in;
 
-    private void Start()
-    {
-       this.Rigidbody.useGravity = false;
-    }
 
     private void FixedUpdate()
     {
-        this.Rigidbody.velocity = _direction_vector * this.Speed;
-        this.transform.LookAt(transform.position + _direction_vector);
+        transform.position += Speed;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void Launch(Vector3 direction_vector, Vector3 TargetPos)
     {
-        var targetable = collision.rigidbody?.GetComponent<Targetable>();
+        Speed = direction_vector * _speed;
 
-        if (targetable == null) return;
+        _hit_in = (transform.position - TargetPos).magnitude / _speed;
 
-        var contactPoint = collision.GetContact(0).point;
-
-        targetable.Hit(
-            new HitInfoDto
-            {
-                Damage = Damage,
-                HitPosition = contactPoint,
-                Origin = contactPoint - this.DirectionVector
-            }
-        );
-
-        Destroy(gameObject);
-    }
-
-    public void Launch(Vector3 direction_vector, int damage)
-    {
-        _direction_vector = direction_vector;
-        _damage = damage;
-
-        Destroy(gameObject, 1.0f);
+        Destroy(gameObject, _hit_in);
     }
 }
