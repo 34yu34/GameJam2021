@@ -21,15 +21,27 @@ public class InputMove : MonoBehaviour
     [SerializeField]
     private float _time_to_sprint_speed = 0.5f;
 
-    private float _accel;
+    private float _sprint_accel;
+
+    private Vector3 _direction;
 
     private void Awake()
     {
-        _accel = (_sprint_speed - _normal_speed) / _time_to_sprint_speed;
+        set_acceleration();
+    }
+
+    private void set_acceleration()
+    {
+        _sprint_accel = (_sprint_speed - _normal_speed) / _time_to_sprint_speed;
     }
 
     // Start is called before the first frame update
     void Start()
+    {
+        get_required_components();
+    }
+
+    private void get_required_components()
     {
         _move_component = GetComponent<Move>();
         _jump_component = GetComponent<Jump>();
@@ -38,18 +50,27 @@ public class InputMove : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        move_over_input();
+    }
+
+    private void move_over_input()
+    {
+        set_direction();
+
+        set_speed();
+
+        _move_component.MoveObjectOnFixedUpdate(_direction, _speed);
+    }
+
+    private void set_direction()
+    {
         float horizontalInput = Input.GetAxis("Horizontal");
         //Get the value of the Horizontal input axis.
 
         float verticalInput = Input.GetAxis("Vertical");
         //Get the value of the Vertical input axis.
 
-        Vector3 direction = transform.right * horizontalInput + transform.forward * verticalInput;
-
-        set_speed();
-
-        _move_component.MoveObjectOnFixedUpdate(direction, _speed);
-
+        _direction = transform.right * horizontalInput + transform.forward * verticalInput;
     }
 
     private void Update()
@@ -72,7 +93,7 @@ public class InputMove : MonoBehaviour
         {
             if(_speed < _sprint_speed)
             {
-                _speed += _accel * Time.fixedDeltaTime;
+                _speed += _sprint_accel * Time.fixedDeltaTime;
                 _speed = Mathf.Clamp(_speed, 0f, _sprint_speed);
             }
         }
