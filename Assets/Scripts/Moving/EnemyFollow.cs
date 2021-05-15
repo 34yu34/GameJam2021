@@ -16,23 +16,26 @@ public class EnemyFollow : MonoBehaviour
     [SerializeField]
     private float _stop_distance;
 
+    [SerializeField] 
+    private float _vision_angle;
+
     [SerializeField]
     private GameObject _player;
 
-    enum State { Calm, Chase };
+    public enum AiState { Calm = 0, Chase = 1};
 
-    private State _state = State.Calm;
+    private AiState _aiState;
+    public AiState CurrentAiState => _aiState;
 
     void FixedUpdate()
     {
         change_state();
-        Debug.Log(_state);
-        switch (_state)
+        switch (_aiState)
         {
-            case State.Calm:
+            case AiState.Calm:
                 NavMeshAgent.ResetPath();
                 break;
-            case State.Chase:
+            case AiState.Chase:
                 NavMeshAgent.SetDestination(_player.transform.position);
                 break;
             default:
@@ -43,23 +46,25 @@ public class EnemyFollow : MonoBehaviour
 
     private void change_state()
     {
-        switch (_state)
+        switch (_aiState)
         {
-            case State.Calm:
+            case AiState.Calm:
                 if (sees_player())
                 {
-                    _state = State.Chase;
+                    _aiState = AiState.Chase;
                 }
-                break;
-            case State.Chase:
+
+                return;
+            case AiState.Chase:
                 if (is_far_from_player())
                 {
-                    _state = State.Calm;
+                    _aiState = AiState.Calm;
                 }
-                break;
+
+                return;
             default:
-                _state = State.Calm;
-                break;
+                _aiState = AiState.Calm;
+                return;
             
 
         }
@@ -77,7 +82,7 @@ public class EnemyFollow : MonoBehaviour
         }
 
 
-        return Vector3.Angle(transform.forward, _player.transform.position - transform.position) < 181 &&
+        return Vector3.Angle(transform.forward, _player.transform.position - transform.position) < _vision_angle &&
             hit.collider.gameObject == _player;
     }
 

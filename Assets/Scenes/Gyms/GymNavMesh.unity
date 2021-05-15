@@ -829,9 +829,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fc18418945c2a0499235ef5e54d02ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nav_mesh_agent: {fileID: 1606410160}
+  _follow_up_distance: 0
+  _stop_distance: 0
+  _vision_angle: 0
   _player: {fileID: 1202487003}
-  _collider_player: {fileID: 1037453745}
 --- !u!195 &1606410160
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -994,54 +995,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
---- !u!1 &1790000631 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4254726130396731687, guid: edf36c411044cfa46bd4c20f6c2cbf5a, type: 3}
-  m_PrefabInstance: {fileID: 4254726132251041323}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1790000632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1790000631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58027ae26007f5645935231297ac521f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 1828858331}
-  _nav_mesh_agent: {fileID: 1790000634}
---- !u!195 &1790000634 stripped
-NavMeshAgent:
-  m_CorrespondingSourceObject: {fileID: 4254726130396731706, guid: edf36c411044cfa46bd4c20f6c2cbf5a, type: 3}
-  m_PrefabInstance: {fileID: 4254726132251041323}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1828858330 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4020231286968447925, guid: edf36c411044cfa46bd4c20f6c2cbf5a, type: 3}
-  m_PrefabInstance: {fileID: 4254726132251041323}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1828858331
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1828858330}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 792dd26789b8dfd45b9961c709e51d43, type: 3}
-  m_Controller: {fileID: 9100000, guid: 5e871b0dbaa5afa4da04eed4808c6ca8, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &2128141582
 PrefabInstance:
   m_ObjectHideFlags: 0

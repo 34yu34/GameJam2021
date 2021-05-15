@@ -3,22 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
+[RequireComponent(typeof(EnemyFollow))]
 public class EnemyAnimation : MonoBehaviour
 {
     [SerializeField]
     private Animator _animator;
 
-    [SerializeField]
-    private NavMeshAgent _nav_mesh_agent;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private EnemyFollow _enemyFollow;
+    protected EnemyFollow EnemyFollow => _enemyFollow ??= GetComponent<EnemyFollow>();
+
 
     // Update is called once per frame
     void Update()
     {
-        _animator.SetBool("IsWalking", !_nav_mesh_agent.isStopped);
+       _animator.SetInteger("State", (int)EnemyFollow.CurrentAiState);
     }
 }
