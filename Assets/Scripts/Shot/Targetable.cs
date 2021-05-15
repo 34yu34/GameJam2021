@@ -20,6 +20,10 @@ public class Targetable : MonoBehaviour
     }
     private void CreateHitEffect(HitInfoDto hitInfoDto)
     {
+        if (hitEffect == null)
+        {
+            return;
+        }
         var obj = Instantiate(hitEffect);
         obj.transform.position = hitInfoDto.HitPosition;
         obj.transform.LookAt(hitInfoDto.Origin);

@@ -71,6 +71,10 @@ public class ShotComponent : MonoBehaviour
 
     private void CreateShotEffect()
     {
+        if(_shot_effect == null)
+        {
+            return;
+        }
         var obj = Instantiate(_shot_effect);
         
         obj.transform.parent = transform;

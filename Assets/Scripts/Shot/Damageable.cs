@@ -11,11 +11,11 @@ public class Damageable : MonoBehaviour
     [ShowNonSerializedField]
     private int _currentHealth;
 
-    private int CurrentHealth
+    public int CurrentHealth
     {
         get => _currentHealth;
 
-        set => _currentHealth = Mathf.Clamp(value, 0, _max_health);
+        private set => _currentHealth = Mathf.Clamp(value, 0, _max_health);
     }
 
     private void Start()
@@ -26,6 +26,7 @@ public class Damageable : MonoBehaviour
     public void TakeDamage(int damage)
     {
         this.CurrentHealth -= damage;
+        CheckAlive();
     }
 
     private void CheckAlive()
