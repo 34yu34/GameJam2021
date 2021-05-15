@@ -11,10 +11,7 @@ public class Jump : MonoBehaviour
     private bool ShouldJump;
 
     private Rigidbody _rb;
-    void Start()
-    {
-        _rb = GetComponent<Rigidbody>();
-    }
+    public Rigidbody Rb => _rb ??= GetComponent<Rigidbody>();
 
     public void SetJump()
     {
@@ -25,14 +22,14 @@ public class Jump : MonoBehaviour
     {
         ShouldJump = false;
 
-        if (!Physics.Raycast(transform.position, -transform.up, out _, 0.1f))
+        if (!Physics.Raycast(transform.position + new Vector3(0, 0.1f, 0), Vector3.down, out _, 0.2f))
         {
             return;
         }
 
-        var vel = _rb.velocity;
+        var vel = Rb.velocity;
         vel.y = _jump_speed;
-        _rb.velocity = vel;
+        Rb.velocity = vel;
     }
 
     public void FixedUpdate()

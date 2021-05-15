@@ -13,19 +13,12 @@ public class InputMove : MonoBehaviour
     void Start()
     {
         get_required_components();
-        get_half_height();
     }
 
     private void get_required_components()
     {
         _move_component = GetComponent<Move>();
         _jump_component = GetComponent<Jump>();
-    }
-
-    private void get_half_height()
-    {
-        var capsule = GetComponentInChildren<CapsuleCollider>();
-        Debug.Assert(capsule != null, "player should have a capsule collider!");
     }
 
     private void Update()

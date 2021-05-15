@@ -244,6 +244,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66b01efe4c56d8a43a70a4675f24b40f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sprint_speed: 2
+  _normal_speed: 1
+  _time_to_sprint_speed: 0.5
 --- !u!114 &2844436848525014091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,6 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0969e8d43f4066d4aa2182839d7dc64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _jump_speed: 5
 --- !u!114 &2844436848525014090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,9 +272,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 269f4ffcd8703d94ea7227d51dde61c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sprint_speed: 2
-  _normal_speed: 1
-  _time_to_sprint_speed: 0.5
 --- !u!114 &2844436848525014085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,3 +285,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2844436847507411008}
+  _up_angle_limit: 80
