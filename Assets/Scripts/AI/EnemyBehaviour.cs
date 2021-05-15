@@ -16,7 +16,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     [SerializeField]
     private float _stop_distance;
-    public float StopDistance => StopDistance;
+    public float StopDistance => _stop_distance;
 
     [SerializeField] 
     private float _vision_angle;
@@ -32,7 +32,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void Start()
     {
-        _aiState = gameObject.GetComponent<AiCalmState>();
+        _aiState = gameObject.AddComponent<AiCalmState>();
     }
 
     private void FixedUpdate()
