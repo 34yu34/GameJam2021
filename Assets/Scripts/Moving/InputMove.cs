@@ -53,10 +53,7 @@ public class InputMove : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
         {
-            if (Physics.Raycast(transform.position, -transform.up, out _, 0.1f))
-            {
-                _jump_component.JumpObject();
-            }
+            _jump_component.SetJump();
         }
     }
 
