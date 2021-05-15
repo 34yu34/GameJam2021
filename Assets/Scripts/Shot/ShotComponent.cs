@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SocialPlatforms;
 
 public class ShotComponent : MonoBehaviour
 {
@@ -12,8 +9,10 @@ public class ShotComponent : MonoBehaviour
     private int _damage;
 
     [SerializeField]
-    private ParticleSystem shotEffect;
+    private ParticleSystem _shot_effect;
 
+    [SerializeField]
+    private Projectile _projectile;
 
     private void Update()
     {
@@ -23,33 +22,18 @@ public class ShotComponent : MonoBehaviour
         }
     }
 
- 
     private void Shoot()
     {
         CreateShotEffect();
-        if (!Physics.Raycast(transform.position, transform.forward, out var hit, _range))
-        {
-            return;
-        }
 
-        var hitInfo = CreateHitInfo(hit);
+        var projectile = Instantiate(_projectile);
 
-        hit.rigidbody.GetComponent<Targetable>()?.Hit(hitInfo);
-    }
-
-    private HitInfo CreateHitInfo(RaycastHit hit)
-    {
-        return new HitInfo
-        {
-            Damage = _damage,
-            Origin = transform.position,
-            HitPosition = hit.point
-        };
+        projectile.Launch();
     }
 
     private void CreateShotEffect()
     {
-        var obj = Instantiate(shotEffect);
+        var obj = Instantiate(_shot_effect);
         obj.transform.position = transform.position;
         obj.transform.LookAt(transform.position + transform.forward);
         obj.Play();
