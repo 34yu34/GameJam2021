@@ -64,8 +64,11 @@ public class EnemyFollow : MonoBehaviour
     private bool sees_player()
     {
         RaycastHit hit;
-        bool ray = Physics.Raycast(transform.position + Vector3.up, _player.transform.position, out hit);
+        var begin = transform.position;
+        begin.y = _player.transform.position.y;
+        bool ray = Physics.Raycast(begin, _player.transform.position, out hit);
         Debug.Log(ray);
+        //Debug.Break();
         return Vector3.Angle(transform.forward, _player.transform.position - transform.position) < 181 &&
             ray &&
             hit.collider == _collider_player;
