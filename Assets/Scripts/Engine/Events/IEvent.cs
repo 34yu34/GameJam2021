@@ -4,7 +4,7 @@
 
     int ProbabilityWeight { get; set; }
 
-    void DoEvent();
+    void DoEvent(EventEngineConstructorFacade eventEngineConstructorFacade);
  
     bool CanHappen();
 }

@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class EventEngine
 {
+    private readonly EventEngineConstructorFacade _constructorFacade;
+
     private List<IEvent> _event_dictionary = new List<IEvent>
     {
         // Minor events
@@ -46,8 +48,12 @@ public class EventEngine
 
     private int _current_event_index = 0;
 
-    public EventEngine(EventEngineSettingDto settings)
+    public EventEngine(
+        EventEngineSettingDto settings,
+        EventEngineConstructorFacade constructorFacade)
     {
+        _constructorFacade = constructorFacade;
+
         MIN_SECONDS_UNTIL_EVENT = settings.MinSecondsUntilEvent;
         MAX_SECONDS_UNTIL_EVENT = settings.MaxSecondsUntilEvent;
 
@@ -72,7 +78,7 @@ public class EventEngine
 
         var next_event = SelectNextEvent(is_major_event);
 
-        next_event.DoEvent();
+        next_event.DoEvent(_constructorFacade);
 
         SetNextEventTimestamp();
     }

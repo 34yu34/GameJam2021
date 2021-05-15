@@ -26,6 +26,10 @@ public class EventEngineBehavior : MonoBehaviour
                     MaxSecondsUntilEvent = _maxSecondsUntilEvent,
                     MajorEventMinIndex = _majorEventMinIndex,
                     MajorEventMaxIndex = _majorEventMaxIndex
+                },
+                new EventEngineConstructorFacade
+                {
+
                 }
             );
     }
