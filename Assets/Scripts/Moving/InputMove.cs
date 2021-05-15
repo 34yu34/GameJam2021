@@ -10,33 +10,6 @@ public class InputMove : MonoBehaviour
 
     private Jump _jump_component;
 
-    private float _speed;
-
-    [SerializeField]
-    private float _sprint_speed = 2;
-
-    [SerializeField]
-    private float _normal_speed = 1;
-
-    [SerializeField]
-    private float _time_to_sprint_speed = 0.5f;
-
-    private float _sprint_accel;
-
-    private Vector3 _direction;
-
-    private float _half_height;
-
-    private void Awake()
-    {
-        set_acceleration();
-    }
-
-    private void set_acceleration()
-    {
-        _sprint_accel = (_sprint_speed - _normal_speed) / _time_to_sprint_speed;
-    }
-
     void Start()
     {
         get_required_components();
@@ -53,12 +26,12 @@ public class InputMove : MonoBehaviour
     {
         var capsule = GetComponentInChildren<CapsuleCollider>();
         Debug.Assert(capsule != null, "player should have a capsule collider!");
-        _half_height = capsule.height / 2;
     }
 
-    void FixedUpdate()
+    private void Update()
     {
         move_over_input();
+        check_jump();
     }
 
     private void move_over_input()
@@ -66,8 +39,6 @@ public class InputMove : MonoBehaviour
         set_direction();
 
         set_speed();
-
-        _move_component.MoveObjectOnFixedUpdate(_direction, _speed);
     }
 
     private void set_direction()
@@ -75,19 +46,14 @@ public class InputMove : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        _direction = transform.right * horizontalInput + transform.forward * verticalInput;
-    }
-
-    private void Update()
-    {
-        check_jump();
+        _move_component.Direction = transform.right * horizontalInput + transform.forward * verticalInput;
     }
 
     private void check_jump()
     {
         if (Input.GetButtonDown("Jump"))
         {
-            if (Physics.Raycast(transform.position, -transform.up, out _, _half_height + 0.1f))
+            if (Physics.Raycast(transform.position, -transform.up, out _, 0.1f))
             {
                 _jump_component.JumpObject();
             }
@@ -96,27 +62,12 @@ public class InputMove : MonoBehaviour
 
     private void set_speed()
     {
-
         if (Input.GetButton("Sprint"))
         {
-            set_speed_for_sprint();
+            _move_component.SetSprint();
             return;
         }
         
-        set_speed_for_normal();
-    }
-
-    private void set_speed_for_normal()
-    {
-        _speed = _normal_speed;
-    }
-
-    private void set_speed_for_sprint()
-    {
-        if (_speed < _sprint_speed)
-        {
-            _speed += _sprint_accel * Time.fixedDeltaTime;
-            _speed = Mathf.Clamp(_speed, 0f, _sprint_speed);
-        }
+        _move_component.SetWalk();
     }
 }
