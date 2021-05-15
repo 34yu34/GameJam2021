@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 288f5dd448618f1429d8bd4baba45da7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _range: 10
+  _range: 50
   _damage: 8
   _shot_effect: {fileID: 8036483352958626291, guid: 6a07ba3b7e98a58489043a63fb5d53f5, type: 3}
   _projectile: {fileID: 9093462148266488815, guid: 7cf658e823ed44347b880577a13c0bd8, type: 3}
@@ -294,7 +294,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 581545642}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
+  m_LocalPosition: {x: 0, y: 0, z: 24.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1859784168}
