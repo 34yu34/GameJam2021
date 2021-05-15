@@ -22,7 +22,7 @@ public class Jump : MonoBehaviour
     {
         ShouldJump = false;
 
-        if (!Physics.Raycast(transform.position + new Vector3(0, 0.1f, 0), Vector3.down, out _, 0.2f))
+        if (!Physics.Raycast(transform.position + new Vector3(0, 0.1f, 0), Vector3.down, out _, 0.5f))
         {
             return;
         }
