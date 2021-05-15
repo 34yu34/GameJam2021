@@ -10,32 +10,20 @@ public class EventEngine
     private List<IEvent> _event_dictionary = new List<IEvent>
     {
         // Minor events
-        new SolarStormEvent
+        new SandStormEvent
         {
             ProbabilityWeight = 1
-        },
-        new SolarStormEvent
-        {
-            ProbabilityWeight = 2
-        },
-        new SolarStormEvent
-        {
-            ProbabilityWeight = 3
-        },
-        new SolarStormEvent
-        {
-            ProbabilityWeight = 200
-        },
+        }
 
         // Major events
-        new LavaRisingEvent
-        {
-            ProbabilityWeight = 1
-        },
-        new LavaRisingEvent
-        {
-            ProbabilityWeight = 10
-        }
+        //new LavaRisingEvent
+        //{
+        //    ProbabilityWeight = 1
+        //},
+        //new LavaRisingEvent
+        //{
+        //    ProbabilityWeight = 10
+        //}
     };
 
     private Timestamp _next_event_timestamp;

@@ -56,7 +56,7 @@ public class Move : MonoBehaviour
 
     public void SetWalk()
     {
-        _current_speed = _normal_speed;
+        _current_speed = (_is_slowed) ? _slow_speed : _normal_speed;
     }
 
     public void SetSlowSpeed()

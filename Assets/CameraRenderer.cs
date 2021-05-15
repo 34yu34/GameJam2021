@@ -13,7 +13,10 @@ public class CameraRenderer : MonoBehaviour
         if (ShaderMat != null)
         {
             Graphics.Blit(source, destination, ShaderMat);
+            return;
         }
+        
+        Graphics.Blit(source, destination);
     }
 
 
