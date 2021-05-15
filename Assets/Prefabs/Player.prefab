@@ -484,6 +484,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2844436847507411009}
     m_Modifications:
+    - target: {fileID: 2519506405129742660, guid: 73a093f6541e5794f9c5994b6c7ff30d, type: 3}
+      propertyPath: _aim_camera_object
+      value: 
+      objectReference: {fileID: 2844436847507411009}
     - target: {fileID: 2519506405129742662, guid: 73a093f6541e5794f9c5994b6c7ff30d, type: 3}
       propertyPath: m_Name
       value: Gun

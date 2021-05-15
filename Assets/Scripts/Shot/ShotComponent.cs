@@ -1,4 +1,5 @@
 using UnityEngine;
+using NaughtyAttributes;
 
 public class ShotComponent : MonoBehaviour
 {
@@ -16,6 +17,10 @@ public class ShotComponent : MonoBehaviour
 
     [SerializeField]
     private Projectile _projectile;
+
+    [SerializeField]
+    [Required]
+    private Transform _aim_camera_object;
 
     public void SetShoot()
     {
@@ -36,7 +41,7 @@ public class ShotComponent : MonoBehaviour
 
         CreateShotEffect();
 
-        if (!Physics.Raycast(transform.position, transform.forward, out var hit, _range))
+        if (!Physics.Raycast(_aim_camera_object.position, _aim_camera_object.forward, out var hit, _range))
         {
             return;
         }
