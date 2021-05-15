@@ -2,36 +2,37 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(BoxCollider))]
 public class Projectile : MonoBehaviour
 {
-    private Rigidbody _rigid_body;
-    public Rigidbody RigidBody => _rigid_body ??= GetComponent<Rigidbody>();
-
-    private bool _is_launched = false;
+    private Rigidbody _rigidbody;
+    public Rigidbody Rigidbody => _rigidbody ??= GetComponent<Rigidbody>();
 
     private Vector3 _direction_vector;
-    public Vector3 DirectionVector
-    {
-        get => _direction_vector;
-        set => _direction_vector = value;
-    }
+    public Vector3 DirectionVector => _direction_vector;
 
     [SerializeField]
     private float _speed;
+    public float Speed => _speed;
 
     [SerializeField]
     private int _damage;
-    public int Damage
+    public int Damage => _damage;
+
+    private void Start()
     {
-        get => _damage;
-        set => _damage = value;
+       this.Rigidbody.useGravity = false;
     }
 
-    public float Speed => _speed;
+    private void FixedUpdate()
+    {
+        this.Rigidbody.velocity = _direction_vector * this.Speed;
+        this.transform.LookAt(transform.position + _direction_vector);
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
-        var targetable = collision.rigidbody.GetComponent<Targetable>();
+        var targetable = collision.rigidbody?.GetComponent<Targetable>();
 
         if (targetable == null) return;
 
@@ -40,16 +41,20 @@ public class Projectile : MonoBehaviour
         targetable.Hit(
             new HitInfoDto
             {
-                Damage = 5,
+                Damage = Damage,
                 HitPosition = contactPoint,
                 Origin = contactPoint - this.DirectionVector
             }
         );
+
+        Destroy(gameObject);
     }
 
     public void Launch(Vector3 direction_vector, int damage)
     {
-        this.RigidBody.velocity = direction_vector * this.Speed;
-        this.Damage = damage;
+        _direction_vector = direction_vector;
+        _damage = damage;
+
+        Destroy(gameObject, 1.0f);
     }
 }
