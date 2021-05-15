@@ -2,17 +2,20 @@
 
 namespace Assets.Scripts.Engine.Events
 {
-    public class SolarStormEvent : IEvent
+    public class SolarStormEvent : Event
     {
-        public bool IsMajor => false;
+        public override bool IsMajor => false;
 
-        public int ProbabilityWeight { get; set; }
-
-        public void DoEvent()
+        public override void DoEvent()
         {
-            Debug.Log($"{this.GetType().Name} WEIGHT: [{this.ProbabilityWeight}]");
+            Debug.Log($"{this.GetType().Name}WEIGHT: [{this.ProbabilityWeight}]");
         }
 
-        public bool CanHappen() => true;
+        public override void UndoEvent()
+        {
+            
+        }
+
+        public override bool CanHappen() => true;
     }
 }

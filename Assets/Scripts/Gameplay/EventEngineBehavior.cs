@@ -16,10 +16,11 @@ public class EventEngineBehavior : MonoBehaviour
     [SerializeField]
     private int _majorEventMaxIndex = 5;
 
-    public void Awake()
+    public void Start()
     {
-        _event_engine =
-            new EventEngine(
+        _event_engine = gameObject.GetComponent<EventEngine>();
+
+        _event_engine.SetEventEngineSettings(
                 new EventEngineSettingDto
                 {
                     MinSecondsUntilEvent = _minSecondsUntilEvent,
@@ -32,6 +33,15 @@ public class EventEngineBehavior : MonoBehaviour
 
     public void Update()
     {
-        _event_engine.TryDoNextEvent();
+        var response = _event_engine.TryDoNextEvent();
+
+        if (!response.EventWasTriggered) return;
+
+        Invoke(nameof(UndoCurrentEvent), response.EventDurationInSeconds);
+    }
+
+    private void UndoCurrentEvent()
+    {
+        _event_engine.UndoCurrentEvent();
     }
 }

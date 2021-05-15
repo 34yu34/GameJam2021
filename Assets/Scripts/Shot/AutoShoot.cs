@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AutoShoot : MonoBehaviour
@@ -8,7 +6,7 @@ public class AutoShoot : MonoBehaviour
     private ShotComponent Shooter => _shooter ??= GetComponent<ShotComponent>();
 
     private Timestamp next_shoot_timestamp;
-    // Start is called before the first frame update
+
     void Start()
     {
         reset_next_shoot_timestamp();
@@ -19,13 +17,11 @@ public class AutoShoot : MonoBehaviour
         next_shoot_timestamp = Timestamp.In(1f);
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
-        if(next_shoot_timestamp.HasPassed())
-        {
-            Shooter.SetShoot();
-            reset_next_shoot_timestamp();
-        }
+        if (!next_shoot_timestamp.HasPassed()) return;
+        
+        Shooter.SetShoot();
+        reset_next_shoot_timestamp();
     }
 }

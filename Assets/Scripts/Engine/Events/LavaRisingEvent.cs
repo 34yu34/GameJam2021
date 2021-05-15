@@ -2,17 +2,17 @@
 
 namespace Assets.Scripts.Engine.Events
 {
-    public class LavaRisingEvent : IEvent
+    public class LavaRisingEvent : Event
     {
-        public bool IsMajor => true;
+        public override bool IsMajor => true;
 
-        public int ProbabilityWeight { get; set; }
-
-        public void DoEvent()
+        public override void  DoEvent()
         {
             Debug.Log($"{this.GetType().Name} WEIGHT: [{this.ProbabilityWeight}]");
         }
 
-        public bool CanHappen() => true;
+        public override void UndoEvent() { }
+
+        public override bool CanHappen() => true;
     }
 }
