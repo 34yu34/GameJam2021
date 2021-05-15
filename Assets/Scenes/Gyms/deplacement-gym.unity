@@ -1080,14 +1080,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: eventManager
       objectReference: {fileID: 0}
-    - target: {fileID: 2071808668624017951, guid: 9826b55a9b9c3a143beedbab997bbcb2, type: 3}
-      propertyPath: _maxSecondsUntilEvent
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 2071808668624017951, guid: 9826b55a9b9c3a143beedbab997bbcb2, type: 3}
-      propertyPath: _minSecondsUntilEvent
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9826b55a9b9c3a143beedbab997bbcb2, type: 3}
 --- !u!1001 &2844436849155650626

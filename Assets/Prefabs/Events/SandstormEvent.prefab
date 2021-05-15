@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _probability_weight: 1
-  _duration_in_seconds: 7
+  _duration_in_seconds: 5
   _sandstorm_shader: {fileID: 2100000, guid: 0895c733b5c758a4abeff7649475d256, type: 2}
