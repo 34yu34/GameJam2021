@@ -4,19 +4,19 @@ using UnityEngine;
 using UnityEngine.AI;
 
 
-[RequireComponent(typeof(EnemyFollow))]
+[RequireComponent(typeof(EnemyBehaviour))]
 public class EnemyAnimation : MonoBehaviour
 {
     [SerializeField]
     private Animator _animator;
 
-    private EnemyFollow _enemyFollow;
-    protected EnemyFollow EnemyFollow => _enemyFollow ??= GetComponent<EnemyFollow>();
+    private EnemyBehaviour _enemyBehaviour;
+    protected EnemyBehaviour EnemyBehaviour => _enemyBehaviour ??= GetComponent<EnemyBehaviour>();
 
 
     // Update is called once per frame
     void Update()
     {
-       _animator.SetInteger("State", (int)EnemyFollow.CurrentAiState);
+       _animator.SetInteger("State", (int)EnemyBehaviour.CurrentAiState.StateId);
     }
 }

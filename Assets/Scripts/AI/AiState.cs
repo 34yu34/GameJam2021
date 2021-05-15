@@ -1,9 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-public enum AiState
+public abstract class AiState : MonoBehaviour
 {
-    Calm = 0, 
-    Chase = 1
+    public abstract int StateId { get; }
+
+    private NavMeshAgent _nav_mesh_agent;
+    protected NavMeshAgent NavMeshAgent => _nav_mesh_agent ??= GetComponent<NavMeshAgent>();
+
+    private EnemyBehaviour _enemy_behaviour;
+    protected EnemyBehaviour EnemyBehaviour => _enemy_behaviour ??= GetComponent<EnemyBehaviour>();
+
+    public abstract AiState NextState();
+
+    public abstract void Act();
+
+    public AiState GetState<T>() where T : AiState
+    {
+        return GetComponent<T>() ?? gameObject.AddComponent<T>();
+    }
+
 };
