@@ -8,10 +8,14 @@ namespace Assets.Scripts.Engine.Events
 
         public int ProbabilityWeight { get; set; }
 
-        public void DoEvent()
+        public int? DurationInSeconds => null;
+
+        public void DoEvent(EventEngineConstructorFacade eventEngineConstructorFacade)
         {
             Debug.Log($"{this.GetType().Name} WEIGHT: [{this.ProbabilityWeight}]");
         }
+
+        public void UndoEvent(EventEngineConstructorFacade engineConstructorFacade) { }
 
         public bool CanHappen() => true;
     }

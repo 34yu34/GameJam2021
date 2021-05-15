@@ -1,8 +1,8 @@
-﻿using UnityEngine;
+﻿using UnityEditor.Timeline.Actions;
 
 namespace Assets.Scripts.Engine.Events
 {
-    public class SolarStormEvent : IEvent
+    public class /*Darude*/SandStormEvent : IEvent
     {
         public bool IsMajor => false;
 
@@ -12,12 +12,14 @@ namespace Assets.Scripts.Engine.Events
 
         public void DoEvent(EventEngineConstructorFacade eventEngineConstructorFacade)
         {
-            Debug.Log($"{this.GetType().Name}WEIGHT: [{this.ProbabilityWeight}]");
+            var player = eventEngineConstructorFacade.Player;
+
+            player.GetComponent<Move>().SetSlowSpeed();
         }
 
-        public void UndoEvent(EventEngineConstructorFacade engineConstructorFacade)
+        public void UndoEvent(EventEngineConstructorFacade eventEngineConstructorFacade)
         {
-            
+
         }
 
         public bool CanHappen() => true;

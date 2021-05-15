@@ -48,6 +48,8 @@ public class EventEngine
 
     private int _current_event_index = 0;
 
+    private IEvent _current_event;
+
     public EventEngine(
         EventEngineSettingDto settings,
         EventEngineConstructorFacade constructorFacade)
@@ -61,26 +63,35 @@ public class EventEngine
         MAJOR_EVENT_MAX_INDEX = settings.MajorEventMaxIndex;
     }
 
-    public void TryDoNextEvent()
+    public int? TryDoNextEvent()
     {
         if (_next_event_timestamp == null)
         {
             SetNextEventTimestamp();
 
-            return;
+            return null;
         }
 
-        if (!_next_event_timestamp.HasPassed()) return;
+        if (!_next_event_timestamp.HasPassed()) return null;
 
         ++_current_event_index;
 
         var is_major_event = ShouldTriggerMajorEvent();
 
-        var next_event = SelectNextEvent(is_major_event);
+        _current_event = SelectNextEvent(is_major_event);
 
-        next_event.DoEvent(_constructorFacade);
+        if (_current_event == null) return null;
+
+        _current_event.DoEvent(_constructorFacade);
 
         SetNextEventTimestamp();
+
+        return _current_event.DurationInSeconds;
+    }
+
+    public void UndoCurrentEvent(EventEngineConstructorFacade construsctor_facade)
+    {
+        _current_event.UndoEvent(construsctor_facade);
     }
 
     private bool ShouldTriggerMajorEvent()
@@ -108,7 +119,7 @@ public class EventEngine
     {
         var should_play_major_event = is_major_event && _event_dictionary.Any(x => x.IsMajor && x.CanHappen());
 
-        var availableEvents = _event_dictionary.Where(x => x.CanHappen() && x.IsMajor == should_play_major_event).ToList();
+        var availableEvents = _event_dictionary.Where(x => x.IsMajor == should_play_major_event && x.CanHappen()).ToList();
 
         if (!availableEvents.Any()) return null;
 

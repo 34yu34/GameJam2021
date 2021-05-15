@@ -16,8 +16,13 @@ public class EventEngineBehavior : MonoBehaviour
     [SerializeField]
     private int _majorEventMaxIndex = 5;
 
-    public void Awake()
+    private EventEngineConstructorFacade _constructorFacade;
+
+    public void Start()
     {
+        var player = FindObjectOfType<Player>();
+        _constructorFacade = new EventEngineConstructorFacade(player);
+
         _event_engine =
             new EventEngine(
                 new EventEngineSettingDto
@@ -27,15 +32,21 @@ public class EventEngineBehavior : MonoBehaviour
                     MajorEventMinIndex = _majorEventMinIndex,
                     MajorEventMaxIndex = _majorEventMaxIndex
                 },
-                new EventEngineConstructorFacade
-                {
-
-                }
+                _constructorFacade
             );
     }
 
     public void Update()
     {
-        _event_engine.TryDoNextEvent();
+        var occuring_event_duration = _event_engine.TryDoNextEvent();
+
+        if (!occuring_event_duration.HasValue) return;
+
+        Invoke(nameof(UndoCurrentEvent), occuring_event_duration.Value);
+    }
+
+    private void UndoCurrentEvent()
+    {
+        _event_engine.UndoCurrentEvent(_constructorFacade);
     }
 }
