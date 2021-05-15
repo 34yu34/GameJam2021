@@ -11,6 +11,9 @@ public class ShotComponent : MonoBehaviour
     [SerializeField] 
     private int _damage;
 
+    [SerializeField]
+    private ParticleSystem shotEffect;
+
 
     private void Update()
     {
@@ -23,20 +26,26 @@ public class ShotComponent : MonoBehaviour
  
     private void Shoot()
     {
+        CreateShotEffect();
         if (!Physics.Raycast(transform.position, transform.forward, out var hit, _range))
         {
             return;
         }
 
-        Debug.DrawLine(transform.position, hit.point, Color.blue);
+        var hitInfo = new HitInfo();
+        hitInfo.Damage = _damage;
+        hitInfo.Origin = transform.position;
+        hitInfo.HitPosition = hit.point;
 
-        var damageable = hit.rigidbody.GetComponent<Targetable>()?.Damageable;
+        hit.rigidbody.GetComponent<Targetable>()?.Hit(hit, _damage);
+    }
 
-        if (damageable == null)
-        {
-            return;
-        }
-
-        damageable.TakeDamage(_damage);
+    private void CreateShotEffect()
+    {
+        var obj = Instantiate(shotEffect);
+        obj.transform.position = transform.position;
+        obj.transform.LookAt(transform.position + transform.forward);
+        obj.Play();
+        Destroy(obj.gameObject, 0.2f);
     }
 }
