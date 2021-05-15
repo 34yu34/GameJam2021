@@ -14,6 +14,8 @@ public class Jump : MonoBehaviour
 
     public void JumpObject(float jumpspeed = 5)
     {
-        _rb.velocity += Vector3.up * jumpspeed;
+        var vel = _rb.velocity;
+        vel.y = jumpspeed;
+        _rb.velocity = vel;
     }
 }

@@ -7,7 +7,7 @@ public class MouseView : MonoBehaviour
     [SerializeField]
     private Camera cam;
 
-    public float ang_front;
+    private float _ang_front;
 
     // Start is called before the first frame update
     void Start()
@@ -24,9 +24,9 @@ public class MouseView : MonoBehaviour
 
     private void limit_vertical_view_angle()
     {
-        ang_front = Vector3.Angle(transform.forward, cam.transform.forward);
+        _ang_front = Vector3.Angle(transform.forward, cam.transform.forward);
         bool is_looking_up = Vector3.Angle(transform.up, cam.transform.forward) < 90f;
-        if (ang_front > 90f)
+        if (_ang_front > 90f)
         {
             rotate_to_limit(is_looking_up);
         }
@@ -34,7 +34,7 @@ public class MouseView : MonoBehaviour
 
     private void rotate_to_limit(bool is_looking_up)
     {
-        float correction = 90 - ang_front;
+        float correction = 90 - _ang_front;
         correction = is_looking_up ? -correction : correction;
         cam.transform.Rotate(Vector3.right, correction, Space.Self);
     }

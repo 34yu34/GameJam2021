@@ -25,6 +25,8 @@ public class InputMove : MonoBehaviour
 
     private Vector3 _direction;
 
+    private float _half_height;
+
     private void Awake()
     {
         set_acceleration();
@@ -39,12 +41,20 @@ public class InputMove : MonoBehaviour
     void Start()
     {
         get_required_components();
+        get_half_height();
     }
 
     private void get_required_components()
     {
         _move_component = GetComponent<Move>();
         _jump_component = GetComponent<Jump>();
+    }
+
+    private void get_half_height()
+    {
+        var capsule = GetComponentInChildren<CapsuleCollider>();
+        Debug.Assert(capsule != null, "player should have a capsule collider!");
+        _half_height = capsule.height / 2;
     }
 
     // Update is called once per frame
@@ -82,7 +92,11 @@ public class InputMove : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
         {
-            _jump_component.JumpObject();
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, -transform.up, out hit, _half_height + 0.1f))
+            {
+                _jump_component.JumpObject();
+            }
         }
     }
 
