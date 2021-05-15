@@ -22,14 +22,17 @@ public class EnemyFollow : MonoBehaviour
     [SerializeField]
     private GameObject _player;
 
-    public enum AiState { Calm = 0, Chase = 1};
-
     private AiState _aiState;
     public AiState CurrentAiState => _aiState;
 
     void FixedUpdate()
     {
         change_state();
+        act();
+    }
+
+    private void act()
+    {
         switch (_aiState)
         {
             case AiState.Calm:
@@ -41,7 +44,6 @@ public class EnemyFollow : MonoBehaviour
             default:
                 break;
         }
-
     }
 
     private void change_state()
@@ -49,41 +51,57 @@ public class EnemyFollow : MonoBehaviour
         switch (_aiState)
         {
             case AiState.Calm:
-                if (sees_player())
-                {
-                    _aiState = AiState.Chase;
-                }
-
+                _aiState = calm_state_change();
                 return;
+
             case AiState.Chase:
-                if (is_far_from_player())
-                {
-                    _aiState = AiState.Calm;
-                }
-
+                _aiState = chase_state_change();
                 return;
+
             default:
                 _aiState = AiState.Calm;
                 return;
-            
-
         }
+    }
+
+    private AiState chase_state_change()
+    {
+        if (is_far_from_player())
+        {
+            return AiState.Calm;
+        }
+
+        return _aiState;
+    }
+
+    private AiState calm_state_change()
+    {
+        if (sees_player())
+        {
+            return AiState.Chase;
+        }
+
+        return _aiState;
     }
 
     private bool sees_player()
     {
-        RaycastHit hit;
-        var begin = transform.position;
-        begin.y = _player.transform.position.y;
+        var begin = find_begining_ray();
 
-        if (!Physics.Raycast(begin, _player.transform.position - begin, out hit, _follow_up_distance))
+        if (!Physics.Raycast(begin, _player.transform.position - begin,out var hit, _follow_up_distance))
         {
             return false;
         }
 
-
         return Vector3.Angle(transform.forward, _player.transform.position - transform.position) < _vision_angle &&
             hit.collider.gameObject == _player;
+    }
+
+    private Vector3 find_begining_ray()
+    {
+        var begin = transform.position;
+        begin.y = _player.transform.position.y;
+        return begin;
     }
 
     private bool is_far_from_player()
