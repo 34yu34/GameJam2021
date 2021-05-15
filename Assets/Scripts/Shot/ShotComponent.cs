@@ -8,22 +8,30 @@ public class ShotComponent : MonoBehaviour
     [SerializeField] 
     private int _damage;
 
+    private bool _should_shoot;
+
     [SerializeField]
     private ParticleSystem _shot_effect;
 
     [SerializeField]
     private Projectile _projectile;
 
-    private void Update()
+    public void SetShoot()
     {
-        if (Input.GetButtonDown("Fire1"))
+        _should_shoot = true;
+    }
+
+    private void FixedUpdate()
+    {
+        if (_should_shoot)
         {
-            Shoot();
+            shoot();
         }
     }
 
-    private void Shoot()
+    private void shoot()
     {
+        _should_shoot = false;
         CreateShotEffect();
 
         if (!Physics.Raycast(transform.position, transform.forward, out var hit, _range))
@@ -45,7 +53,7 @@ public class ShotComponent : MonoBehaviour
     private void create_projectile(RaycastHit hit)
     {
         var projectile = Instantiate(_projectile);
-        projectile.transform.position = transform.position;
+        projectile.transform.position = this.transform.position;
         projectile.transform.LookAt(transform.position + transform.forward);
 
         projectile.Launch(transform.forward, hit.point);
@@ -54,7 +62,8 @@ public class ShotComponent : MonoBehaviour
     private void CreateShotEffect()
     {
         var obj = Instantiate(_shot_effect);
-        obj.transform.position = transform.position;
+        obj.transform.parent = transform;
+        obj.transform.localPosition = Vector3.zero;
         obj.transform.LookAt(transform.position + transform.forward);
         obj.Play();
         Destroy(obj.gameObject, 0.2f);
