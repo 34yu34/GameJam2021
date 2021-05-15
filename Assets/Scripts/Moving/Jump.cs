@@ -6,7 +6,6 @@ using UnityEngine;
 public class Jump : MonoBehaviour
 {
     private Rigidbody _rb;
-    // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody>();

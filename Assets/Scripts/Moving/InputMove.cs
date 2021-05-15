@@ -37,7 +37,6 @@ public class InputMove : MonoBehaviour
         _sprint_accel = (_sprint_speed - _normal_speed) / _time_to_sprint_speed;
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         get_required_components();
@@ -57,7 +56,6 @@ public class InputMove : MonoBehaviour
         _half_height = capsule.height / 2;
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         move_over_input();
@@ -75,10 +73,7 @@ public class InputMove : MonoBehaviour
     private void set_direction()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
-        //Get the value of the Horizontal input axis.
-
         float verticalInput = Input.GetAxis("Vertical");
-        //Get the value of the Vertical input axis.
 
         _direction = transform.right * horizontalInput + transform.forward * verticalInput;
     }
@@ -92,8 +87,7 @@ public class InputMove : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
         {
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, -transform.up, out hit, _half_height + 0.1f))
+            if (Physics.Raycast(transform.position, -transform.up, out _, _half_height + 0.1f))
             {
                 _jump_component.JumpObject();
             }
@@ -105,15 +99,24 @@ public class InputMove : MonoBehaviour
 
         if (Input.GetButton("Sprint"))
         {
-            if(_speed < _sprint_speed)
-            {
-                _speed += _sprint_accel * Time.fixedDeltaTime;
-                _speed = Mathf.Clamp(_speed, 0f, _sprint_speed);
-            }
+            set_speed_for_sprint();
+            return;
         }
-        else
+        
+        set_speed_for_normal();
+    }
+
+    private void set_speed_for_normal()
+    {
+        _speed = _normal_speed;
+    }
+
+    private void set_speed_for_sprint()
+    {
+        if (_speed < _sprint_speed)
         {
-            _speed = _normal_speed;
+            _speed += _sprint_accel * Time.fixedDeltaTime;
+            _speed = Mathf.Clamp(_speed, 0f, _sprint_speed);
         }
     }
 }
