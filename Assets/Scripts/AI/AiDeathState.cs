@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Damageable))]
 public class AiDeathState : AiState
 {
     public override int StateId => 2;
-    private Damageable _damageable_component;
 
     private Timestamp _timestamp;
 
@@ -21,9 +19,11 @@ public class AiDeathState : AiState
 
     public override void Act()
     {
-        Debug.Log("Dead");
-
-        if (_timestamp == null) _timestamp = Timestamp.In(5f);
+        if (_timestamp == null)
+        {
+            _timestamp = Timestamp.In(5f);
+            NavMeshAgent.ResetPath();
+        }
 
         if (_timestamp.HasPassed())
         {
