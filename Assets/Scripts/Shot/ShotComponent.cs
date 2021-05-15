@@ -27,8 +27,11 @@ public class ShotComponent : MonoBehaviour
         CreateShotEffect();
 
         var projectile = Instantiate(_projectile);
+        projectile.transform.position = transform.position;
+        projectile.transform.LookAt(transform.position + transform.forward);
 
-        projectile.Launch();
+        projectile.Launch(transform.forward, _damage);
+        
     }
 
     private void CreateShotEffect()

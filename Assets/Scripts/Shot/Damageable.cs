@@ -4,9 +4,9 @@ using UnityEngine;
 public class Damageable : MonoBehaviour
 {
     [SerializeField]
-    private int _maxHealth;
+    private int _max_health;
 
-    public int MaxHealth => _maxHealth;
+    public int MaxHealth => _max_health;
 
     [ShowNonSerializedField]
     private int _currentHealth;
@@ -15,7 +15,7 @@ public class Damageable : MonoBehaviour
     {
         get => _currentHealth;
 
-        set => _currentHealth = Mathf.Clamp(value, 0, _maxHealth);
+        set => _currentHealth = Mathf.Clamp(value, 0, _max_health);
     }
 
     private void Start()

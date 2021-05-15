@@ -169,8 +169,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _range: 10
   _damage: 8
-  hitEffect: {fileID: 1302120397210508001, guid: 60fb48db7226192408442ef259c93670, type: 3}
-  shotEffect: {fileID: 8036483352958626291, guid: 6a07ba3b7e98a58489043a63fb5d53f5, type: 3}
+  _shot_effect: {fileID: 8036483352958626291, guid: 6a07ba3b7e98a58489043a63fb5d53f5, type: 3}
+  _projectile: {fileID: 9093462148266488815, guid: 7cf658e823ed44347b880577a13c0bd8, type: 3}
 --- !u!1 &393235754
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,6 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbe8ed3194a31704f95912a552799b16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitEffect: {fileID: 1302120397210508001, guid: 60fb48db7226192408442ef259c93670, type: 3}
 --- !u!114 &581545645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,7 +326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4395af72c5fa57245985ab8b7b29632b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 100
+  _max_health: 0
 --- !u!54 &581545646
 Rigidbody:
   m_ObjectHideFlags: 0
