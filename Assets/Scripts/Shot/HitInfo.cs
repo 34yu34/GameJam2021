@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public struct HitInfo
+public class HitInfo
 {
-    public Vector3 HitPosition;
-    public Vector3 Origin;
-    public int Damage;
+    public Vector3 HitPosition { get; set; }
+    public Vector3 Origin { get; set; }
+    public int Damage { get; set; }
 }
