@@ -41,7 +41,7 @@ public class ShotComponent : MonoBehaviour
         
         create_projectile(hit);
 
-        hit.rigidbody.GetComponent<Targetable>()?.Hit(new HitInfoDto
+        hit.rigidbody?.GetComponent<Targetable>()?.Hit(new HitInfoDto
         {
             Damage = _damage,
             HitPosition = hit.point,
