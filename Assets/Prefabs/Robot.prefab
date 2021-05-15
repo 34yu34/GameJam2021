@@ -14,6 +14,9 @@ GameObject:
   - component: {fileID: 4254726130396731685}
   - component: {fileID: 1606196327335724286}
   - component: {fileID: 4445984900041557880}
+  - component: {fileID: 495743127747932906}
+  - component: {fileID: 566158689430199963}
+  - component: {fileID: 3612264291331866877}
   m_Layer: 0
   m_Name: Robot
   m_TagString: Untagged
@@ -103,7 +106,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 4445984900041557880}
-  _nav_mesh_agent: {fileID: 4254726130396731706}
 --- !u!95 &4445984900041557880
 Animator:
   serializedVersion: 3
@@ -123,6 +125,46 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!136 &495743127747932906
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4254726130396731687}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.5
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.7, z: 0}
+--- !u!114 &566158689430199963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4254726130396731687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4395af72c5fa57245985ab8b7b29632b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _max_health: 30
+--- !u!114 &3612264291331866877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4254726130396731687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbe8ed3194a31704f95912a552799b16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitEffect: {fileID: 0}
 --- !u!1001 &4254726131601067748
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -42,11 +42,6 @@ public class Damageable : MonoBehaviour
         }
 
         _on_death.Invoke();
-        Kill();
     }
 
-    private void Kill()
-    {
-        Destroy(gameObject);
-    }
 }
