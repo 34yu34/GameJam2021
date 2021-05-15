@@ -1,9 +1,8 @@
-﻿using TMPro;
-using UnityEngine;
+﻿using UnityEngine;
 
 public abstract class Event : MonoBehaviour
 {
-    public bool IsMajor { get; }
+    public abstract bool IsMajor { get; }
 
     [SerializeField]
     private int _probability_weight;
@@ -13,9 +12,9 @@ public abstract class Event : MonoBehaviour
     private int _duration_in_seconds;
     public int DurationInSeconds => _duration_in_seconds;
 
-    public abstract void DoEvent(EventEngineConstructorFacade eventEngineConstructorFacade);
+    public abstract void DoEvent();
 
-    public abstract void UndoEvent(EventEngineConstructorFacade engineConstructorFacade);
+    public abstract void UndoEvent();
 
     public abstract bool CanHappen();
 }

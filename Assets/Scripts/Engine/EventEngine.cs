@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class EventEngine : MonoBehaviour
 {
-    private EventEngineConstructorFacade _constructorFacade;
-
     [SerializeField]
     private List<Event> _event_dictionary;
  
@@ -22,10 +20,8 @@ public class EventEngine : MonoBehaviour
 
     private Event _current_event;
 
-    public void GenerateEvent(EventEngineSettingDto settings, EventEngineConstructorFacade constructorFacade)
+    public void SetEventEngineSettings(EventEngineSettingDto settings)
     {
-        _constructorFacade = constructorFacade;
-
         MIN_SECONDS_UNTIL_EVENT = settings.MinSecondsUntilEvent;
         MAX_SECONDS_UNTIL_EVENT = settings.MaxSecondsUntilEvent;
 
@@ -33,16 +29,25 @@ public class EventEngine : MonoBehaviour
         MAJOR_EVENT_MAX_INDEX = settings.MajorEventMaxIndex;
     }
 
-    public int TryDoNextEvent()
+    public EventResponse TryDoNextEvent()
     {
         if (_next_event_timestamp == null)
         {
             SetNextEventTimestamp();
 
-            return -1;
+            return new EventResponse
+            {
+                EventWasTriggered = false
+            };
         }
 
-        if (!_next_event_timestamp.HasPassed()) return -1;
+        if (!_next_event_timestamp.HasPassed())
+        {
+            return new EventResponse()
+            {
+                EventWasTriggered = false
+            };
+        }
 
         ++_current_event_index;
 
@@ -50,18 +55,28 @@ public class EventEngine : MonoBehaviour
 
         _current_event = SelectNextEvent(is_major_event);
 
-        if (_current_event == null) return -1;
+        if (_current_event == null)
+        {
+            return new EventResponse
+            {
+                EventWasTriggered = false
+            };
+        }
 
-        _current_event.DoEvent(_constructorFacade);
+        _current_event.DoEvent();
 
         SetNextEventTimestamp();
 
-        return _current_event.DurationInSeconds;
+        return new EventResponse
+        {
+            EventDurationInSeconds = _current_event.DurationInSeconds,
+            EventWasTriggered = true
+        };
     }
 
-    public void UndoCurrentEvent(EventEngineConstructorFacade construsctor_facade)
+    public void UndoCurrentEvent()
     {
-        _current_event.UndoEvent(construsctor_facade);
+        _current_event.UndoEvent();
     }
 
     private bool ShouldTriggerMajorEvent()
@@ -133,4 +148,11 @@ public class EventEngine : MonoBehaviour
 
         public Event Event { get; set; }
     }
+}
+
+public class EventResponse
+{
+    public bool EventWasTriggered { get; set; }
+
+    public int EventDurationInSeconds { get; set; }
 }
