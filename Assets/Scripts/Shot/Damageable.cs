@@ -1,8 +1,13 @@
 using NaughtyAttributes;
+using UnityEngine.Events;
 using UnityEngine;
 
 public class Damageable : MonoBehaviour
 {
+    private UnityEvent _on_death = new UnityEvent();
+
+    public UnityEvent OnDeath => _on_death;
+
     [SerializeField]
     private int _max_health;
 
@@ -36,6 +41,7 @@ public class Damageable : MonoBehaviour
             return;
         }
 
+        _on_death.Invoke();
         Kill();
     }
 
