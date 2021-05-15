@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Move))]
+[RequireComponent(typeof(Jump))]
 public class InputMove : MonoBehaviour
 {
     private Move _move_component;
+
+    private Jump _jump_component;
 
     private float _speed;
 
@@ -29,6 +32,7 @@ public class InputMove : MonoBehaviour
     void Start()
     {
         _move_component = GetComponent<Move>();
+        _jump_component = GetComponent<Jump>();
     }
 
     // Update is called once per frame
@@ -45,6 +49,20 @@ public class InputMove : MonoBehaviour
         set_speed();
 
         _move_component.MoveObjectOnFixedUpdate(direction, _speed);
+
+    }
+
+    private void Update()
+    {
+        check_jump();
+    }
+
+    private void check_jump()
+    {
+        if (Input.GetButtonDown("Jump"))
+        {
+            _jump_component.JumpObject();
+        }
     }
 
     private void set_speed()
