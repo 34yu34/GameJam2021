@@ -10,6 +10,9 @@ public class MouseView : MonoBehaviour
     [SerializeField]
     private float _up_angle_limit = 80f;
 
+    [SerializeField]
+    private float _mouse_sensitivity = 3f;
+
     private float _ang_front;
 
     void Start()
@@ -42,7 +45,7 @@ public class MouseView : MonoBehaviour
 
     private void apply_rotation_over_mouse_input()
     {
-        var _mouse_input = new Vector2(Input.GetAxis("Mouse X"), -Input.GetAxis("Mouse Y"));
+        var _mouse_input = new Vector2(Input.GetAxis("Mouse X"), -Input.GetAxis("Mouse Y")) * _mouse_sensitivity;
         transform.Rotate(Vector3.up, _mouse_input.x, Space.World);
         cam.transform.Rotate(Vector3.right, _mouse_input.y, Space.Self);
     }
