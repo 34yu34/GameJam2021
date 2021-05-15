@@ -27,13 +27,8 @@ public class Timestamp
         return new Timestamp(-seconds);
     }
 
-    public bool IsAfter()
+    public bool HasPassed()
     {
         return _timestamp < Time.time;
-    }
-
-    public bool IsBefore()
-    {
-        return _timestamp > Time.time;
     }
 }
