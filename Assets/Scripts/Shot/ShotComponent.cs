@@ -41,7 +41,7 @@ public class ShotComponent : MonoBehaviour
 
         CreateShotEffect();
 
-        if (!Physics.Raycast(_aim_camera_object.position, _aim_camera_object.forward, out var hit, _range))
+        if (!Physics.Raycast(_aim_camera_object.position, _aim_camera_object.forward, out var hit, _range) || hit.collider.gameObject == gameObject)
         {
             create_projectile(_aim_camera_object.position + _aim_camera_object.forward * _range);
 
