@@ -43,10 +43,12 @@ public class ShotComponent : MonoBehaviour
 
         if (!Physics.Raycast(_aim_camera_object.position, _aim_camera_object.forward, out var hit, _range))
         {
+            create_projectile(_aim_camera_object.position + _aim_camera_object.forward * _range);
+
             return;
         }
         
-        create_projectile(hit);
+        create_projectile(hit.point);
 
         hit.rigidbody?.GetComponent<Targetable>()?.Hit(new HitInfoDto
 
@@ -58,7 +60,7 @@ public class ShotComponent : MonoBehaviour
 
     }
 
-    private void create_projectile(RaycastHit hit)
+    private void create_projectile(Vector3 target_pos)
     {
         var projectile = Instantiate(_projectile);
 
@@ -66,7 +68,7 @@ public class ShotComponent : MonoBehaviour
 
         projectile.transform.LookAt(transform.position + transform.forward);
 
-        projectile.Launch(transform.forward, hit.point);
+        projectile.Launch(transform.forward, target_pos);
     }
 
     private void CreateShotEffect()
