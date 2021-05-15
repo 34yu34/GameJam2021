@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Damageable))]
 [RequireComponent(typeof(NavMeshAgent))]
 public class EnemyBehaviour : MonoBehaviour
 {
@@ -30,9 +31,13 @@ public class EnemyBehaviour : MonoBehaviour
     private AiState _aiState;
     public AiState CurrentAiState => _aiState;
 
+    private Damageable _damageable_component;
+
+
     private void Start()
     {
         _aiState = gameObject.AddComponent<AiCalmState>();
+        add_death_listener();
     }
 
     private void FixedUpdate()
@@ -41,5 +46,14 @@ public class EnemyBehaviour : MonoBehaviour
         _aiState.Act();
     }
 
+    private void add_death_listener()
+    {
+        _damageable_component = GetComponent<Damageable>();
+        _damageable_component.OnDeath.AddListener(death);
+    }
 
+    private void death()
+    {
+        _aiState = gameObject.AddComponent<AiDeathState>();
+    }
 }
