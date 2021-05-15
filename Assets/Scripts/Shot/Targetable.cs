@@ -12,17 +12,17 @@ public class Targetable : MonoBehaviour
     [SerializeField]
     private ParticleSystem hitEffect;
 
-    public void Hit(HitInfo hitInfo)
+    public void Hit(HitInfoDto hitInfoDto)
     {
-        CreateHitEffect(hitInfo);
+        CreateHitEffect(hitInfoDto);
 
-        Damageable.TakeDamage(hitInfo.Damage);
+        Damageable.TakeDamage(hitInfoDto.Damage);
     }
-    private void CreateHitEffect(HitInfo hitInfo)
+    private void CreateHitEffect(HitInfoDto hitInfoDto)
     {
         var obj = Instantiate(hitEffect);
-        obj.transform.position = hitInfo.HitPosition;
-        obj.transform.LookAt(hitInfo.Origin);
+        obj.transform.position = hitInfoDto.HitPosition;
+        obj.transform.LookAt(hitInfoDto.Origin);
         obj.Play();
         Destroy(obj.gameObject, 0.2f);
     }
