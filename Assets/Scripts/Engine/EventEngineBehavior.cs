@@ -32,6 +32,6 @@ public class EventEngineBehavior : MonoBehaviour
 
     public void Update()
     {
-        _event_engine.DoCycle();
+        _event_engine.TryDoNextEvent();
     }
 }

@@ -46,16 +46,16 @@ public class EventEngine
 
     private int _current_event_index = 0;
 
-    public EventEngine(EventEngineSettingDto setttings)
+    public EventEngine(EventEngineSettingDto settings)
     {
-        MIN_SECONDS_UNTIL_EVENT = setttings.MinSecondsUntilEvent;
-        MAX_SECONDS_UNTIL_EVENT = setttings.MaxSecondsUntilEvent;
+        MIN_SECONDS_UNTIL_EVENT = settings.MinSecondsUntilEvent;
+        MAX_SECONDS_UNTIL_EVENT = settings.MaxSecondsUntilEvent;
 
-        MAJOR_EVENT_MIN_INDEX = setttings.MajorEventMinIndex;
-        MAJOR_EVENT_MAX_INDEX = setttings.MajorEventMaxIndex;
+        MAJOR_EVENT_MIN_INDEX = settings.MajorEventMinIndex;
+        MAJOR_EVENT_MAX_INDEX = settings.MajorEventMaxIndex;
     }
 
-    public void DoCycle()
+    public void TryDoNextEvent()
     {
         if (_next_event_timestamp == null)
         {
