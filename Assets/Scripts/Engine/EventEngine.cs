@@ -3,44 +3,26 @@ using System.Linq;
 using Assets.Scripts.Engine.Events;
 using UnityEngine;
 
-public class EventEngine
+public class EventEngine : MonoBehaviour
 {
-    private readonly EventEngineConstructorFacade _constructorFacade;
+    private EventEngineConstructorFacade _constructorFacade;
 
-    private List<IEvent> _event_dictionary = new List<IEvent>
-    {
-        // Minor events
-        new SandStormEvent
-        {
-            ProbabilityWeight = 1
-        }
-
-        // Major events
-        //new LavaRisingEvent
-        //{
-        //    ProbabilityWeight = 1
-        //},
-        //new LavaRisingEvent
-        //{
-        //    ProbabilityWeight = 10
-        //}
-    };
-
+    [SerializeField]
+    private List<Event> _event_dictionary;
+ 
     private Timestamp _next_event_timestamp;
 
-    private readonly int MIN_SECONDS_UNTIL_EVENT;
-    private readonly int MAX_SECONDS_UNTIL_EVENT;
+    private int MIN_SECONDS_UNTIL_EVENT;
+    private int MAX_SECONDS_UNTIL_EVENT;
 
-    private readonly int MAJOR_EVENT_MIN_INDEX;
-    private readonly int MAJOR_EVENT_MAX_INDEX;
+    private int MAJOR_EVENT_MIN_INDEX;
+    private int MAJOR_EVENT_MAX_INDEX;
 
     private int _current_event_index = 0;
 
-    private IEvent _current_event;
+    private Event _current_event;
 
-    public EventEngine(
-        EventEngineSettingDto settings,
-        EventEngineConstructorFacade constructorFacade)
+    public void GenerateEvent(EventEngineSettingDto settings, EventEngineConstructorFacade constructorFacade)
     {
         _constructorFacade = constructorFacade;
 
@@ -51,16 +33,16 @@ public class EventEngine
         MAJOR_EVENT_MAX_INDEX = settings.MajorEventMaxIndex;
     }
 
-    public int? TryDoNextEvent()
+    public int TryDoNextEvent()
     {
         if (_next_event_timestamp == null)
         {
             SetNextEventTimestamp();
 
-            return null;
+            return -1;
         }
 
-        if (!_next_event_timestamp.HasPassed()) return null;
+        if (!_next_event_timestamp.HasPassed()) return -1;
 
         ++_current_event_index;
 
@@ -68,7 +50,7 @@ public class EventEngine
 
         _current_event = SelectNextEvent(is_major_event);
 
-        if (_current_event == null) return null;
+        if (_current_event == null) return -1;
 
         _current_event.DoEvent(_constructorFacade);
 
@@ -103,7 +85,7 @@ public class EventEngine
         _next_event_timestamp = Timestamp.In(next_event_time);
     }
 
-    private IEvent SelectNextEvent(bool is_major_event)
+    private Event SelectNextEvent(bool is_major_event)
     {
         var should_play_major_event = is_major_event && _event_dictionary.Any(x => x.IsMajor && x.CanHappen());
 
@@ -113,10 +95,9 @@ public class EventEngine
 
         var current_index = 0;
 
-        var event_ranges =
-            availableEvents
-                .Select(@event => CreateEventRangeFromEvent(@event, ref current_index))
-                .ToList();
+        var event_ranges = availableEvents
+                                            .Select(@event => CreateEventRangeFromEvent(@event, ref current_index))
+                                            .ToList();
 
         // current index is now equal to max + 1
         // Random.Range is (Inclusive, Exclusive)
@@ -128,7 +109,7 @@ public class EventEngine
                 .Event;
     }
 
-    private static EventRange CreateEventRangeFromEvent(IEvent @event, ref int current_min)
+    private static EventRange CreateEventRangeFromEvent(Event @event, ref int current_min)
     {
         var current_max = current_min + @event.ProbabilityWeight;
 
@@ -150,6 +131,6 @@ public class EventEngine
 
         public int Max { get; set; }
 
-        public IEvent Event { get; set; }
+        public Event Event { get; set; }
     }
 }

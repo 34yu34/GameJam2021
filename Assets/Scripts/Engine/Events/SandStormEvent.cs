@@ -4,38 +4,34 @@ using UnityEngine;
 namespace Assets.Scripts.Engine.Events
 {
     [System.Serializable]
-    public class /*Darude*/SandStormEvent : IEvent
+    public class /*Darude*/SandStormEvent : Event
     {
         [SerializeField]
         private Material _sandstorm_shader;
 
         public bool IsMajor => false;
 
-        public int ProbabilityWeight { get; set; }
-
-        public int? DurationInSeconds => 2;
-
-        public void DoEvent(EventEngineConstructorFacade eventEngineConstructorFacade)
+        public override void DoEvent(EventEngineConstructorFacade eventEngineConstructorFacade)
         {
             Debug.Log($"{this.GetType().Name} on DoEvent");
             var player = eventEngineConstructorFacade.Player;
 
             player.GetComponent<Move>().SetSlowSpeed();
 
-            Camera.main.GetComponent<CameraRenderer>().ShaderMat = _sandstorm_shader;
+            Camera.main.GetComponent<CameraRenderer>().FadeIn(_sandstorm_shader);
         }
 
-        public void UndoEvent(EventEngineConstructorFacade eventEngineConstructorFacade)
+        public override void UndoEvent(EventEngineConstructorFacade eventEngineConstructorFacade)
         {
             Debug.Log($"{this.GetType().Name} on UndoEvent");
             var player = eventEngineConstructorFacade.Player;
 
             player.GetComponent<Move>().SetNormalSpeed();
             
-            Camera.main.GetComponent<CameraRenderer>().ShaderMat = null;
+            Camera.main.GetComponent<CameraRenderer>().FadeOut();
 
         }
 
-        public bool CanHappen() => true;
+        public override bool CanHappen() => true;
     }
 }

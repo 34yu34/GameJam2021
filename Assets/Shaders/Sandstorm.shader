@@ -3,7 +3,9 @@ Shader "Camera/Sandstorm"
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
+        _Power ("Power", Float) = 1
     }
+
     SubShader
     {
         // No culling or depth
@@ -38,18 +40,14 @@ Shader "Camera/Sandstorm"
             }
 
             sampler2D _MainTex;
+            float _Power;
 
             fixed4 frag(v2f i) : SV_Target
             {
-                float2 coord = i.uv;
-                
-                coord.x = coord.x * _Time % 1.0f;
-                coord.y = coord.y * _Time % 1.0f;
-
                 fixed4 col = tex2D(_MainTex, i.uv);
-                col.b = col.b - 0.75f;
-                col.r = col.r - 0.075f;
-                col.g = col.g - 0.165f;
+                col.b = col.b - (0.75f * _Power);
+                col.r = col.r - (0.075f * _Power);
+                col.g = col.g - (0.165f * _Power);
 
                 return col;
             }

@@ -23,8 +23,9 @@ public class EventEngineBehavior : MonoBehaviour
         var player = FindObjectOfType<Player>();
         _constructorFacade = new EventEngineConstructorFacade(player);
 
-        _event_engine =
-            new EventEngine(
+        _event_engine = gameObject.GetComponent<EventEngine>();
+
+        _event_engine.GenerateEvent(
                 new EventEngineSettingDto
                 {
                     MinSecondsUntilEvent = _minSecondsUntilEvent,
@@ -40,9 +41,9 @@ public class EventEngineBehavior : MonoBehaviour
     {
         var occuring_event_duration = _event_engine.TryDoNextEvent();
 
-        if (!occuring_event_duration.HasValue) return;
+        if (occuring_event_duration == -1) return;
 
-        Invoke(nameof(UndoCurrentEvent), occuring_event_duration.Value);
+        Invoke(nameof(UndoCurrentEvent), occuring_event_duration);
     }
 
     private void UndoCurrentEvent()

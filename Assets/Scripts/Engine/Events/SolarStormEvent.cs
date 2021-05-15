@@ -2,24 +2,22 @@
 
 namespace Assets.Scripts.Engine.Events
 {
-    public class SolarStormEvent : IEvent
+    public class SolarStormEvent : Event
     {
         public bool IsMajor => false;
 
-        public int ProbabilityWeight { get; set; }
+        public int DurationInSeconds => 60;
 
-        public int? DurationInSeconds => 60;
-
-        public void DoEvent(EventEngineConstructorFacade eventEngineConstructorFacade)
+        public override void DoEvent(EventEngineConstructorFacade eventEngineConstructorFacade)
         {
             Debug.Log($"{this.GetType().Name}WEIGHT: [{this.ProbabilityWeight}]");
         }
 
-        public void UndoEvent(EventEngineConstructorFacade engineConstructorFacade)
+        public override void UndoEvent(EventEngineConstructorFacade engineConstructorFacade)
         {
             
         }
 
-        public bool CanHappen() => true;
+        public override bool CanHappen() => true;
     }
 }

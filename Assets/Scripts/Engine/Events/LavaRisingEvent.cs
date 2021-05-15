@@ -2,21 +2,19 @@
 
 namespace Assets.Scripts.Engine.Events
 {
-    public class LavaRisingEvent : IEvent
+    public class LavaRisingEvent : Event
     {
         public bool IsMajor => true;
 
-        public int ProbabilityWeight { get; set; }
+        public int DurationInSeconds => -1;
 
-        public int? DurationInSeconds => null;
-
-        public void DoEvent(EventEngineConstructorFacade eventEngineConstructorFacade)
+        public override void  DoEvent(EventEngineConstructorFacade eventEngineConstructorFacade)
         {
             Debug.Log($"{this.GetType().Name} WEIGHT: [{this.ProbabilityWeight}]");
         }
 
-        public void UndoEvent(EventEngineConstructorFacade engineConstructorFacade) { }
+        public override void UndoEvent(EventEngineConstructorFacade engineConstructorFacade) { }
 
-        public bool CanHappen() => true;
+        public override bool CanHappen() => true;
     }
 }
