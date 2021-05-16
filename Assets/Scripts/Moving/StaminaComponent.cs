@@ -35,6 +35,11 @@ public class StaminaComponent : MonoBehaviour
         is_regenarating = true;
     }
 
+    public void GiveStamina(float val)
+    {
+        CurrentStamina += val;
+    }
+
     public bool TrySprint()
     {
         is_regenarating = false;
