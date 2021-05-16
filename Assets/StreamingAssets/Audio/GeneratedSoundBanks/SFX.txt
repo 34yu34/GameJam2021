@@ -10,6 +10,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1755524482	Event_Alert_Major			\Default Work Unit\Event_Alert_Major	
 	2130607615	Robot_Shoot			\Default Work Unit\Robot_Shoot	
 	2147561130	Player_Walk			\Default Work Unit\Player_Walk	
+	2503977873	Sandstorm_Stop			\Default Work Unit\Sandstorm_Stop	
 	2770458161	Robot_Hurt			\Default Work Unit\Robot_Hurt	
 	2941777918	Event_Alert_Minor			\Default Work Unit\Event_Alert_Minor	
 	3290572544	SFX_Environment_Wind_Stop			\Default Work Unit\SFX_Environment_Wind_Stop	
@@ -50,7 +51,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	263917526	Environment_Sandstorm	Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\.cache\Windows\SFX\Events\Environment_Sandstorm_6AC9F016.wem		\Actor-Mixer Hierarchy\Default Work Unit\Events\Events\Environment_Sandstorm		3072208
 	269762572	Robot_GunShoot_Pistol_2	Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\.cache\Windows\SFX\Robot_GunShoot_Pistol\Robot_GunShoot_Pistol_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Robot\Robot_GunShoot_Pistol\Robot_GunShoot_Pistol_2		224432
 	271386171	Player_Reload	Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\.cache\Windows\SFX\Player_Reload_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Reload		213844
-	293363968	Environment_Lava	Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\.cache\Windows\SFX\Events\Environment_Lava_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Events\Events\Environment_Lava		2688144
 	314140635	Bullet_Impact_Metal	Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\.cache\Windows\SFX\Bullet_Impact_Metal\Bullet_Impact_Metal_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bullet_Impact\Bullet_Impact_Metal\Bullet_Impact_Metal		102544
 	321299980	Robot_Hurt	Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\.cache\Windows\SFX\Robot_Hurt\Robot_Hurt_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Robot\Robot_Hurt\Robot_Hurt		292444
 	343787144	Robot_Die	Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\.cache\Windows\SFX\Robot_Die\Robot_Die_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Robot\Robot_Die\Robot_Die		159244

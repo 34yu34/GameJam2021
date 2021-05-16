@@ -10,6 +10,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1755524482	Event_Alert_Major			\Default Work Unit\Event_Alert_Major	
 	2130607615	Robot_Shoot			\Default Work Unit\Robot_Shoot	
 	2147561130	Player_Walk			\Default Work Unit\Player_Walk	
+	2503977873	Sandstorm_Stop			\Default Work Unit\Sandstorm_Stop	
 	2770458161	Robot_Hurt			\Default Work Unit\Robot_Hurt	
 	2941777918	Event_Alert_Minor			\Default Work Unit\Event_Alert_Minor	
 	3290572544	SFX_Environment_Wind_Stop			\Default Work Unit\SFX_Environment_Wind_Stop	

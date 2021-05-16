@@ -31,7 +31,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 1716856a51622242a946789ddc168529
     GuidInternal: 
-    m_lastTime: -8585804210304775808
+    m_lastTime: -8585804198464775808
     List:
     - name: Music
       guid: b5210697ff0dbd44beb9035ef41243c3
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 7db2b3ac555d7d44a275ce60f295652b
     GuidInternal: 
-    m_lastTime: -8585804210304775808
+    m_lastTime: -8585804198644775808
     List:
     - name: Bullet_Impact_Metal
       guid: 94d5a775b590bd4f9693f9eb73c2d6cb
@@ -105,7 +105,7 @@ MonoBehaviour:
       Path: Default Work Unit/Environment_Event
       maxAttenuation: 0
       maxDuration: Infinity
-      minDuration: 16.719
+      minDuration: 11.719
     - name: Event_Alert_Major
       guid: b4663e003959cf47bfae839d1ab26b8f
       id: 1755524482
@@ -310,6 +310,18 @@ MonoBehaviour:
       maxAttenuation: 50
       maxDuration: 0.151415
       minDuration: 0.117394
+    - name: Sandstorm_Stop
+      guid: 142f0a4dd1df6141b9f2c8c0b6870b36
+      id: 2503977873
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Sandstorm_Stop
+        ObjectType: 3
+      Path: Default Work Unit/Sandstorm_Stop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: SFX_Environment_Wind_Start
       guid: 9d29a6e048528c4d942fcaed7eac4f23
       id: 3555070956

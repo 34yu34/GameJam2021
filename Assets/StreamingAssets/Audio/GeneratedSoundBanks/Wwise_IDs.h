@@ -34,6 +34,7 @@ namespace AK
         static const AkUniqueID ROBOT_HURT = 2770458161U;
         static const AkUniqueID ROBOT_SHOOT = 2130607615U;
         static const AkUniqueID ROBOT_WALK = 825506301U;
+        static const AkUniqueID SANDSTORM_STOP = 2503977873U;
         static const AkUniqueID SFX_ENVIRONMENT_WIND_START = 3555070956U;
         static const AkUniqueID SFX_ENVIRONMENT_WIND_STOP = 3290572544U;
         static const AkUniqueID SFX_UI_CLICK = 1452887354U;

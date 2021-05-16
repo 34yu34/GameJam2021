@@ -86,6 +86,14 @@
 							<Position X="4" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Environment_Event" ID="{7ADD57D3-DA55-48E6-8C6F-E1E7310D32DA}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
+							<Position X="4" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Sandstorm_Stop" ID="{4D0A2F14-DFD1-4161-B9F2-C8C0B6870B36}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
+							<Position X="4" Y="3"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="SFX_Environment_Wind_Start" ID="{E0A6299D-5248-4D8C-942F-CAED7EAC4F23}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
 							<Position X="5" Y="0"/>
 						</Module>
@@ -110,7 +118,7 @@
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="AssaultRifle" ID="{A17E72F6-DD68-4A8F-B161-B6F553039371}"/>
-						<CurrentSwitchRef Name="Earthquake" ID="{24C37CC2-C82C-4B21-940E-4CA460B2FCC7}"/>
+						<CurrentSwitchRef Name="Sandstorm" ID="{8BD2157E-BDCE-479B-AFB2-F3B5BD19FAF3}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
