@@ -62,3 +62,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _event_dictionary:
   - {fileID: 5948563354555309462, guid: 9ac3829331bda5d42b2da7741bad9e8b, type: 3}
+  - {fileID: 6624048978926332797, guid: 23e31f4a16741b440a2b09eea670713f, type: 3}

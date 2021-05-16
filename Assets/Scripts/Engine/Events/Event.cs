@@ -17,4 +17,6 @@ public abstract class Event : MonoBehaviour
     public abstract void UndoEvent();
 
     public abstract bool CanHappen();
+
+    public abstract void ResetEvent();
 }

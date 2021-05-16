@@ -17,5 +17,6 @@ namespace Assets.Scripts.Engine.Events
         }
 
         public override bool CanHappen() => true;
+        public override void ResetEvent() { }
     }
 }
