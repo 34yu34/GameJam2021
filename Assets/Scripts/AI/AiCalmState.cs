@@ -12,6 +12,11 @@ public class AiCalmState : AiState
             return GetState<AiChaseState>(); ;
         }
 
+        if (Random.Range(0, 300) == 0)
+        {
+            return GetState<AiRoam>();
+        }
+
         return this;
     }
 
