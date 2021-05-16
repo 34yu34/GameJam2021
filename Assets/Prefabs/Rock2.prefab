@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5497598105873217298}
   - component: {fileID: 8848854475352818}
+  - component: {fileID: 4899003391454370909}
   m_Layer: 0
   m_Name: Rock2
   m_TagString: Untagged
@@ -44,7 +45,20 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.75
-  m_Center: {x: 0, y: 0.4, z: 0}
+  m_Center: {x: 0, y: 0.16, z: -0.13}
+--- !u!135 &4899003391454370909
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7290759148942429568}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.75
+  m_Center: {x: 0, y: 0.16, z: 0.23}
 --- !u!1001 &9209164369662747067
 PrefabInstance:
   m_ObjectHideFlags: 0

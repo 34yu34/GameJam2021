@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7726728857563811761}
   - component: {fileID: 5513916140020037519}
+  - component: {fileID: 5266003691974620624}
   m_Layer: 0
   m_Name: Bush3
   m_TagString: Untagged
@@ -45,7 +46,21 @@ CapsuleCollider:
   m_Radius: 0.5
   m_Height: 1
   m_Direction: 1
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0.09, y: 0.8, z: 0}
+--- !u!136 &5266003691974620624
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8642596606641441446}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.16
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.21, z: 0}
 --- !u!1001 &8645775137985185421
 PrefabInstance:
   m_ObjectHideFlags: 0
