@@ -41,10 +41,8 @@ public class EnemyBehaviour : MonoBehaviour
     public float RoamTime => _roam_time;
 
 
-    [SerializeField]
-    private GameObject _player;
-
-    public GameObject Player => _player;
+    private Player _player;
+    public GameObject Player => (_player ??= FindObjectOfType<Player>()).gameObject;
 
     private AiState _aiState;
     public AiState CurrentAiState => _aiState;
@@ -56,7 +54,6 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void Start()
     {
-        _player = GameObject.Find("Player");
         _aiState = gameObject.AddComponent<AiCalmState>();
         _is_dead = false;
         add_death_listener();
