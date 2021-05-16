@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5596461904391692886}
   - component: {fileID: 5596461904391692885}
   - component: {fileID: 5596461904391692881}
+  - component: {fileID: 882826599055537613}
   m_Layer: 0
   m_Name: cratter_cover
   m_TagString: Untagged
@@ -110,3 +111,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _seconds_between_hits: 0.25
   _damage_dealt: 2
+--- !u!114 &882826599055537613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5596461904391692884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 502ae7418b202aa42b168ee41169e8f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _view_pane: {fileID: 8258685207326231573, guid: 778a87aeca8c98d47ab6afcb1eac137b, type: 3}
