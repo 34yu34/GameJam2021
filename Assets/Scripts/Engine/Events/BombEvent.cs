@@ -25,7 +25,6 @@ public class BombEvent : Event
 
     public override void DoEvent()
     {
-        Debug.Log($"{this.GetType().Name} on DoEvent");
 
         _furthest_crater = CratterManager.GetFurthestCratterFrom(PlayerInstance.transform.position);
 
@@ -34,7 +33,6 @@ public class BombEvent : Event
 
     private void explode_furthest_crater()
     {
-        Debug.Log($"{this.GetType().Name} on explode");
 
         if (_furthest_crater != null)
         {
@@ -54,7 +52,6 @@ public class BombEvent : Event
         if (distance_to_player.magnitude <= _explosion_radius_knockback)
         {
             PlayerInstance.GetComponent<Rigidbody>().AddForce(distance_to_player.normalized * _explosion_knockback_power);
-            Debug.Log($"{this.GetType().Name} got knocked back");
         }
     }
 
