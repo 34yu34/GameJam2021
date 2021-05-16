@@ -18,6 +18,8 @@ public class EventEngineBehavior : MonoBehaviour
     [SerializeField]
     private int _majorEventMaxIndex = 5;
 
+    [SerializeField] private float time_of_warning = 25;
+
     public void Start()
     {
         _event_engine = gameObject.GetComponent<EventEngine>();
@@ -45,9 +47,9 @@ public class EventEngineBehavior : MonoBehaviour
 
         AkSoundEngine.PostEvent(_event.IsMajor ? "Event_Alert_Major" : "Event_Alert_Minor", gameObject);
 
-        Invoke(nameof(DoCurrentEvent), 25);
+        Invoke(nameof(DoCurrentEvent), time_of_warning);
 
-        Invoke(nameof(UndoCurrentEvent), _event.DurationInSeconds);
+        Invoke(nameof(UndoCurrentEvent), _event.DurationInSeconds + time_of_warning);
     }
 
     private void DoCurrentEvent()
