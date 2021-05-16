@@ -1,6 +1,7 @@
 using UnityEngine;
 using NaughtyAttributes;
 
+[RequireComponent(typeof(MunitionComponent))]
 public class ShotComponent : MonoBehaviour
 {
     [SerializeField] 
@@ -8,7 +9,6 @@ public class ShotComponent : MonoBehaviour
 
     [SerializeField] 
     private int _damage;
-
 
     private bool _should_shoot;
     
@@ -19,8 +19,24 @@ public class ShotComponent : MonoBehaviour
     private Projectile _projectile;
 
     [SerializeField]
+    private float _reload_time;
+
+    private Timestamp _reload_timestamp;
+
+    private GunHolderScript _gun_holder;
+
+    [SerializeField]
     [Required]
     private Transform _aim_camera_object;
+
+    private MunitionComponent _munitions;
+    public MunitionComponent Munitions => _munitions ??= gameObject.GetComponent<MunitionComponent>();
+
+    private void Start()
+    {
+        _gun_holder = GetComponentInParent<GunHolderScript>();
+        _reload_timestamp = Timestamp.Now();
+    }
 
     public void SetShoot()
     {
@@ -39,6 +55,17 @@ public class ShotComponent : MonoBehaviour
     {
         _should_shoot = false;
 
+        if (!_reload_timestamp.HasPassed())
+        {
+            return;
+        }
+
+        if (!Munitions.TryShoot())
+        {
+            Reload();
+            return;
+        }
+
         CreateShotEffect();
 
         if (!Physics.Raycast(_aim_camera_object.position, _aim_camera_object.forward, out var hit, _range))
@@ -51,13 +78,25 @@ public class ShotComponent : MonoBehaviour
         create_projectile(hit.point);
 
         hit.rigidbody?.GetComponent<Targetable>()?.Hit(new HitInfoDto
-
         {
             Damage = _damage,
             HitPosition = hit.point,
             Origin = transform.position
         });
 
+    }
+
+    public void Reload()
+    {
+        if (Munitions.IsFull())
+        {
+            return;
+        }
+
+        _reload_timestamp = Timestamp.In(_reload_time);
+
+        Munitions.Reload();
+        _gun_holder?.Reload();
     }
 
     private void create_projectile(Vector3 target_pos)
