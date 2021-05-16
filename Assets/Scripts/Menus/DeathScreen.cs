@@ -18,6 +18,6 @@ public class DeathScreen : MonoBehaviour
 
     public void Menu()
     {
-        SceneManager.LoadScene("Map");
+        SceneManager.LoadScene("Menu");
     }
 }
