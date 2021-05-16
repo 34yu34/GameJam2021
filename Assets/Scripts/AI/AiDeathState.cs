@@ -25,6 +25,9 @@ public class AiDeathState : AiState
             NavMeshAgent.ResetPath();
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
 
+            Destroy(gameObject.GetComponent<Targetable>());
+            Destroy(gameObject.GetComponent<Collider>());
+
             var killCounter = GameObject.Find("KillCounter").GetComponent<KillCount>();
             if (killCounter != null) killCounter.AddKill();
         }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Spawner : MonoBehaviour
 {
@@ -35,9 +36,28 @@ public class Spawner : MonoBehaviour
 
         if (_timestamp.HasPassed() && transform.childCount <= _numberMaxOfEnemy)
         {
-            var spawnPosition = transform.position + new Vector3(Random.Range(-_radiusSpawnable, _radiusSpawnable),transform.position.y,Random.Range(-_radiusSpawnable, _radiusSpawnable));
-            Instantiate(_enemy,spawnPosition,Quaternion.identity,transform);
-            _timestamp = null;
+            for(int i = 0; i < 100; i++)
+            {
+                Debug.DrawLine(transform.position, transform.position 
+                    + new Vector3(Random.Range(-_radiusSpawnable, _radiusSpawnable), 0f, Random.Range(-_radiusSpawnable, _radiusSpawnable)), 
+                    Color.red, 1f);
+            }
+
+            var spawn_position = transform.position + new Vector3(Random.Range(-_radiusSpawnable, _radiusSpawnable), 0f ,Random.Range(-_radiusSpawnable, _radiusSpawnable));
+
+            if (!Physics.Raycast(spawn_position, Vector3.down, out var hit))
+            {
+                Debug.Log("spawner didn't see any ground!");
+                return;
+            }
+            
+            spawn_position += Vector3.up * hit.point.y;
+
+            if (NavMesh.SamplePosition(spawn_position, out var navmesh_hit, 100f, NavMesh.AllAreas))
+            {
+                Instantiate(_enemy, navmesh_hit.position, Quaternion.identity,transform);
+                _timestamp = null;
+            }
         }
     }
 }
