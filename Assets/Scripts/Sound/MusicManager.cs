@@ -51,9 +51,15 @@ public class MusicManager : MonoBehaviour
         if (currentSceneIndex != lastSceneIndex)
         {
             if (currentSceneIndex == gameplayBuildIndex)
+            {
                 AkSoundEngine.PostEvent("Music_Gameplay_Danger_Start", gameObject);
+                AkSoundEngine.PostEvent("SFX_Environment_Wind_Start", gameObject);
+            }
             else
+            {
                 AkSoundEngine.PostEvent("Music_Gameplay_Danger_Stop", gameObject);
+                AkSoundEngine.PostEvent("SFX_Environment_Wind_Stop", gameObject);
+            }
         }
 
         if (shouldCallMusicStart)

@@ -16,9 +16,9 @@
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1321907086" Name="Bullet_Impact_Metal" ObjectPath="\Events\Default Work Unit\Bullet_Impact_Metal" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.445449" DurationMax="0.722000"/>
-				<Event Id="3328773773" Name="Bullet_Impact_Mud" ObjectPath="\Events\Default Work Unit\Bullet_Impact_Mud" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.222725" DurationMax="0.340410"/>
-				<Event Id="988755994" Name="Bullet_Impact_Wood" ObjectPath="\Events\Default Work Unit\Bullet_Impact_Wood" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.406473" DurationMax="0.678739"/>
+				<Event Id="1321907086" Name="Bullet_Impact_Metal" ObjectPath="\Events\Default Work Unit\Bullet_Impact_Metal" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.495449" DurationMax="0.772000"/>
+				<Event Id="3328773773" Name="Bullet_Impact_Mud" ObjectPath="\Events\Default Work Unit\Bullet_Impact_Mud" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.322725" DurationMax="0.440410"/>
+				<Event Id="988755994" Name="Bullet_Impact_Wood" ObjectPath="\Events\Default Work Unit\Bullet_Impact_Wood" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.506473" DurationMax="0.778739"/>
 				<Event Id="3666448085" Name="Environment_Event" ObjectPath="\Events\Default Work Unit\Environment_Event" DurationType="Mixed" DurationMin="11.719000" DurationMax="Infinite"/>
 				<Event Id="1755524482" Name="Event_Alert_Major" ObjectPath="\Events\Default Work Unit\Event_Alert_Major" DurationType="OneShot" DurationMin="4.388889" DurationMax="4.749479"/>
 				<Event Id="2941777918" Name="Event_Alert_Minor" ObjectPath="\Events\Default Work Unit\Event_Alert_Minor" DurationType="OneShot" DurationMin="4.859140" DurationMax="4.859140"/>
@@ -37,7 +37,7 @@
 				<Event Id="2503977873" Name="Sandstorm_Stop" ObjectPath="\Events\Default Work Unit\Sandstorm_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3555070956" Name="SFX_Environment_Wind_Start" ObjectPath="\Events\Default Work Unit\SFX_Environment_Wind_Start" DurationType="Infinite"/>
 				<Event Id="3290572544" Name="SFX_Environment_Wind_Stop" ObjectPath="\Events\Default Work Unit\SFX_Environment_Wind_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="1452887354" Name="SFX_UI_Click" ObjectPath="\Events\Default Work Unit\SFX_UI_Click" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000"/>
+				<Event Id="1452887354" Name="SFX_UI_Click" ObjectPath="\Events\Default Work Unit\SFX_UI_Click" DurationType="OneShot" DurationMin="3.961667" DurationMax="3.961667"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="35067713" Language="SFX">

@@ -105,20 +105,24 @@
 							<ObjectRef Name="SFX_UI_Click" ID="{94F2681E-EC44-49C9-B95A-412BCD3E4EF6}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
 							<Position X="5" Y="2"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="Pick_Ammo" ID="{09827D15-59EC-4CA2-8761-9B15C3B3C658}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
+							<Position X="5" Y="3"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="PlayerHealth" ID="{6D75F4EA-93FE-4249-83BF-451D97C0A474}"/>
-							<Value>100</Value>
+							<Value>1</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Gameplay" ID="{001F2EEC-FDF6-4F35-8226-8FAA8E06D1DC}"/>
+						<CurrentStateRef Name="MainMenu" ID="{FAF6F6BD-16B1-4308-B4FD-87ABA5C63406}"/>
 						<CurrentStateRef Name="Low" ID="{998CCD9D-1621-488D-A42B-AC2A0CFDA229}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="AssaultRifle" ID="{A17E72F6-DD68-4A8F-B161-B6F553039371}"/>
-						<CurrentSwitchRef Name="Sandstorm" ID="{8BD2157E-BDCE-479B-AFB2-F3B5BD19FAF3}"/>
+						<CurrentSwitchRef Name="Earthquake" ID="{24C37CC2-C82C-4B21-940E-4CA460B2FCC7}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

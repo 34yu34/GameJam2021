@@ -23,7 +23,7 @@ public class Targetable : MonoBehaviour
         if (hitEffect == null)
         {
             hitEffect = ShotManager.Instance.BasicEffect;
-            AkSoundEngine.PostEvent("Bullet_Impact_Wood", FindObjectOfType<Player>().gameObject);
+            AkSoundEngine.PostEvent("Bullet_Impact_Mud", FindObjectOfType<Player>().gameObject);
         }
         else
         {

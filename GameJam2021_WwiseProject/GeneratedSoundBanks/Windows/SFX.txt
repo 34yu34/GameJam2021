@@ -36,7 +36,7 @@ Switch	ID	Name	Switch Group			Notes
 	3147235103	MeteorSwarm	Event			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	35067713	UI_Click	Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\.cache\Windows\SFX\UI_Click_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI_Click		192144
+	35067713	UI_Click	Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\.cache\Windows\SFX\UI_Click_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI_Click		760784
 	50905531	Voice_Earthquake	Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\.cache\Windows\SFX\Voice_Events\Voice_Earthquake_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Events\Voice_Events\Voice_Earthquake		287744
 	60488963	Environment_Earthquake	Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\.cache\Windows\SFX\Events\Environment_Earthquake_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Events\Events\Environment_Earthquake		6579380
 	62037485	Robot_GunShoot_Pistol	Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\.cache\Windows\SFX\Robot_GunShoot_Pistol\Robot_GunShoot_Pistol_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Robot\Robot_GunShoot_Pistol\Robot_GunShoot_Pistol		140844
