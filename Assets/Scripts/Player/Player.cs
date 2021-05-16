@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Targetable))]
 [RequireComponent(typeof(Damageable))]
@@ -24,7 +25,8 @@ public class Player : MonoBehaviour
 
     private void death()
     {
-        // die here
+        GameObject.Find("GameTimer").GetComponent<GameTimer>().StopTimer();
+        SceneManager.LoadScene("Death");
         return;
     }
 
