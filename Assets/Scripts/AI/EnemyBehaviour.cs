@@ -31,6 +31,14 @@ public class EnemyBehaviour : MonoBehaviour
     private float _shot_cooldown;
     public float ShotCooldown => _shot_cooldown;
 
+    [SerializeField]
+    private float _roam_distance;
+    public float RoamDistance => _roam_distance;
+
+    [SerializeField]
+    private float _roam_time;
+    public float RoamTime => _roam_time;
+
 
     [SerializeField]
     private GameObject _player;
