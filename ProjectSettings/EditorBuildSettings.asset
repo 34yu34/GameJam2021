@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Death.unity
-    guid: a142589f9e05392489e753517ddf2353
+    path: Assets/Scenes/Menu.unity
+    guid: 2729c217986f84847bc4bb2c567f36a5
   - enabled: 1
     path: Assets/Scenes/Map.unity
     guid: fdd3394aada0401499245ade189a0410
+  - enabled: 1
+    path: Assets/Scenes/Death.unity
+    guid: a142589f9e05392489e753517ddf2353
   m_configObjects: {}

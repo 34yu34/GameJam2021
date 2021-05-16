@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
+	<RootPaths>
+		<ProjectRoot>/Users/jean-christopheduhamel/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameJam2021/GameJam2021_WwiseProject/</ProjectRoot>
+		<SourceFilesRoot>/Users/jean-christopheduhamel/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameJam2021/GameJam2021_WwiseProject/.cache/Windows/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/jean-christopheduhamel/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameJam2021/GameJam2021_WwiseProject/GeneratedSoundBanks/Windows/</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>/Users/jean-christopheduhamel/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/GameJam2021/GameJam2021_WwiseProject/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2469185595" Name="Music_EndGame_Start" ObjectPath="\Events\Default Work Unit\Music_EndGame_Start" DurationType="Infinite"/>
+				<Event Id="2528424500" Name="Music_Gameplay_Danger_Start" ObjectPath="\Events\Default Work Unit\Music_Gameplay_Danger_Start" DurationType="Infinite"/>
+				<Event Id="532737960" Name="Music_Gameplay_Danger_Stop" ObjectPath="\Events\Default Work Unit\Music_Gameplay_Danger_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3725903807" Name="Music_Start" ObjectPath="\Events\Default Work Unit\Music_Start" DurationType="Infinite"/>
+				<Event Id="3555070956" Name="SFX_Environment_Wind_Start" ObjectPath="\Events\Default Work Unit\SFX_Environment_Wind_Start" DurationType="Infinite"/>
+				<Event Id="3290572544" Name="SFX_Environment_Wind_Stop" ObjectPath="\Events\Default Work Unit\SFX_Environment_Wind_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1452887354" Name="SFX_UI_Click" ObjectPath="\Events\Default Work Unit\SFX_UI_Click" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="35067713" Language="SFX">
+					<ShortName>UI_Click.wav</ShortName>
+					<Path>SFX/UI_Click_10C4C929.wem</Path>
+				</File>
+				<File Id="81923293" Language="SFX">
+					<ShortName>NLGS_MainMenu_v1WithBeat.wav</ShortName>
+					<Path>SFX/NLGS_MainMenu_v1WithBeat_D79FB2B7.wem</Path>
+				</File>
+				<File Id="203681696" Language="SFX">
+					<ShortName>Environment_Wind.wav</ShortName>
+					<Path>SFX/Environment_Wind_1012CFA3.wem</Path>
+				</File>
+				<File Id="247936089" Language="SFX">
+					<ShortName>NLGS_EndGame1_v1.wav</ShortName>
+					<Path>SFX/NLGS_EndGame1_v1_D79FB2B7.wem</Path>
+				</File>
+				<File Id="320704465" Language="SFX">
+					<ShortName>NLGS_EndGame2_v1.wav</ShortName>
+					<Path>SFX/NLGS_EndGame2_v1_D79FB2B7.wem</Path>
+				</File>
+				<File Id="323173154" Language="SFX">
+					<ShortName>NLGS_Gameplay_v1_noDroneNoWind.wav</ShortName>
+					<Path>SFX/NLGS_Gameplay_v1_noDroneNoWind_D79FB2B7.wem</Path>
+				</File>
+				<File Id="385016927" Language="SFX">
+					<ShortName>NLGS_EndGame3_v1.wav</ShortName>
+					<Path>SFX/NLGS_EndGame3_v1_D79FB2B7.wem</Path>
+				</File>
+				<File Id="775939739" Language="SFX">
+					<ShortName>NLGS_EndGameLoop_108bpm_v1.wav</ShortName>
+					<Path>SFX/NLGS_EndGameLoop_108bpm_v1_D79FB2B7.wem</Path>
+				</File>
+				<File Id="873770560" Language="SFX">
+					<ShortName>NLGS_Gameplay_DangerPercs.wav</ShortName>
+					<Path>SFX/NLGS_Gameplay_DangerPercs_D79FB2B7.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
