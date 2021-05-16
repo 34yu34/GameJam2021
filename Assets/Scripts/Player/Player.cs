@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
     private StaminaComponent _stamina;
     public StaminaComponent Stamina => _stamina ??= GetComponent<StaminaComponent>();
 
+    private EventShower _event_shower;
+    public EventShower EventShower => _event_shower ??= GetComponentInChildren<EventShower>();
 
     // Start is called before the first frame update
     void Start()

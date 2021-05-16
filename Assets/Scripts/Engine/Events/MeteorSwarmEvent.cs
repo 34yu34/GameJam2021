@@ -12,6 +12,7 @@ namespace Assets.Scripts.Engine.Events
 
         public override bool IsMajor => false;
 
+        public override string Name => "Meteor Shower";
         public override string SoundName => "MeteorSwarm";
         
         public override void DoEvent()

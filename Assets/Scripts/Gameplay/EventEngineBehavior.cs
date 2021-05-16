@@ -49,6 +49,8 @@ public class EventEngineBehavior : MonoBehaviour
 
         Invoke(nameof(DoCurrentEvent), time_of_warning);
 
+        Camera.main.GetComponentInParent<Player>().EventShower.SetNextEvent(_event, time_of_warning);
+
         Invoke(nameof(UndoCurrentEvent), _event.DurationInSeconds + time_of_warning);
     }
 

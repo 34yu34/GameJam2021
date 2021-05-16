@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public abstract class Event : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public abstract class Event : MonoBehaviour
     [SerializeField] 
     private int _duration_in_seconds;
     public int DurationInSeconds => _duration_in_seconds;
+
+
+    public abstract string Name { get; }
 
     public abstract string SoundName { get; }
 
