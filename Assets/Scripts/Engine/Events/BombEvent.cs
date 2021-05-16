@@ -48,6 +48,7 @@ public class BombEvent : Event
 
         Knock_back_player(explosion);
 
+        Camera.main.GetComponent<CameraRenderer>().ShakeCamera(1f, 0.25f);
     }
 
     private void Knock_back_player(GameObject explosion)

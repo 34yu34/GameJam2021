@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
 
 public class CameraRenderer : MonoBehaviour
@@ -42,6 +40,32 @@ public class CameraRenderer : MonoBehaviour
 
         Graphics.Blit(source, destination, _shader_material);
         return;
+    }
+
+    public void ShakeCamera(float duration, float magnitude)
+    {
+        StartCoroutine(ShakeCameraInternal(duration, magnitude));
+    }
+
+    private IEnumerator ShakeCameraInternal(float duration, float magnitude)
+    {
+        var originalPos = transform.localPosition;
+
+        var elapsed = 0.0f;
+
+        while (elapsed < duration)
+        {
+            var x = Random.Range(-1f, 1f) * magnitude;
+            var y = Random.Range(-0.5f, 0.5f) * magnitude;
+
+            transform.localPosition += new Vector3(x, 0, y);
+
+            elapsed += Time.deltaTime;
+
+            yield return null;
+        }
+
+        transform.localPosition = originalPos;
     }
 
     private void calculate_power()

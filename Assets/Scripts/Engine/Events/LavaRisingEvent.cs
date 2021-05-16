@@ -20,6 +20,9 @@ namespace Assets.Scripts.Engine.Events
         public override void DoEvent()
         {
             ++_event_occurrences;
+
+            Camera.main.GetComponent<CameraRenderer>().ShakeCamera(2f, 0.05f);
+
             FindObjectOfType<LavaMove>().MoveUpwardsFor(_height_increases, _lava_rising_duration);
         }
 
