@@ -103,10 +103,6 @@
 					<ShortName>Player_Reload.wav</ShortName>
 					<Path>SFX/Player_Reload_10C4C929.wem</Path>
 				</File>
-				<File Id="293363968" Language="SFX">
-					<ShortName>Events\Environment_Lava.wav</ShortName>
-					<Path>SFX/Events/Environment_Lava_10C4C929.wem</Path>
-				</File>
 				<File Id="314140635" Language="SFX">
 					<ShortName>Bullet_Impact_Metal\Bullet_Impact_Metal.wav</ShortName>
 					<Path>SFX/Bullet_Impact_Metal/Bullet_Impact_Metal_10C4C929.wem</Path>
