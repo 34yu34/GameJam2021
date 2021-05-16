@@ -6,6 +6,7 @@ public class StaminaComponent : MonoBehaviour
 {
     [SerializeField]
     private float _max_stamina;
+    public float MaxStamina => _max_stamina;
 
     [SerializeField] 
     private float _stamina_usage_rate;
@@ -17,10 +18,10 @@ public class StaminaComponent : MonoBehaviour
 
     private float _current_stamina;
 
-    private float CurrentStamina
+    public float CurrentStamina
     {
         get => _current_stamina;
-        set => _current_stamina = Mathf.Clamp(value, 0f, _max_stamina);
+        private set => _current_stamina = Mathf.Clamp(value, 0f, _max_stamina);
     }
 
     private void Start()
