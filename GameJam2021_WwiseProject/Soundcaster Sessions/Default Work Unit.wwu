@@ -22,16 +22,88 @@
 							<Position X="0" Y="3"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="SFX_UI_Click" ID="{94F2681E-EC44-49C9-B95A-412BCD3E4EF6}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
+							<ObjectRef Name="Player_Walk" ID="{5AA29913-0C4F-4987-A85B-92E83EAB0404}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="SFX_Environment_Wind_Start" ID="{E0A6299D-5248-4D8C-942F-CAED7EAC4F23}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
+							<ObjectRef Name="Player_Shoot" ID="{FE3910F7-E903-43CD-A172-E1843CB367D5}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Player_Heal" ID="{AFBC1413-C3A8-430F-969C-5272E54A9500}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Player_Hurt" ID="{84E4D1B0-307E-43A2-897D-0689F50B0315}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
+							<Position X="1" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Player_Jump" ID="{E0AED598-DBDA-46FF-BB7D-866C1E253354}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
+							<Position X="1" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Player_Land" ID="{E56AB195-FD6A-4074-A88A-9F61B6A8ED1C}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
+							<Position X="1" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Player_Reload" ID="{77473506-157D-40A1-BEFC-B7D504967ECB}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
+							<Position X="1" Y="6"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Robot_Die" ID="{66995C22-8221-4640-8184-2119CE098424}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
 							<Position X="2" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="SFX_Environment_Wind_Stop" ID="{82848DC8-5E86-423F-BCB6-DF084766371E}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
+							<ObjectRef Name="Robot_Shoot" ID="{3F729627-6F54-4EFA-8332-5557B89CBBE6}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
 							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Robot_Hurt" ID="{B9DEDE5D-0552-4BEA-A454-958DDCF55DEC}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Robot_Walk" ID="{13284BAE-862A-47C1-B276-04E9FC048922}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
+							<Position X="2" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Bullet_Impact_Metal" ID="{75A7D594-90B5-4FBD-9693-F9EB73C2D6CB}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Bullet_Impact_Mud" ID="{DC31CF67-0111-4568-89E8-F360973517C4}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Bullet_Impact_Wood" ID="{C0EC5EA2-677E-43E0-93AB-72691AAB711D}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Event_Alert_Major" ID="{003E66B4-5939-47CF-BFAE-839D1AB26B8F}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Event_Alert_Minor" ID="{326432B3-0B51-4B2A-A759-770B5919D11B}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Environment_Event" ID="{7ADD57D3-DA55-48E6-8C6F-E1E7310D32DA}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
+							<Position X="4" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Sandstorm_Stop" ID="{4D0A2F14-DFD1-4161-B9F2-C8C0B6870B36}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
+							<Position X="4" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SFX_Environment_Wind_Start" ID="{E0A6299D-5248-4D8C-942F-CAED7EAC4F23}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
+							<Position X="5" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SFX_Environment_Wind_Stop" ID="{82848DC8-5E86-423F-BCB6-DF084766371E}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
+							<Position X="5" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SFX_UI_Click" ID="{94F2681E-EC44-49C9-B95A-412BCD3E4EF6}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
+							<Position X="5" Y="2"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
@@ -44,7 +116,10 @@
 						<CurrentStateRef Name="Gameplay" ID="{001F2EEC-FDF6-4F35-8226-8FAA8E06D1DC}"/>
 						<CurrentStateRef Name="Low" ID="{998CCD9D-1621-488D-A42B-AC2A0CFDA229}"/>
 					</CurrentStateList>
-					<CurrentSwitchList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="AssaultRifle" ID="{A17E72F6-DD68-4A8F-B161-B6F553039371}"/>
+						<CurrentSwitchRef Name="Sandstorm" ID="{8BD2157E-BDCE-479B-AFB2-F3B5BD19FAF3}"/>
+					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>

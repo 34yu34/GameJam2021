@@ -36,7 +36,7 @@ public class EventEngine : MonoBehaviour
         MAJOR_EVENT_MAX_INDEX = settings.MajorEventMaxIndex;
     }
 
-    public EventResponse TryDoNextEvent()
+    public EventResponse TryGetNextEvent()
     {
         if (_next_event_timestamp == null)
         {
@@ -44,7 +44,7 @@ public class EventEngine : MonoBehaviour
 
             return new EventResponse
             {
-                EventWasTriggered = false
+                EventIsReady = false
             };
         }
 
@@ -52,7 +52,7 @@ public class EventEngine : MonoBehaviour
         {
             return new EventResponse
             {
-                EventWasTriggered = false
+                EventIsReady = false
             };
         }
 
@@ -66,18 +66,16 @@ public class EventEngine : MonoBehaviour
         {
             return new EventResponse
             {
-                EventWasTriggered = false
+                EventIsReady = false
             };
         }
-
-        _current_event.DoEvent();
 
         SetNextEventTimestamp();
 
         return new EventResponse
         {
-            EventDurationInSeconds = _current_event.DurationInSeconds,
-            EventWasTriggered = true
+            EventIsReady = true,
+            Event = _current_event
         };
     }
 
@@ -168,7 +166,7 @@ public class EventEngineSettingDto
 
 public class EventResponse
 {
-    public bool EventWasTriggered { get; set; }
+    public bool EventIsReady { get; set; }
 
-    public int EventDurationInSeconds { get; set; }
+    public Event Event { get; set; }
 }

@@ -10,6 +10,8 @@ namespace Assets.Scripts.Engine.Events
 
         public override bool IsMajor => false;
 
+        public override string SoundName => "Sandstorm";
+
         public override void DoEvent()
         {
             Debug.Log($"{this.GetType().Name} on DoEvent");
@@ -23,6 +25,8 @@ namespace Assets.Scripts.Engine.Events
         public override void UndoEvent()
         {
             Debug.Log($"{this.GetType().Name} on UndoEvent");
+            AkSoundEngine.PostEvent("Sandstorm_Stop", gameObject);
+
             var player = FindObjectOfType<Player>();
 
             player.GetComponent<Move>().SetNormalSpeed();

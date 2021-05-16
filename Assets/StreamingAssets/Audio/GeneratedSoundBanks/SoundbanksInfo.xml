@@ -11,20 +11,29 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX">
-			<ObjectPath>Init</ObjectPath>
-			<ShortName>Init</ShortName>
-			<Path>Init.bnk</Path>
-		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX">
-			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
-			<ShortName>Main</ShortName>
-			<Path>Main.bnk</Path>
+		<SoundBank Id="393239870" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
+			<ShortName>SFX</ShortName>
+			<Path>SFX.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2469185595" Name="Music_EndGame_Start" ObjectPath="\Events\Default Work Unit\Music_EndGame_Start" DurationType="Infinite"/>
-				<Event Id="2528424500" Name="Music_Gameplay_Danger_Start" ObjectPath="\Events\Default Work Unit\Music_Gameplay_Danger_Start" DurationType="Infinite"/>
-				<Event Id="532737960" Name="Music_Gameplay_Danger_Stop" ObjectPath="\Events\Default Work Unit\Music_Gameplay_Danger_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="3725903807" Name="Music_Start" ObjectPath="\Events\Default Work Unit\Music_Start" DurationType="Infinite"/>
+				<Event Id="1321907086" Name="Bullet_Impact_Metal" ObjectPath="\Events\Default Work Unit\Bullet_Impact_Metal" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.445449" DurationMax="0.722000"/>
+				<Event Id="3328773773" Name="Bullet_Impact_Mud" ObjectPath="\Events\Default Work Unit\Bullet_Impact_Mud" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.222725" DurationMax="0.340410"/>
+				<Event Id="988755994" Name="Bullet_Impact_Wood" ObjectPath="\Events\Default Work Unit\Bullet_Impact_Wood" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.406473" DurationMax="0.678739"/>
+				<Event Id="3666448085" Name="Environment_Event" ObjectPath="\Events\Default Work Unit\Environment_Event" DurationType="Mixed" DurationMin="11.719000" DurationMax="Infinite"/>
+				<Event Id="1755524482" Name="Event_Alert_Major" ObjectPath="\Events\Default Work Unit\Event_Alert_Major" DurationType="OneShot" DurationMin="4.388889" DurationMax="4.749479"/>
+				<Event Id="2941777918" Name="Event_Alert_Minor" ObjectPath="\Events\Default Work Unit\Event_Alert_Minor" DurationType="OneShot" DurationMin="4.859140" DurationMax="4.859140"/>
+				<Event Id="780312891" Name="Player_Heal" ObjectPath="\Events\Default Work Unit\Player_Heal" DurationType="OneShot" DurationMin="2.470133" DurationMax="3.493296"/>
+				<Event Id="1068092414" Name="Player_Hurt" ObjectPath="\Events\Default Work Unit\Player_Hurt" DurationType="OneShot" DurationMin="0.752435" DurationMax="1.145827"/>
+				<Event Id="1305133589" Name="Player_Jump" ObjectPath="\Events\Default Work Unit\Player_Jump" DurationType="OneShot" DurationMin="0.266077" DurationMax="0.376289"/>
+				<Event Id="3629196698" Name="Player_Land" ObjectPath="\Events\Default Work Unit\Player_Land" DurationType="OneShot" DurationMin="0.500445" DurationMax="0.707736"/>
+				<Event Id="1650679582" Name="Player_Reload" ObjectPath="\Events\Default Work Unit\Player_Reload" DurationType="OneShot" DurationMin="0.991589" DurationMax="1.249324"/>
+				<Event Id="4004702906" Name="Player_Shoot" ObjectPath="\Events\Default Work Unit\Player_Shoot" DurationType="OneShot" DurationMin="1.060262" DurationMax="2.436093"/>
+				<Event Id="2147561130" Name="Player_Walk" ObjectPath="\Events\Default Work Unit\Player_Walk" DurationType="OneShot" DurationMin="0.477606" DurationMax="0.613411"/>
+				<Event Id="3481114272" Name="Robot_Die" ObjectPath="\Events\Default Work Unit\Robot_Die" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.738239" DurationMax="0.959939"/>
+				<Event Id="2770458161" Name="Robot_Hurt" ObjectPath="\Events\Default Work Unit\Robot_Hurt" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="1.186056" DurationMax="1.758904"/>
+				<Event Id="2130607615" Name="Robot_Shoot" ObjectPath="\Events\Default Work Unit\Robot_Shoot" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.671992" DurationMax="1.273895"/>
+				<Event Id="825506301" Name="Robot_Walk" ObjectPath="\Events\Default Work Unit\Robot_Walk" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.117394" DurationMax="0.151415"/>
+				<Event Id="2503977873" Name="Sandstorm_Stop" ObjectPath="\Events\Default Work Unit\Sandstorm_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3555070956" Name="SFX_Environment_Wind_Start" ObjectPath="\Events\Default Work Unit\SFX_Environment_Wind_Start" DurationType="Infinite"/>
 				<Event Id="3290572544" Name="SFX_Environment_Wind_Stop" ObjectPath="\Events\Default Work Unit\SFX_Environment_Wind_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1452887354" Name="SFX_UI_Click" ObjectPath="\Events\Default Work Unit\SFX_UI_Click" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000"/>
@@ -34,13 +43,243 @@
 					<ShortName>UI_Click.wav</ShortName>
 					<Path>SFX/UI_Click_10C4C929.wem</Path>
 				</File>
-				<File Id="81923293" Language="SFX">
-					<ShortName>NLGS_MainMenu_v1WithBeat.wav</ShortName>
-					<Path>SFX/NLGS_MainMenu_v1WithBeat_D79FB2B7.wem</Path>
+				<File Id="50905531" Language="SFX">
+					<ShortName>Voice_Events\Voice_Earthquake.wav</ShortName>
+					<Path>SFX/Voice_Events/Voice_Earthquake_10C4C929.wem</Path>
+				</File>
+				<File Id="60488963" Language="SFX">
+					<ShortName>Events\Environment_Earthquake.wav</ShortName>
+					<Path>SFX/Events/Environment_Earthquake_10C4C929.wem</Path>
+				</File>
+				<File Id="62037485" Language="SFX">
+					<ShortName>Robot_GunShoot_Pistol\Robot_GunShoot_Pistol.wav</ShortName>
+					<Path>SFX/Robot_GunShoot_Pistol/Robot_GunShoot_Pistol_10C4C929.wem</Path>
+				</File>
+				<File Id="119725822" Language="SFX">
+					<ShortName>SFX_Evenement Mineur.wav</ShortName>
+					<Path>SFX/SFX_Evenement Mineur_988D48DC.wem</Path>
+				</File>
+				<File Id="138324406" Language="SFX">
+					<ShortName>Player_Heal.wav</ShortName>
+					<Path>SFX/Player_Heal_10C4C929.wem</Path>
+				</File>
+				<File Id="157987406" Language="SFX">
+					<ShortName>Voice_Events\Voice_Sandstorm.wav</ShortName>
+					<Path>SFX/Voice_Events/Voice_Sandstorm_10C4C929.wem</Path>
+				</File>
+				<File Id="198771312" Language="SFX">
+					<ShortName>Player_Hurt\Player_Hurt_5.wav</ShortName>
+					<Path>SFX/Player_Hurt/Player_Hurt_5_10C4C929.wem</Path>
 				</File>
 				<File Id="203681696" Language="SFX">
 					<ShortName>Environment_Wind.wav</ShortName>
-					<Path>SFX/Environment_Wind_92892C89.wem</Path>
+					<Path>SFX/Environment_Wind_1012CFA3.wem</Path>
+				</File>
+				<File Id="226708070" Language="SFX">
+					<ShortName>Robot_Die\Robot_Die_2.wav</ShortName>
+					<Path>SFX/Robot_Die/Robot_Die_2_10C4C929.wem</Path>
+				</File>
+				<File Id="228019174" Language="SFX">
+					<ShortName>Player_Jump.wav</ShortName>
+					<Path>SFX/Player_Jump_123CA308.wem</Path>
+				</File>
+				<File Id="229417389" Language="SFX">
+					<ShortName>Player_Footsteps\Player_Footsteps_1.wav</ShortName>
+					<Path>SFX/Player_Footsteps/Player_Footsteps_1_10C4C929.wem</Path>
+				</File>
+				<File Id="257757521" Language="SFX">
+					<ShortName>Robot_Hurt\Robot_Hurt_1.wav</ShortName>
+					<Path>SFX/Robot_Hurt/Robot_Hurt_1_10C4C929.wem</Path>
+				</File>
+				<File Id="263917526" Language="SFX">
+					<ShortName>Events\Environment_Sandstorm.wav</ShortName>
+					<Path>SFX/Events/Environment_Sandstorm_6AC9F016.wem</Path>
+				</File>
+				<File Id="269762572" Language="SFX">
+					<ShortName>Robot_GunShoot_Pistol\Robot_GunShoot_Pistol_2.wav</ShortName>
+					<Path>SFX/Robot_GunShoot_Pistol/Robot_GunShoot_Pistol_2_10C4C929.wem</Path>
+				</File>
+				<File Id="271386171" Language="SFX">
+					<ShortName>Player_Reload.wav</ShortName>
+					<Path>SFX/Player_Reload_10C4C929.wem</Path>
+				</File>
+				<File Id="314140635" Language="SFX">
+					<ShortName>Bullet_Impact_Metal\Bullet_Impact_Metal.wav</ShortName>
+					<Path>SFX/Bullet_Impact_Metal/Bullet_Impact_Metal_10C4C929.wem</Path>
+				</File>
+				<File Id="321299980" Language="SFX">
+					<ShortName>Robot_Hurt\Robot_Hurt.wav</ShortName>
+					<Path>SFX/Robot_Hurt/Robot_Hurt_10C4C929.wem</Path>
+				</File>
+				<File Id="343787144" Language="SFX">
+					<ShortName>Robot_Die\Robot_Die.wav</ShortName>
+					<Path>SFX/Robot_Die/Robot_Die_10C4C929.wem</Path>
+				</File>
+				<File Id="374138552" Language="SFX">
+					<ShortName>Bullet_Impact_Wood\Bullet_Impact_Wood_1.wav</ShortName>
+					<Path>SFX/Bullet_Impact_Wood/Bullet_Impact_Wood_1_10C4C929.wem</Path>
+				</File>
+				<File Id="389524188" Language="SFX">
+					<ShortName>Robot_Walk\Robot_Walk_1.wav</ShortName>
+					<Path>SFX/Robot_Walk/Robot_Walk_1_10C4C929.wem</Path>
+				</File>
+				<File Id="406122204" Language="SFX">
+					<ShortName>Bullet_Impact_Mud\Bullet_Impact_Mud.wav</ShortName>
+					<Path>SFX/Bullet_Impact_Mud/Bullet_Impact_Mud_10C4C929.wem</Path>
+				</File>
+				<File Id="411246786" Language="SFX">
+					<ShortName>Player_GunShoot_AssaultRifle\Player_GunShoot_AssaultRifle_2.wav</ShortName>
+					<Path>SFX/Player_GunShoot_AssaultRifle/Player_GunShoot_AssaultRifle_2_10C4C929.wem</Path>
+				</File>
+				<File Id="422573147" Language="SFX">
+					<ShortName>Player_Hurt\Player_Hurt_1.wav</ShortName>
+					<Path>SFX/Player_Hurt/Player_Hurt_1_10C4C929.wem</Path>
+				</File>
+				<File Id="444562783" Language="SFX">
+					<ShortName>Player_Footsteps\Player_Footsteps_4.wav</ShortName>
+					<Path>SFX/Player_Footsteps/Player_Footsteps_4_10C4C929.wem</Path>
+				</File>
+				<File Id="451136198" Language="SFX">
+					<ShortName>Player_Hurt\Player_Hurt_2.wav</ShortName>
+					<Path>SFX/Player_Hurt/Player_Hurt_2_10C4C929.wem</Path>
+				</File>
+				<File Id="451466327" Language="SFX">
+					<ShortName>Robot_GunShoot_Pistol\Robot_GunShoot_Pistol_1.wav</ShortName>
+					<Path>SFX/Robot_GunShoot_Pistol/Robot_GunShoot_Pistol_1_10C4C929.wem</Path>
+				</File>
+				<File Id="466540877" Language="SFX">
+					<ShortName>Player_GunShoot_AssaultRifle\Player_GunShoot_AssaultRifle_1.wav</ShortName>
+					<Path>SFX/Player_GunShoot_AssaultRifle/Player_GunShoot_AssaultRifle_1_10C4C929.wem</Path>
+				</File>
+				<File Id="487566496" Language="SFX">
+					<ShortName>Player_Land.wav</ShortName>
+					<Path>SFX/Player_Land_10C4C929.wem</Path>
+				</File>
+				<File Id="500007473" Language="SFX">
+					<ShortName>Bullet_Impact_Wood\Bullet_Impact_Wood.wav</ShortName>
+					<Path>SFX/Bullet_Impact_Wood/Bullet_Impact_Wood_10C4C929.wem</Path>
+				</File>
+				<File Id="526664765" Language="SFX">
+					<ShortName>Events\Environment_MeteorSwarm.wav</ShortName>
+					<Path>SFX/Events/Environment_MeteorSwarm_10C4C929.wem</Path>
+				</File>
+				<File Id="546331345" Language="SFX">
+					<ShortName>Player_Footsteps\Player_Footsteps.wav</ShortName>
+					<Path>SFX/Player_Footsteps/Player_Footsteps_10C4C929.wem</Path>
+				</File>
+				<File Id="548913644" Language="SFX">
+					<ShortName>Player_Hurt\Player_Hurt_4.wav</ShortName>
+					<Path>SFX/Player_Hurt/Player_Hurt_4_10C4C929.wem</Path>
+				</File>
+				<File Id="591979239" Language="SFX">
+					<ShortName>Bullet_Impact_Mud\Bullet_Impact_Mud_1.wav</ShortName>
+					<Path>SFX/Bullet_Impact_Mud/Bullet_Impact_Mud_1_10C4C929.wem</Path>
+				</File>
+				<File Id="607149999" Language="SFX">
+					<ShortName>Voice_Events\Voice_NuclearBomb.wav</ShortName>
+					<Path>SFX/Voice_Events/Voice_NuclearBomb_10C4C929.wem</Path>
+				</File>
+				<File Id="609998197" Language="SFX">
+					<ShortName>Bullet_Impact_Wood\Bullet_Impact_Wood_2.wav</ShortName>
+					<Path>SFX/Bullet_Impact_Wood/Bullet_Impact_Wood_2_10C4C929.wem</Path>
+				</File>
+				<File Id="611406218" Language="SFX">
+					<ShortName>Player_GunShoot_Pistol\Player_GunShoot_Pistol_1.wav</ShortName>
+					<Path>SFX/Player_GunShoot_Pistol/Player_GunShoot_Pistol_1_10C4C929.wem</Path>
+				</File>
+				<File Id="619107595" Language="SFX">
+					<ShortName>Voice_Events\Voice_MeteorSwarm.wav</ShortName>
+					<Path>SFX/Voice_Events/Voice_MeteorSwarm_10C4C929.wem</Path>
+				</File>
+				<File Id="660872902" Language="SFX">
+					<ShortName>Robot_Die\Robot_Die_1.wav</ShortName>
+					<Path>SFX/Robot_Die/Robot_Die_1_10C4C929.wem</Path>
+				</File>
+				<File Id="692057471" Language="SFX">
+					<ShortName>Robot_Walk\Robot_Walk_3.wav</ShortName>
+					<Path>SFX/Robot_Walk/Robot_Walk_3_10C4C929.wem</Path>
+				</File>
+				<File Id="715299030" Language="SFX">
+					<ShortName>Bullet_Impact_Mud\Bullet_Impact_Mud_2.wav</ShortName>
+					<Path>SFX/Bullet_Impact_Mud/Bullet_Impact_Mud_2_10C4C929.wem</Path>
+				</File>
+				<File Id="724265012" Language="SFX">
+					<ShortName>Player_Footsteps\Player_Footsteps_3.wav</ShortName>
+					<Path>SFX/Player_Footsteps/Player_Footsteps_3_10C4C929.wem</Path>
+				</File>
+				<File Id="740442603" Language="SFX">
+					<ShortName>Player_GunShoot_Pistol\Player_GunShoot_Pistol.wav</ShortName>
+					<Path>SFX/Player_GunShoot_Pistol/Player_GunShoot_Pistol_10C4C929.wem</Path>
+				</File>
+				<File Id="741103954" Language="SFX">
+					<ShortName>Robot_Walk\Robot_Walk_2.wav</ShortName>
+					<Path>SFX/Robot_Walk/Robot_Walk_2_10C4C929.wem</Path>
+				</File>
+				<File Id="777196075" Language="SFX">
+					<ShortName>Bullet_Impact_Metal\Bullet_Impact_Metal_2.wav</ShortName>
+					<Path>SFX/Bullet_Impact_Metal/Bullet_Impact_Metal_2_10C4C929.wem</Path>
+				</File>
+				<File Id="778742628" Language="SFX">
+					<ShortName>Voice_Events\Voice_Lava.wav</ShortName>
+					<Path>SFX/Voice_Events/Voice_Lava_10C4C929.wem</Path>
+				</File>
+				<File Id="809780109" Language="SFX">
+					<ShortName>Robot_GunShoot_Pistol\Robot_GunShoot_Pistol_3.wav</ShortName>
+					<Path>SFX/Robot_GunShoot_Pistol/Robot_GunShoot_Pistol_3_10C4C929.wem</Path>
+				</File>
+				<File Id="842514672" Language="SFX">
+					<ShortName>Player_GunShoot_AssaultRifle\Player_GunShoot_AssaultRifle.wav</ShortName>
+					<Path>SFX/Player_GunShoot_AssaultRifle/Player_GunShoot_AssaultRifle_10C4C929.wem</Path>
+				</File>
+				<File Id="865377599" Language="SFX">
+					<ShortName>Player_Footsteps\Player_Footsteps_2.wav</ShortName>
+					<Path>SFX/Player_Footsteps/Player_Footsteps_2_10C4C929.wem</Path>
+				</File>
+				<File Id="946861382" Language="SFX">
+					<ShortName>Events\Environment_NuclearExplosion.wav</ShortName>
+					<Path>SFX/Events/Environment_NuclearExplosion_10C4C929.wem</Path>
+				</File>
+				<File Id="962029046" Language="SFX">
+					<ShortName>Player_Hurt\Player_Hurt_3.wav</ShortName>
+					<Path>SFX/Player_Hurt/Player_Hurt_3_10C4C929.wem</Path>
+				</File>
+				<File Id="1035606782" Language="SFX">
+					<ShortName>Player_Hurt\Player_Hurt.wav</ShortName>
+					<Path>SFX/Player_Hurt/Player_Hurt_10C4C929.wem</Path>
+				</File>
+				<File Id="1039228193" Language="SFX">
+					<ShortName>SFX_Evenement Majeur.wav</ShortName>
+					<Path>SFX/SFX_Evenement Majeur_BDFD73D5.wem</Path>
+				</File>
+				<File Id="1051214489" Language="SFX">
+					<ShortName>Bullet_Impact_Metal\Bullet_Impact_Metal_1.wav</ShortName>
+					<Path>SFX/Bullet_Impact_Metal/Bullet_Impact_Metal_1_10C4C929.wem</Path>
+				</File>
+				<File Id="1065082700" Language="SFX">
+					<ShortName>Robot_Walk\Robot_Walk.wav</ShortName>
+					<Path>SFX/Robot_Walk/Robot_Walk_10C4C929.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3991942870" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
+			<ShortName>Music</ShortName>
+			<Path>Music.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2469185595" Name="Music_EndGame_Start" ObjectPath="\Events\Default Work Unit\Music_EndGame_Start" DurationType="Infinite"/>
+				<Event Id="2528424500" Name="Music_Gameplay_Danger_Start" ObjectPath="\Events\Default Work Unit\Music_Gameplay_Danger_Start" DurationType="Infinite"/>
+				<Event Id="532737960" Name="Music_Gameplay_Danger_Stop" ObjectPath="\Events\Default Work Unit\Music_Gameplay_Danger_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3725903807" Name="Music_Start" ObjectPath="\Events\Default Work Unit\Music_Start" DurationType="Infinite"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="81923293" Language="SFX">
+					<ShortName>NLGS_MainMenu_v1WithBeat.wav</ShortName>
+					<Path>SFX/NLGS_MainMenu_v1WithBeat_D79FB2B7.wem</Path>
 				</File>
 				<File Id="247936089" Language="SFX">
 					<ShortName>NLGS_EndGame1_v1.wav</ShortName>

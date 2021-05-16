@@ -20,6 +20,7 @@ public class WwiseSoundbankManager : MonoBehaviour
 
     private void OnEnable()
     {
-        AkBankManager.LoadBank("Main", false, false);
+        AkBankManager.LoadBank("Music", false, false);
+        AkBankManager.LoadBank("SFX", false, false);
     }
 }

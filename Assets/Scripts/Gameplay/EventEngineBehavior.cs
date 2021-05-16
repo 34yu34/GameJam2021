@@ -4,6 +4,8 @@ public class EventEngineBehavior : MonoBehaviour
 {
     private EventEngine _event_engine;
 
+    private Event _event;
+
     [SerializeField]
     private int _minSecondsUntilEvent = 5;
 
@@ -15,6 +17,8 @@ public class EventEngineBehavior : MonoBehaviour
 
     [SerializeField]
     private int _majorEventMaxIndex = 5;
+
+    [SerializeField] private float time_of_warning = 25;
 
     public void Start()
     {
@@ -33,11 +37,26 @@ public class EventEngineBehavior : MonoBehaviour
 
     public void Update()
     {
-        var response = _event_engine.TryDoNextEvent();
+        var response = _event_engine.TryGetNextEvent();
 
-        if (!response.EventWasTriggered) return;
+        if (!response.EventIsReady) return;
 
-        Invoke(nameof(UndoCurrentEvent), response.EventDurationInSeconds);
+        _event = response.Event;
+
+        AkSoundEngine.SetSwitch("Event", _event.SoundName, gameObject);
+
+        AkSoundEngine.PostEvent(_event.IsMajor ? "Event_Alert_Major" : "Event_Alert_Minor", gameObject);
+
+        Invoke(nameof(DoCurrentEvent), time_of_warning);
+
+        Invoke(nameof(UndoCurrentEvent), _event.DurationInSeconds + time_of_warning);
+    }
+
+    private void DoCurrentEvent()
+    {
+        AkSoundEngine.PostEvent("Environment_Event", gameObject);
+
+        _event.DoEvent();
     }
 
     private void UndoCurrentEvent()

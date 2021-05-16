@@ -17,6 +17,8 @@ namespace Assets.Scripts.Engine.Events
         [SerializeField]
         private float _height_increases = 0.1f;
 
+        public override string SoundName => "Lava";
+
         public override void DoEvent()
         {
             ++_event_occurrences;

@@ -47,7 +47,7 @@ MonoBehaviour:
   _numberMaxOfEnemy: 2
   _radiusSpawnable: 2
   _frequence: 5
-  _enemy: {fileID: 4254726130396731687, guid: edf36c411044cfa46bd4c20f6c2cbf5a, type: 3}
+  _enemy: {fileID: 4254726130396731687, guid: c0b4177eb62c76740abfd250dd304fd5, type: 3}
 --- !u!64 &6195393795714691068
 MeshCollider:
   m_ObjectHideFlags: 0

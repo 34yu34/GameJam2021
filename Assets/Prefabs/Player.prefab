@@ -206,8 +206,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2844436847507411009}
   - component: {fileID: 2844436847507411008}
-  - component: {fileID: 2844436847507411011}
   - component: {fileID: 4864774200788636463}
+  - component: {fileID: 717985928}
+  - component: {fileID: 637422313}
+  - component: {fileID: 637422314}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -273,14 +275,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &2844436847507411011
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2844436847507411010}
-  m_Enabled: 1
 --- !u!114 &4864774200788636463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,6 +287,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f309be83787de641a608d11c83aac72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &717985928
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2844436847507411010}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &637422313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2844436847507411010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 637e05288bd284e8d86ebb92e6c9ef57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  listenerId: 0
+--- !u!114 &637422314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2844436847507411010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0171bdaa2e9542adbee42f8a336d93f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &2844436848521744573
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,6 +494,7 @@ MonoBehaviour:
   _slow_sprint_speed: 1
   _slow_speed: 0.5
   _time_to_sprint_speed: 0.5
+  _walk_sfx_speed: 2
 --- !u!114 &2844436848525014091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -754,7 +798,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 98.599976, y: -56.899994}
+  m_AnchoredPosition: {x: 98.599976, y: -56.900024}
   m_SizeDelta: {x: 180, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2149296625233241875
@@ -895,7 +939,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 9.999695, y: 17.000122}
+  m_AnchoredPosition: {x: 9.999756, y: 17.000122}
   m_SizeDelta: {x: 300, y: 30}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &5897629059742958235
