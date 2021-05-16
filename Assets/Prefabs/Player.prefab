@@ -173,7 +173,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.2
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -365,8 +365,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66b01efe4c56d8a43a70a4675f24b40f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sprint_speed: 4.5
-  _normal_speed: 2
+  _sprint_speed: 12
+  _normal_speed: 4
   _slow_sprint_speed: 1
   _slow_speed: 0.5
   _time_to_sprint_speed: 0.5
@@ -1003,7 +1003,7 @@ Canvas:
   m_GameObject: {fileID: 8107345985752065397}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 2844436847507411008}
   m_PlaneDistance: 0.3
   m_PixelPerfect: 0
@@ -1062,6 +1062,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3816558089917760343}
     m_Modifications:
+    - target: {fileID: 1677206980391772012, guid: 73a093f6541e5794f9c5994b6c7ff30d, type: 3}
+      propertyPath: _magazine_size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2519506405129742660, guid: 73a093f6541e5794f9c5994b6c7ff30d, type: 3}
+      propertyPath: _aim_camera_object
+      value: 
+      objectReference: {fileID: 2844436847507411009}
+    - target: {fileID: 2519506405129742662, guid: 73a093f6541e5794f9c5994b6c7ff30d, type: 3}
+      propertyPath: m_Name
+      value: GunM1911
+      objectReference: {fileID: 0}
     - target: {fileID: -508359634471575229, guid: 10a36f84b16da8249b272f3b3106e8eb, type: 3}
       propertyPath: _aim_camera_object
       value: 
@@ -1101,18 +1113,6 @@ PrefabInstance:
     - target: {fileID: 8211284551073632290, guid: 10a36f84b16da8249b272f3b3106e8eb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1677206980391772012, guid: 73a093f6541e5794f9c5994b6c7ff30d, type: 3}
-      propertyPath: _magazine_size
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2519506405129742660, guid: 73a093f6541e5794f9c5994b6c7ff30d, type: 3}
-      propertyPath: _aim_camera_object
-      value: 
-      objectReference: {fileID: 2844436847507411009}
-    - target: {fileID: 2519506405129742662, guid: 73a093f6541e5794f9c5994b6c7ff30d, type: 3}
-      propertyPath: m_Name
-      value: GunM1911
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10a36f84b16da8249b272f3b3106e8eb, type: 3}
