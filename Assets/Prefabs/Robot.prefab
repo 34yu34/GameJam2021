@@ -80,7 +80,6 @@ MonoBehaviour:
   _shot_cooldown: 2
   _roam_distance: 10
   _roam_time: 10
-  _player: {fileID: 0}
 --- !u!54 &4254726130396731685
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -176,6 +175,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7752225709043471218}
     m_Modifications:
+    - target: {fileID: 1677206980391772012, guid: 73a093f6541e5794f9c5994b6c7ff30d, type: 3}
+      propertyPath: _has_infinite_ammo
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2519506405129742660, guid: 73a093f6541e5794f9c5994b6c7ff30d, type: 3}
       propertyPath: _aim_camera_object
       value: 
