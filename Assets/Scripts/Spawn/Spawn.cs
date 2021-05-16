@@ -18,12 +18,17 @@ public class Spawn : MonoBehaviour
     private float _lifetime;
     public float Lifetime => _lifetime;
 
+    [SerializeField]
+    bool _is_eternal = false;
 
     private void  Start()
     {
         var collider = GetComponent<BoxCollider>();
         collider.isTrigger = true;
-        Destroy(gameObject, Lifetime);
+        if (!_is_eternal)
+        {
+            Destroy(gameObject, Lifetime);
+        }
     }
 
     private void OnTriggerEnter(Collider collider)
