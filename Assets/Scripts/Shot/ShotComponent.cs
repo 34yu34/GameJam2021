@@ -70,12 +70,12 @@ public class ShotComponent : MonoBehaviour
 
         if (!Physics.Raycast(_aim_camera_object.position, _aim_camera_object.forward, out var hit, _range))
         {
-            create_projectile(_aim_camera_object.position + _aim_camera_object.forward * _range);
+            create_projectile(_aim_camera_object.position + _aim_camera_object.forward * _range, _aim_camera_object.forward);
 
             return;
         }
         
-        create_projectile(hit.point);
+        create_projectile(hit.point, (hit.point - _aim_camera_object.position).normalized);
 
         hit.rigidbody?.GetComponent<Targetable>()?.Hit(new HitInfoDto
         {
@@ -98,16 +98,16 @@ public class ShotComponent : MonoBehaviour
         Munitions.Reload();
         _gun_holder?.Reload();
     }
-
-    private void create_projectile(Vector3 target_pos)
+    
+    private void create_projectile(Vector3 target_pos, Vector3 direction)
     {
         var projectile = Instantiate(_projectile);
 
         projectile.transform.position = this.transform.position;
 
-        projectile.transform.LookAt(transform.position + transform.forward);
+        projectile.transform.LookAt(transform.position + direction);
 
-        projectile.Launch(transform.forward, target_pos);
+        projectile.Launch(direction, target_pos);
     }
 
     private void CreateShotEffect()
