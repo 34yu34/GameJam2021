@@ -50,6 +50,7 @@ MonoBehaviour:
   _maxSecondsUntilEvent: 180
   _majorEventMinIndex: 3
   _majorEventMaxIndex: 4
+  time_of_warning: 25
 --- !u!114 &3417018554349410137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,6 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4247f651c7bc4145b37d8a7d7e4442b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawn_chances: 0.2
+  _spawn_chances: 0.4
   _spawnables:
-  - {fileID: 6904975601117048835, guid: fc619d70a71aa644b80e5a165cd25499, type: 3}
+  - {fileID: 1190099144213314130, guid: 4744d8827b4b4ff41be0030e8be9980f, type: 3}
+  - {fileID: 4787687355983359497, guid: e6c4248b2f1c3274793bc5ac473eee9b, type: 3}
