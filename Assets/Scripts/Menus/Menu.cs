@@ -6,7 +6,7 @@ public class Menu : MonoBehaviour
 {
     public void Play()
     {
-        SceneManager.LoadScene("Map");
+        SceneManager.LoadScene("Intro");
     }
 
     public void Quit()
