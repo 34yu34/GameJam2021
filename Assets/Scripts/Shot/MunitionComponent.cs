@@ -69,6 +69,8 @@ public class MunitionComponent : MonoBehaviour
     public void GiveAmmo(int ammout)
     {
         LeftOverAmmo += ammout;
+
+        AkSoundEngine.PostEvent("Pick_Ammo", gameObject);
     }
 
     public bool IsFull()

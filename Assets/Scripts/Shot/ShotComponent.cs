@@ -66,7 +66,14 @@ public class ShotComponent : MonoBehaviour
             return;
         }
 
-        AkSoundEngine.PostEvent("Player_Shoot", gameObject);
+        if (gameObject.GetComponentInParent<Player>() != null)
+        {
+            AkSoundEngine.PostEvent("Player_Shoot", gameObject);
+        }
+        else if (gameObject.GetComponent<EnemyBehaviour>() != null)
+        {
+            AkSoundEngine.PostEvent("Robot_Shoot", gameObject);
+        }
 
         CreateShotEffect();
 
