@@ -13,6 +13,8 @@ public class DeathScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
+
         var game_timer = GameObject.Find("GameTimer").GetComponent<GameTimer>();
         var time = game_timer.TimestampEnd - game_timer.TimestampBegin;
         _time.text = TimeSpan.FromSeconds(time).ToString("mm\\:ss");
