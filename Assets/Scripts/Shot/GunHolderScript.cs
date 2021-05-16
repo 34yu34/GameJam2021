@@ -18,5 +18,7 @@ public class GunHolderScript : MonoBehaviour
 
         Anim.ResetTrigger("Reload");
         Anim.SetTrigger("Reload");
+
+        AkSoundEngine.PostEvent("Player_Reload", gameObject);
     }
 }

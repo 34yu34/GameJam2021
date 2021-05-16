@@ -31,24 +31,93 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 1716856a51622242a946789ddc168529
     GuidInternal: 
-    m_lastTime: -8585804375034775808
+    m_lastTime: -8585804288894775808
     List:
-    - name: Main
-      guid: a0d62f507bc14f4fbfffdf51d44fd441
-      id: 3161908922
+    - name: Music
+      guid: b5210697ff0dbd44beb9035ef41243c3
+      id: 3991942870
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Main
+      - ElementName: Music
         ObjectType: 7
-      Path: Default Work Unit/Main
+      Path: Default Work Unit/Music
+    - name: SFX
+      guid: a0d62f507bc14f4fbfffdf51d44fd441
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 7
+      Path: Default Work Unit/SFX
   EventWwu:
   - PhysicalPath: Events/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 7db2b3ac555d7d44a275ce60f295652b
     GuidInternal: 
-    m_lastTime: -8585804375484775808
+    m_lastTime: -8585804297934775808
     List:
+    - name: Bullet_Impact_Metal
+      guid: 94d5a775b590bd4f9693f9eb73c2d6cb
+      id: 1321907086
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bullet_Impact_Metal
+        ObjectType: 3
+      Path: Default Work Unit/Bullet_Impact_Metal
+      maxAttenuation: 50
+      maxDuration: 0.722
+      minDuration: 0.445449
+    - name: Bullet_Impact_Mud
+      guid: 67cf31dc1101684589e8f360973517c4
+      id: 3328773773
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bullet_Impact_Mud
+        ObjectType: 3
+      Path: Default Work Unit/Bullet_Impact_Mud
+      maxAttenuation: 50
+      maxDuration: 0.34041
+      minDuration: 0.222725
+    - name: Bullet_Impact_Wood
+      guid: a25eecc07e67e04393ab72691aab711d
+      id: 988755994
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bullet_Impact_Wood
+        ObjectType: 3
+      Path: Default Work Unit/Bullet_Impact_Wood
+      maxAttenuation: 50
+      maxDuration: 0.678739
+      minDuration: 0.406473
+    - name: Event_Major
+      guid: b4663e003959cf47bfae839d1ab26b8f
+      id: 448103969
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Event_Major
+        ObjectType: 3
+      Path: Default Work Unit/Event_Major
+      maxAttenuation: 0
+      maxDuration: Infinity
+      minDuration: 16.719
+    - name: Event_Minor
+      guid: b3326432510b2a4ba759770b5919d11b
+      id: 2704182005
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Event_Minor
+        ObjectType: 3
+      Path: Default Work Unit/Event_Minor
+      maxAttenuation: 0
+      maxDuration: Infinity
+      minDuration: 16.719
     - name: Music_EndGame_Start
       guid: 7663e880dbafd04eaacc4779c0e1e767
       id: 2469185595
@@ -97,6 +166,138 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Player_Heal
+      guid: 1314bcafa8c30f43969c5272e54a9500
+      id: 780312891
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player_Heal
+        ObjectType: 3
+      Path: Default Work Unit/Player_Heal
+      maxAttenuation: 0
+      maxDuration: 3.493296
+      minDuration: 2.470133
+    - name: Player_Hurt
+      guid: b0d1e4847e30a243897d0689f50b0315
+      id: 1068092414
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player_Hurt
+        ObjectType: 3
+      Path: Default Work Unit/Player_Hurt
+      maxAttenuation: 0
+      maxDuration: 1.145827
+      minDuration: 0.752435
+    - name: Player_Jump
+      guid: 98d5aee0dadbff46bb7d866c1e253354
+      id: 1305133589
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player_Jump
+        ObjectType: 3
+      Path: Default Work Unit/Player_Jump
+      maxAttenuation: 0
+      maxDuration: 0.376289
+      minDuration: 0.266077
+    - name: Player_Land
+      guid: 95b16ae56afd7440a88a9f61b6a8ed1c
+      id: 3629196698
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player_Land
+        ObjectType: 3
+      Path: Default Work Unit/Player_Land
+      maxAttenuation: 0
+      maxDuration: 0.707736
+      minDuration: 0.500445
+    - name: Player_Reload
+      guid: 063547777d15a140befcb7d504967ecb
+      id: 1650679582
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player_Reload
+        ObjectType: 3
+      Path: Default Work Unit/Player_Reload
+      maxAttenuation: 0
+      maxDuration: 1.249324
+      minDuration: 0.991589
+    - name: Player_Shoot
+      guid: f71039fe03e9cd43a172e1843cb367d5
+      id: 4004702906
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player_Shoot
+        ObjectType: 3
+      Path: Default Work Unit/Player_Shoot
+      maxAttenuation: 0
+      maxDuration: 2.436093
+      minDuration: 1.060262
+    - name: Player_Walk
+      guid: 1399a25a4f0c8749a85b92e83eab0404
+      id: 2147561130
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player_Walk
+        ObjectType: 3
+      Path: Default Work Unit/Player_Walk
+      maxAttenuation: 0
+      maxDuration: 0.613411
+      minDuration: 0.477606
+    - name: Robot_Die
+      guid: 225c99662182404681842119ce098424
+      id: 3481114272
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Robot_Die
+        ObjectType: 3
+      Path: Default Work Unit/Robot_Die
+      maxAttenuation: 50
+      maxDuration: 0.959939
+      minDuration: 0.738239
+    - name: Robot_Hurt
+      guid: 5ddedeb95205ea4ba454958ddcf55dec
+      id: 2770458161
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Robot_Hurt
+        ObjectType: 3
+      Path: Default Work Unit/Robot_Hurt
+      maxAttenuation: 50
+      maxDuration: 1.758904
+      minDuration: 1.186056
+    - name: Robot_Shoot
+      guid: 2796723f546ffa4e83325557b89cbbe6
+      id: 2130607615
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Robot_Shoot
+        ObjectType: 3
+      Path: Default Work Unit/Robot_Shoot
+      maxAttenuation: 50
+      maxDuration: 1.273895
+      minDuration: 0.671992
+    - name: Robot_Walk
+      guid: ae4b28132a86c147b27604e9fc048922
+      id: 825506301
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Robot_Walk
+        ObjectType: 3
+      Path: Default Work Unit/Robot_Walk
+      maxAttenuation: 50
+      maxDuration: 0.151415
+      minDuration: 0.117394
     - name: SFX_Environment_Wind_Start
       guid: 9d29a6e048528c4d942fcaed7eac4f23
       id: 3555070956
@@ -154,7 +355,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 3d82143a07619446bcbc2dbec7f308c1
     GuidInternal: 
-    m_lastTime: -8585804383704775808
+    m_lastTime: -8585804305604775808
     List:
     - name: Music
       guid: 3fa02f4f64ebd943b68381d8f1a5edd5
@@ -229,8 +430,76 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 4003b3dfe014624f8c321135a51a7ae6
     GuidInternal: 
-    m_lastTime: -8585804384414775808
-    List: []
+    m_lastTime: -8585804305604775808
+    List:
+    - name: Event
+      guid: b846af6424e92e439dc49cf40b9b6a96
+      id: 3161415855
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Event
+        ObjectType: 11
+      Path: Default Work Unit/Event
+      values:
+      - name: Earthquake
+        guid: c27cc3242cc8214b940e4ca460b2fcc7
+        id: 1245902094
+        PathAndIcons:
+        - ElementName: Earthquake
+          ObjectType: 10
+      - name: Lava
+        guid: b717a0bfa2ec724280aab322906edd15
+        id: 540301611
+        PathAndIcons:
+        - ElementName: Lava
+          ObjectType: 10
+      - name: MeteorSwarm
+        guid: f902f2309446e1409367fa7c13c54e24
+        id: 3147235103
+        PathAndIcons:
+        - ElementName: MeteorSwarm
+          ObjectType: 10
+      - name: NuclearExplosion
+        guid: 2be8cc842bffc143b3ccd32d40dc6388
+        id: 1632032310
+        PathAndIcons:
+        - ElementName: NuclearExplosion
+          ObjectType: 10
+      - name: Sandstorm
+        guid: 7e15d28bcebd9b47afb2f3b5bd19faf3
+        id: 2225901618
+        PathAndIcons:
+        - ElementName: Sandstorm
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: PlayerGun
+      guid: ebb8c9896673e242a781c7a62e618ca7
+      id: 6936164
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PlayerGun
+        ObjectType: 11
+      Path: Default Work Unit/PlayerGun
+      values:
+      - name: AssaultRifle
+        guid: f6727ea168dd8f4ab161b6f553039371
+        id: 467854164
+        PathAndIcons:
+        - ElementName: AssaultRifle
+          ObjectType: 10
+      - name: Pistol
+        guid: 0f437cc370ef844fa063218da4ca99f4
+        id: 324443136
+        PathAndIcons:
+        - ElementName: Pistol
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers/Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -242,5 +511,7 @@ MonoBehaviour:
   - /GameJam2021_WwiseProject
   - /GameJam2021_WwiseProject/Events
   - /GameJam2021_WwiseProject/Events/Default Work Unit
+  - /GameJam2021_WwiseProject/SoundBanks
+  - /GameJam2021_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

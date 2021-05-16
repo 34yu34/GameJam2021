@@ -109,7 +109,7 @@
 						<CurrentStateRef Name="Low" ID="{998CCD9D-1621-488D-A42B-AC2A0CFDA229}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="Pistol" ID="{C37C430F-EF70-4F84-A063-218DA4CA99F4}"/>
+						<CurrentSwitchRef Name="AssaultRifle" ID="{A17E72F6-DD68-4A8F-B161-B6F553039371}"/>
 						<CurrentSwitchRef Name="Earthquake" ID="{24C37CC2-C82C-4B21-940E-4CA460B2FCC7}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>

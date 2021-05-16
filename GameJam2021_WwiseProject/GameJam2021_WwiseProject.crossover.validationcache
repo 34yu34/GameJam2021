@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="94">
-	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1621163908" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="1621159676" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1621179641" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="1621173587" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="1621159676" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="1621159830" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\Conversion Settings\Default Work Unit.wwu" DateLow="1621159676" DateHigh="0"/>
@@ -9,20 +9,21 @@
 	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1621159676" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\Effects\Default Work Unit.wwu" DateLow="1621159676" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\Effects\Factory Effects.wwu" DateLow="1610309022" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\Events\Default Work Unit.wwu" DateLow="1621169337" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\Events\Default Work Unit.wwu" DateLow="1621177092" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="1621168230" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\GameJam2021_WwiseProject.crossover.wsettings" DateLow="1621178077" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\GameJam2021_WwiseProject.wproj" DateLow="1621159712" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1621169337" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1621177092" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1621159676" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\Mixing Sessions\Default Work Unit.wwu" DateLow="1621159676" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\Modulators\Default Work Unit.wwu" DateLow="1621159676" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\Presets\Default Work Unit.wwu" DateLow="1621159676" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\Queries\Default Work Unit.wwu" DateLow="1621159676" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\Queries\Factory Queries.wwu" DateLow="1610309022" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="1621169382" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1621169337" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\States\Default Work Unit.wwu" DateLow="1621168515" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\Switches\Default Work Unit.wwu" DateLow="1621168444" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="1621177996" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1621179157" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\States\Default Work Unit.wwu" DateLow="1621176325" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\Switches\Default Work Unit.wwu" DateLow="1621176325" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\Triggers\Default Work Unit.wwu" DateLow="1621159676" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\Virtual Acoustics\Default Work Unit.wwu" DateLow="1621159676" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\GitHub\GameJam2021_WwiseIntegrationTemp\GameJam2021_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1621159676" DateHigh="0"/>

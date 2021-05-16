@@ -1302,6 +1302,11 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>9</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1313,6 +1318,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Player_Jump" ID="{35571E74-B51C-4533-B32B-5F86558E9B26}" ShortID="228019174">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.00623372395833333"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0637225115740741"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Player_Jump.wav</AudioFile>
 								</AudioFileSource>
