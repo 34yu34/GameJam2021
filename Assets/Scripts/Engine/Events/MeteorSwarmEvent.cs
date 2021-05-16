@@ -22,7 +22,7 @@ namespace Assets.Scripts.Engine.Events
 
         public override void UndoEvent()
         {
-            Camera.main.GetComponent<CameraRenderer>().FadeIn(_meteorswarm_shader);
+            Camera.main.GetComponent<CameraRenderer>().FadeOut();
         }
 
         public override bool CanHappen() => true;
