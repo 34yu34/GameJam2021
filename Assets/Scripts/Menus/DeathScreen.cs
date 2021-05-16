@@ -15,18 +15,27 @@ public class DeathScreen : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
 
-        var game_timer = GameObject.Find("GameTimer").GetComponent<GameTimer>();
-        var time = game_timer.TimestampEnd - game_timer.TimestampBegin;
-        _time.text = TimeSpan.FromSeconds(time).ToString("mm\\:ss");
-        Destroy(game_timer.gameObject);
-
-        var killCounter = GameObject.Find("KillCounter").GetComponent<KillCount>();
-        _kills.text = killCounter.Kills + " Kills";
-        Destroy(killCounter.gameObject);
+        set_timer();
+        set_kills();
     }
 
     public void Menu()
     {
         SceneManager.LoadScene("Menu");
+    }
+
+    private void set_timer()
+    {
+        var game_timer = GameObject.Find("GameTimer").GetComponent<GameTimer>();
+        var time = game_timer.TimestampEnd - game_timer.TimestampBegin;
+        _time.text = TimeSpan.FromSeconds(time).ToString("mm\\:ss");
+        Destroy(game_timer.gameObject);
+    }
+
+    private void set_kills()
+    {
+        var killCounter = GameObject.Find("KillCounter").GetComponent<KillCount>();
+        _kills.text = killCounter.Kills + " Kills";
+        Destroy(killCounter.gameObject);
     }
 }
