@@ -19,7 +19,7 @@
 				<Event Id="1321907086" Name="Bullet_Impact_Metal" ObjectPath="\Events\Default Work Unit\Bullet_Impact_Metal" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.495449" DurationMax="0.772000"/>
 				<Event Id="3328773773" Name="Bullet_Impact_Mud" ObjectPath="\Events\Default Work Unit\Bullet_Impact_Mud" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.322725" DurationMax="0.440410"/>
 				<Event Id="988755994" Name="Bullet_Impact_Wood" ObjectPath="\Events\Default Work Unit\Bullet_Impact_Wood" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.506473" DurationMax="0.778739"/>
-				<Event Id="3666448085" Name="Environment_Event" ObjectPath="\Events\Default Work Unit\Environment_Event" DurationType="Mixed" DurationMin="11.719000" DurationMax="Infinite"/>
+				<Event Id="3666448085" Name="Environment_Event" ObjectPath="\Events\Default Work Unit\Environment_Event" DurationType="Mixed" DurationMin="16.719000" DurationMax="Infinite"/>
 				<Event Id="1755524482" Name="Event_Alert_Major" ObjectPath="\Events\Default Work Unit\Event_Alert_Major" DurationType="OneShot" DurationMin="4.388889" DurationMax="4.749479"/>
 				<Event Id="2941777918" Name="Event_Alert_Minor" ObjectPath="\Events\Default Work Unit\Event_Alert_Minor" DurationType="OneShot" DurationMin="4.859140" DurationMax="4.859140"/>
 				<Event Id="3543958079" Name="Pick_Ammo" ObjectPath="\Events\Default Work Unit\Pick_Ammo" DurationType="OneShot" DurationMin="0.485170" DurationMax="0.485170"/>

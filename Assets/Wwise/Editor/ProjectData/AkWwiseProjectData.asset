@@ -105,7 +105,7 @@ MonoBehaviour:
       Path: Default Work Unit/Environment_Event
       maxAttenuation: 0
       maxDuration: Infinity
-      minDuration: 11.719
+      minDuration: 16.719
     - name: Event_Alert_Major
       guid: b4663e003959cf47bfae839d1ab26b8f
       id: 1755524482

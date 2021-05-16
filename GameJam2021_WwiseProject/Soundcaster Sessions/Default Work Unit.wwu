@@ -117,12 +117,12 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="MainMenu" ID="{FAF6F6BD-16B1-4308-B4FD-87ABA5C63406}"/>
+						<CurrentStateRef Name="Gameplay" ID="{001F2EEC-FDF6-4F35-8226-8FAA8E06D1DC}"/>
 						<CurrentStateRef Name="Low" ID="{998CCD9D-1621-488D-A42B-AC2A0CFDA229}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="AssaultRifle" ID="{A17E72F6-DD68-4A8F-B161-B6F553039371}"/>
-						<CurrentSwitchRef Name="Earthquake" ID="{24C37CC2-C82C-4B21-940E-4CA460B2FCC7}"/>
+						<CurrentSwitchRef Name="Lava" ID="{BFA017B7-ECA2-4272-80AA-B322906EDD15}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
