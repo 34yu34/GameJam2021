@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2066649430102948816}
-  - component: {fileID: 2066649430102948819}
   - component: {fileID: 2066649430102948818}
   m_Layer: 0
   m_Name: MeteorSwarmEvent
@@ -32,21 +31,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2066649430102948819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2066649430102948813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47ae380c2a7f34342b5d765d4b111b9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _probability_weight: 0
-  _duration_in_seconds: 0
-  _meteorswarm_shader: {fileID: 2100000, guid: f2bfb2eceb27199429b9444a12b1a105, type: 2}
 --- !u!114 &2066649430102948818
 MonoBehaviour:
   m_ObjectHideFlags: 0
