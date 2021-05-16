@@ -24,6 +24,9 @@ public class AiDeathState : AiState
             _timestamp = Timestamp.In(5f);
             NavMeshAgent.ResetPath();
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+
+            var killCounter = GameObject.Find("KillCounter").GetComponent<KillCount>();
+            if (killCounter != null) killCounter.AddKill();
         }
 
         if (_timestamp.HasPassed())
