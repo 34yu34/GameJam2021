@@ -77,12 +77,21 @@ public class ShotComponent : MonoBehaviour
         
         create_projectile(hit.point, (hit.point - _aim_camera_object.position).normalized);
 
-        hit.rigidbody?.GetComponent<Targetable>()?.Hit(new HitInfoDto
+        var hit_obj = hit.rigidbody?.GetComponent<Targetable>();
+
+        var hit_dto = new HitInfoDto
         {
             Damage = _damage,
             HitPosition = hit.point,
             Origin = transform.position
-        });
+        };
+
+        hit_obj?.Hit(hit_dto);
+
+        if (hit_obj == null)
+        {
+            Targetable.CreateHitEffect(hit_dto);
+        }
 
     }
 
