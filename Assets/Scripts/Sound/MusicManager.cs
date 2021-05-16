@@ -47,6 +47,8 @@ public class MusicManager : MonoBehaviour
             AkSoundEngine.PostEvent("Music_EndGame_Start", gameObject);
             shouldCallMusicStart = false;
         }
+        else
+            shouldCallMusicStart = false;
 
         if (currentSceneIndex != lastSceneIndex)
         {
