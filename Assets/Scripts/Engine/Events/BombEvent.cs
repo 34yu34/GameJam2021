@@ -14,6 +14,15 @@ public class BombEvent : Event
 
     private GameObject _furthest_crater;
 
+    [SerializeField]
+    private GameObject _explosion_prefab;
+
+    [SerializeField]
+    private float _explosion_radius_knockback = 200f;
+
+    [SerializeField]
+    private float _explosion_knockback_power = 5f;
+
     public override void DoEvent()
     {
         Debug.Log($"{this.GetType().Name} on DoEvent");
@@ -31,6 +40,21 @@ public class BombEvent : Event
         {
             _furthest_crater.GetComponent<Collider>().isTrigger = true;
             _furthest_crater.GetComponent<Renderer>().enabled = false;
+        }
+
+        var explosion = Instantiate(_explosion_prefab, _furthest_crater.transform);
+
+        Knock_back_player(explosion);
+
+    }
+
+    private void Knock_back_player(GameObject explosion)
+    {
+        var distance_to_player = PlayerInstance.transform.position - explosion.transform.position;
+        if (distance_to_player.magnitude <= _explosion_radius_knockback)
+        {
+            PlayerInstance.GetComponent<Rigidbody>().AddForce(distance_to_player.normalized * _explosion_knockback_power);
+            Debug.Log($"{this.GetType().Name} got knocked back");
         }
     }
 
