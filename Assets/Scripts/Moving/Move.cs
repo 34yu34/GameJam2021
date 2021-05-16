@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(StaminaComponent))]
 public class Move : MonoBehaviour
 {
     [SerializeField]
@@ -23,6 +24,9 @@ public class Move : MonoBehaviour
 
     private float _accel;
 
+    private StaminaComponent _stamina;
+    public StaminaComponent Stamina => _stamina ??= GetComponent<StaminaComponent>();
+
 
     [SerializeField]
     private float _time_to_sprint_speed = 0.5f;
@@ -41,6 +45,12 @@ public class Move : MonoBehaviour
 
     public void SetSprint()
     {
+        if (!Stamina.TrySprint())
+        {
+            SetWalk();
+            return;
+        }
+
         var current_sprint_speed = _is_slowed ? _slow_sprint_speed : _sprint_speed;
 
         if (_current_speed < current_sprint_speed)
