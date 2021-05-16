@@ -24,6 +24,11 @@ public class AIShootingState : AiState
             return this;
         }
 
+        if (EnemyBehaviour.Seeking)
+        {
+            return GetState<AiSeek>();
+        }
+
         return GetState<AiChaseState>();
     }
 
