@@ -23,6 +23,15 @@ public class EnemyBehaviour : MonoBehaviour
     private float _vision_angle;
     public float VisionAngle => _vision_angle;
 
+    [SerializeField] 
+    private float _shot_distance;
+    public float ShotDistance => _shot_distance;
+
+    [SerializeField]
+    private float _shot_cooldown;
+    public float ShotCooldown => _shot_cooldown;
+
+
     [SerializeField]
     private GameObject _player;
 
@@ -42,8 +51,8 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _aiState = _aiState.NextState();
         _aiState.Act();
+        _aiState = _aiState.NextState();
     }
 
     private void add_death_listener()

@@ -7,12 +7,7 @@ public class AiChaseState : AiState
     public override int StateId => 1;
     public override AiState NextState()
     {
-        if (is_far_from_player())
-        {
-            return GetState<AiCalmState>();
-        }
-
-        return this;
+        return is_far_from_player();
     }
 
     public override void Act()
@@ -20,8 +15,20 @@ public class AiChaseState : AiState
         NavMeshAgent.SetDestination(EnemyBehaviour.Player.transform.position);
     }
 
-    private bool is_far_from_player()
+    private AiState is_far_from_player()
     {
-        return Vector3.Distance(transform.position, EnemyBehaviour.Player.transform.position) > EnemyBehaviour.StopDistance;
+        var distance = Vector3.Distance(transform.position, EnemyBehaviour.Player.transform.position);
+
+        if (distance > EnemyBehaviour.StopDistance)
+        {
+            return GetState<AiCalmState>();
+        }
+
+        if (distance < EnemyBehaviour.ShotDistance)
+        {
+            return GetState<AIShootingState>();
+        }
+
+        return this;
     }
 }
