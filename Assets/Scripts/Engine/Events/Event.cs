@@ -12,6 +12,8 @@ public abstract class Event : MonoBehaviour
     private int _duration_in_seconds;
     public int DurationInSeconds => _duration_in_seconds;
 
+    public abstract string SoundName { get; }
+
     public abstract void DoEvent();
 
     public abstract void UndoEvent();

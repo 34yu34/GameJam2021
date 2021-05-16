@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{DFB30340-14E0-4F62-8C32-1135A51A7AE6}" SchemaVersion="94">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{DFB30340-14E0-4F62-8C32-1135A51A7AE6}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{DFB30340-14E0-4F62-8C32-1135A51A7AE6}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Event" ID="{64AF46B8-E924-432E-9DC4-9CF40B9B6A96}">
+					<ChildrenList>
+						<Switch Name="Earthquake" ID="{24C37CC2-C82C-4B21-940E-4CA460B2FCC7}"/>
+						<Switch Name="Lava" ID="{BFA017B7-ECA2-4272-80AA-B322906EDD15}"/>
+						<Switch Name="MeteorSwarm" ID="{30F202F9-4694-40E1-9367-FA7C13C54E24}"/>
+						<Switch Name="NuclearExplosion" ID="{84CCE82B-FF2B-43C1-B3CC-D32D40DC6388}"/>
+						<Switch Name="Sandstorm" ID="{8BD2157E-BDCE-479B-AFB2-F3B5BD19FAF3}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="PlayerGun" ID="{89C9B8EB-7366-42E2-A781-C7A62E618CA7}">
+					<ChildrenList>
+						<Switch Name="Pistol" ID="{C37C430F-EF70-4F84-A063-218DA4CA99F4}"/>
+						<Switch Name="AssaultRifle" ID="{A17E72F6-DD68-4A8F-B161-B6F553039371}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>

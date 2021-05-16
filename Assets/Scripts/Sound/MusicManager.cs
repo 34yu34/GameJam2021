@@ -7,14 +7,15 @@ public class MusicManager : MonoBehaviour
 {
     [SerializeField] int mainMenuBuildIndex = 0;
     [SerializeField] int gameplayBuildIndex = 1;
+    [SerializeField] int deathScreenBuildIndex = 2;
 
     int lastSceneIndex = -1;
+
+    bool shouldCallMusicStart = false;
 
     void Start()
     {
         SceneManager.sceneLoaded += CheckToChangeMusic;
-
-        AkSoundEngine.PostEvent("Music_Start", gameObject);
 
         CheckToChangeMusic(SceneManager.GetActiveScene(), LoadSceneMode.Single);
     }
@@ -24,9 +25,28 @@ public class MusicManager : MonoBehaviour
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
         if (currentSceneIndex == mainMenuBuildIndex)
+        {
             AkSoundEngine.SetState("Music", "MainMenu");
+
+            if (lastSceneIndex != gameplayBuildIndex)
+                shouldCallMusicStart = true;
+            else
+                shouldCallMusicStart = false;
+        }
         else if (currentSceneIndex == gameplayBuildIndex)
+        {
             AkSoundEngine.SetState("Music", "Gameplay");
+
+            if (lastSceneIndex != mainMenuBuildIndex)
+                shouldCallMusicStart = true;
+            else
+                shouldCallMusicStart = false;
+        }
+        else if (currentSceneIndex == deathScreenBuildIndex)
+        {
+            AkSoundEngine.PostEvent("Music_EndGame_Start", gameObject);
+            shouldCallMusicStart = false;
+        }
 
         if (currentSceneIndex != lastSceneIndex)
         {
@@ -35,6 +55,9 @@ public class MusicManager : MonoBehaviour
             else
                 AkSoundEngine.PostEvent("Music_Gameplay_Danger_Stop", gameObject);
         }
+
+        if (shouldCallMusicStart)
+            AkSoundEngine.PostEvent("Music_Start", gameObject);
 
         lastSceneIndex = currentSceneIndex;
     }

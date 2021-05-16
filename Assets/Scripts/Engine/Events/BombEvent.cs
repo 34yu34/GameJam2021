@@ -20,9 +20,10 @@ public class BombEvent : Event
     [SerializeField]
     private float _explosion_knockback_power = 5f;
 
+    public override string SoundName => "NuclearExplosion";
+
     public override void DoEvent()
     {
-
         _furthest_crater = CratterManager.GetFurthestCratterFrom(PlayerInstance.transform.position);
 
         Invoke("explode_furthest_crater", 5);
