@@ -372,10 +372,6 @@ PrefabInstance:
       propertyPath: _event_dictionary.Array.data[1]
       value: 
       objectReference: {fileID: 1139998076}
-    - target: {fileID: 3417018554349410137, guid: 9826b55a9b9c3a143beedbab997bbcb2, type: 3}
-      propertyPath: _event_dictionary.Array.data[3]
-      value: 
-      objectReference: {fileID: 2066649430102948819, guid: 1be2fe776ed6157429ed5069136cc6f4, type: 3}
     - target: {fileID: 6022211670231441783, guid: 9826b55a9b9c3a143beedbab997bbcb2, type: 3}
       propertyPath: _nothing_weight
       value: 8
