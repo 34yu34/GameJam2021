@@ -34,11 +34,13 @@ public class BombEvent : Event
     private void explode_furthest_crater()
     {
 
-        if (_furthest_crater != null)
+        if (_furthest_crater == null)
         {
-            _furthest_crater.GetComponent<Collider>().isTrigger = true;
-            _furthest_crater.GetComponent<Renderer>().enabled = false;
+            return;
         }
+
+        _furthest_crater.GetComponent<Collider>().isTrigger = true;
+        _furthest_crater.GetComponent<Renderer>().enabled = false;
 
         var explosion = Instantiate(_explosion_prefab, _furthest_crater.transform);
 
