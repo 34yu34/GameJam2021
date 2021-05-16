@@ -19,11 +19,12 @@
 				<Event Id="1321907086" Name="Bullet_Impact_Metal" ObjectPath="\Events\Default Work Unit\Bullet_Impact_Metal" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.445449" DurationMax="0.722000"/>
 				<Event Id="3328773773" Name="Bullet_Impact_Mud" ObjectPath="\Events\Default Work Unit\Bullet_Impact_Mud" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.222725" DurationMax="0.340410"/>
 				<Event Id="988755994" Name="Bullet_Impact_Wood" ObjectPath="\Events\Default Work Unit\Bullet_Impact_Wood" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.406473" DurationMax="0.678739"/>
-				<Event Id="448103969" Name="Event_Major" ObjectPath="\Events\Default Work Unit\Event_Major" DurationType="Mixed" DurationMin="16.719000" DurationMax="Infinite"/>
-				<Event Id="2704182005" Name="Event_Minor" ObjectPath="\Events\Default Work Unit\Event_Minor" DurationType="Mixed" DurationMin="16.719000" DurationMax="Infinite"/>
+				<Event Id="3666448085" Name="Environment_Event" ObjectPath="\Events\Default Work Unit\Environment_Event" DurationType="Mixed" DurationMin="16.719000" DurationMax="Infinite"/>
+				<Event Id="1755524482" Name="Event_Alert_Major" ObjectPath="\Events\Default Work Unit\Event_Alert_Major" DurationType="OneShot" DurationMin="4.388889" DurationMax="4.749479"/>
+				<Event Id="2941777918" Name="Event_Alert_Minor" ObjectPath="\Events\Default Work Unit\Event_Alert_Minor" DurationType="OneShot" DurationMin="4.859140" DurationMax="4.859140"/>
 				<Event Id="780312891" Name="Player_Heal" ObjectPath="\Events\Default Work Unit\Player_Heal" DurationType="OneShot" DurationMin="2.470133" DurationMax="3.493296"/>
 				<Event Id="1068092414" Name="Player_Hurt" ObjectPath="\Events\Default Work Unit\Player_Hurt" DurationType="OneShot" DurationMin="0.752435" DurationMax="1.145827"/>
-				<Event Id="1305133589" Name="Player_Jump" ObjectPath="\Events\Default Work Unit\Player_Jump" DurationType="OneShot" DurationMin="0.316653" DurationMax="0.447816"/>
+				<Event Id="1305133589" Name="Player_Jump" ObjectPath="\Events\Default Work Unit\Player_Jump" DurationType="OneShot" DurationMin="0.266077" DurationMax="0.376289"/>
 				<Event Id="3629196698" Name="Player_Land" ObjectPath="\Events\Default Work Unit\Player_Land" DurationType="OneShot" DurationMin="0.500445" DurationMax="0.707736"/>
 				<Event Id="1650679582" Name="Player_Reload" ObjectPath="\Events\Default Work Unit\Player_Reload" DurationType="OneShot" DurationMin="0.991589" DurationMax="1.249324"/>
 				<Event Id="4004702906" Name="Player_Shoot" ObjectPath="\Events\Default Work Unit\Player_Shoot" DurationType="OneShot" DurationMin="1.060262" DurationMax="2.436093"/>
@@ -55,7 +56,7 @@
 				</File>
 				<File Id="119725822" Language="SFX">
 					<ShortName>SFX_Evenement Mineur.wav</ShortName>
-					<Path>SFX/SFX_Evenement Mineur_B99996A2.wem</Path>
+					<Path>SFX/SFX_Evenement Mineur_988D48DC.wem</Path>
 				</File>
 				<File Id="138324406" Language="SFX">
 					<ShortName>Player_Heal.wav</ShortName>
@@ -71,7 +72,7 @@
 				</File>
 				<File Id="203681696" Language="SFX">
 					<ShortName>Environment_Wind.wav</ShortName>
-					<Path>SFX/Environment_Wind_92892C89.wem</Path>
+					<Path>SFX/Environment_Wind_1012CFA3.wem</Path>
 				</File>
 				<File Id="226708070" Language="SFX">
 					<ShortName>Robot_Die\Robot_Die_2.wav</ShortName>
@@ -79,7 +80,7 @@
 				</File>
 				<File Id="228019174" Language="SFX">
 					<ShortName>Player_Jump.wav</ShortName>
-					<Path>SFX/Player_Jump_10C4C929.wem</Path>
+					<Path>SFX/Player_Jump_123CA308.wem</Path>
 				</File>
 				<File Id="229417389" Language="SFX">
 					<ShortName>Player_Footsteps\Player_Footsteps_1.wav</ShortName>
@@ -91,7 +92,7 @@
 				</File>
 				<File Id="263917526" Language="SFX">
 					<ShortName>Events\Environment_Sandstorm.wav</ShortName>
-					<Path>SFX/Events/Environment_Sandstorm_44C0E084.wem</Path>
+					<Path>SFX/Events/Environment_Sandstorm_6AC9F016.wem</Path>
 				</File>
 				<File Id="269762572" Language="SFX">
 					<ShortName>Robot_GunShoot_Pistol\Robot_GunShoot_Pistol_2.wav</ShortName>
@@ -251,7 +252,7 @@
 				</File>
 				<File Id="1039228193" Language="SFX">
 					<ShortName>SFX_Evenement Majeur.wav</ShortName>
-					<Path>SFX/SFX_Evenement Majeur_F9504806.wem</Path>
+					<Path>SFX/SFX_Evenement Majeur_BDFD73D5.wem</Path>
 				</File>
 				<File Id="1051214489" Language="SFX">
 					<ShortName>Bullet_Impact_Metal\Bullet_Impact_Metal_1.wav</ShortName>

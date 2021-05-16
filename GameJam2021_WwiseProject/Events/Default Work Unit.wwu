@@ -218,7 +218,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Event_Minor" ID="{326432B3-0B51-4B2A-A759-770B5919D11B}">
+				<Event Name="Event_Alert_Minor" ID="{326432B3-0B51-4B2A-A759-770B5919D11B}">
 					<PropertyList>
 						<Property Name="Color" Type="int16" Value="4"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
@@ -238,16 +238,9 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{FFCB1D0C-0288-4236-A682-D2FEE5580C6C}" ShortID="156475597">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Events" ID="{469647D7-DC3B-4874-8DD5-823007008471}" WorkUnitID="{D8370ECC-D58C-484B-A44A-CE3A1A329F03}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Event_Major" ID="{003E66B4-5939-47CF-BFAE-839D1AB26B8F}">
+				<Event Name="Event_Alert_Major" ID="{003E66B4-5939-47CF-BFAE-839D1AB26B8F}">
 					<PropertyList>
 						<Property Name="Color" Type="int16" Value="4"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
@@ -264,13 +257,6 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Voice_Events" ID="{65DBE48F-61F2-493E-838F-51B96DD375C7}" WorkUnitID="{D8370ECC-D58C-484B-A44A-CE3A1A329F03}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{C0891E48-DD23-4D9A-AB9C-A102991F7725}" ShortID="112564866">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Events" ID="{469647D7-DC3B-4874-8DD5-823007008471}" WorkUnitID="{D8370ECC-D58C-484B-A44A-CE3A1A329F03}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -436,6 +422,21 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Robot_Walk" ID="{AB8FE523-0925-4F48-8A12-9B7F2B5AF5C9}" WorkUnitID="{D8370ECC-D58C-484B-A44A-CE3A1A329F03}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Environment_Event" ID="{7ADD57D3-DA55-48E6-8C6F-E1E7310D32DA}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{3EBE0907-D8CF-4BA7-A7FF-6F643F460E2E}" ShortID="1060420002">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Events" ID="{469647D7-DC3B-4874-8DD5-823007008471}" WorkUnitID="{D8370ECC-D58C-484B-A44A-CE3A1A329F03}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

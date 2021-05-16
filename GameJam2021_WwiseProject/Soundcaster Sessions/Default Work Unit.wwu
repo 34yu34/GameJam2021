@@ -78,11 +78,11 @@
 							<Position X="3" Y="2"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Event_Major" ID="{003E66B4-5939-47CF-BFAE-839D1AB26B8F}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
+							<ObjectRef Name="Event_Alert_Major" ID="{003E66B4-5939-47CF-BFAE-839D1AB26B8F}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
 							<Position X="4" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Event_Minor" ID="{326432B3-0B51-4B2A-A759-770B5919D11B}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
+							<ObjectRef Name="Event_Alert_Minor" ID="{326432B3-0B51-4B2A-A759-770B5919D11B}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}"/>
 							<Position X="4" Y="1"/>
 						</Module>
 						<Module>
