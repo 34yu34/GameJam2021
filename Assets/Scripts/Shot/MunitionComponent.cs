@@ -15,6 +15,11 @@ public class MunitionComponent : MonoBehaviour
         set => _current_ammo = Mathf.Clamp(value, 0, _max_ammo);
     }
 
+    private void Start()
+    {
+        _current_ammo = _max_ammo;
+    }
+
     public bool Shoot()
     {
         if (CurrentAmmo > 0)

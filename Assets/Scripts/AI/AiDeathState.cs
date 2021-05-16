@@ -28,7 +28,8 @@ public class AiDeathState : AiState
 
         if (_spawn_timestamp.HasPassed())
         {
-
+            _spawn_timestamp = Timestamp.In(5f);
+            SpawnManager.Instance.TrySpawnObject(transform.position);
         }
 
         if (_timestamp.HasPassed())

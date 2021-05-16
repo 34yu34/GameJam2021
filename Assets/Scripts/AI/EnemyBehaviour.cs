@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -42,11 +43,14 @@ public class EnemyBehaviour : MonoBehaviour
 
     private Damageable _damageable_component;
 
+    private bool _is_dead;
+
 
     private void Start()
     {
         _player = GameObject.Find("Player");
         _aiState = gameObject.AddComponent<AiCalmState>();
+        _is_dead = false;
         add_death_listener();
     }
 
@@ -64,6 +68,12 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void death()
     {
+        if (_is_dead)
+        {
+            return;
+        }
+
         _aiState = gameObject.AddComponent<AiDeathState>();
+        _is_dead = true;
     }
 }

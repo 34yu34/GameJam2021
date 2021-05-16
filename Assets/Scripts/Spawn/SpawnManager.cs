@@ -26,7 +26,7 @@ public class SpawnManager : MonoBehaviour
     private List<Spawn> _spawnables;
 
 
-    private void TrySpawnObject(Vector3 position)
+    public void TrySpawnObject(Vector3 position)
     {
         if (Random.value >= _spawn_chances)
         {
