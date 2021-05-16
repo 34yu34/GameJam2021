@@ -21,9 +21,16 @@ public class AiDeathState : AiState
     {
         if (_timestamp == null)
         {
+            Debug.Log("Kill act begin");
+
             _timestamp = Timestamp.In(5f);
             NavMeshAgent.ResetPath();
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+
+            var killCounter = GameObject.Find("KillCounter").GetComponent<KillCount>();
+            if (killCounter != null) killCounter.AddKill();
+
+            Debug.Log("Kill act");
         }
 
         if (_timestamp.HasPassed())
