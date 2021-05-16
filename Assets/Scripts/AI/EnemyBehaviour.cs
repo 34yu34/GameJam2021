@@ -65,7 +65,5 @@ public class EnemyBehaviour : MonoBehaviour
     private void death()
     {
         _aiState = GetComponent<AiDeathState>() ?? gameObject.AddComponent<AiDeathState>();
-        Debug.Log("Dead behavior");
-
     }
 }
