@@ -59,6 +59,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ae380c2a7f34342b5d765d4b111b9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _probability_weight: 1
+  _probability_weight: 2
   _duration_in_seconds: 25
   _meteorswarm_shader: {fileID: 0}

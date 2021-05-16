@@ -365,9 +365,21 @@ PrefabInstance:
       value: eventManager
       objectReference: {fileID: 0}
     - target: {fileID: 3417018554349410137, guid: 9826b55a9b9c3a143beedbab997bbcb2, type: 3}
+      propertyPath: _event_dictionary.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3417018554349410137, guid: 9826b55a9b9c3a143beedbab997bbcb2, type: 3}
       propertyPath: _event_dictionary.Array.data[1]
       value: 
       objectReference: {fileID: 1139998076}
+    - target: {fileID: 3417018554349410137, guid: 9826b55a9b9c3a143beedbab997bbcb2, type: 3}
+      propertyPath: _event_dictionary.Array.data[3]
+      value: 
+      objectReference: {fileID: 2066649430102948819, guid: 1be2fe776ed6157429ed5069136cc6f4, type: 3}
+    - target: {fileID: 6022211670231441783, guid: 9826b55a9b9c3a143beedbab997bbcb2, type: 3}
+      propertyPath: _nothing_weight
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9826b55a9b9c3a143beedbab997bbcb2, type: 3}
 --- !u!1001 &58238562
@@ -3173,15 +3185,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4176604349974467060, guid: 5a40d530e3263574095f02ddafe22f58, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.0275116
+      value: -53.2
       objectReference: {fileID: 0}
     - target: {fileID: 4176604349974467060, guid: 5a40d530e3263574095f02ddafe22f58, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 75.4883
+      value: 52.8
       objectReference: {fileID: 0}
     - target: {fileID: 4176604349974467060, guid: 5a40d530e3263574095f02ddafe22f58, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -170.3349
+      value: -248.5
       objectReference: {fileID: 0}
     - target: {fileID: 4176604349974467060, guid: 5a40d530e3263574095f02ddafe22f58, type: 3}
       propertyPath: m_LocalRotation.w

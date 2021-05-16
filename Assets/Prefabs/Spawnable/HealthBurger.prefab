@@ -62,7 +62,7 @@ MonoBehaviour:
   _health_to_give: 50
   _stamina_to_give: 100
   _lifetime: 120
-  _weight: 10
+  _weight: 2
   _is_eternal: 0
 --- !u!1001 &3683814430165920572
 PrefabInstance:

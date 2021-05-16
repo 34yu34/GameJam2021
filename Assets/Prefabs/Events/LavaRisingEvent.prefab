@@ -46,5 +46,5 @@ MonoBehaviour:
   _probability_weight: 1
   _duration_in_seconds: 0
   _max_event_occurrences: 3
-  _lava_rising_duration: 10
+  _lava_rising_duration: 15
   _height_increases: 10
