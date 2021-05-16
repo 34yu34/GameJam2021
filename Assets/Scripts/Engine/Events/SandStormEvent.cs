@@ -12,6 +12,8 @@ namespace Assets.Scripts.Engine.Events
 
         public override string SoundName => "Sandstorm";
 
+        public override string Name => "Sandstorm";
+
         public override void DoEvent()
         {
             Debug.Log($"{this.GetType().Name} on DoEvent");
