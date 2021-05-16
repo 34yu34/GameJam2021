@@ -1,5 +1,4 @@
 Event	ID	Name			Wwise Object Path	Notes
-	448103969	Event_Major			\Default Work Unit\Event_Major	
 	780312891	Player_Heal			\Default Work Unit\Player_Heal	
 	825506301	Robot_Walk			\Default Work Unit\Robot_Walk	
 	988755994	Bullet_Impact_Wood			\Default Work Unit\Bullet_Impact_Wood	
@@ -8,15 +7,17 @@ Event	ID	Name			Wwise Object Path	Notes
 	1321907086	Bullet_Impact_Metal			\Default Work Unit\Bullet_Impact_Metal	
 	1452887354	SFX_UI_Click			\Default Work Unit\SFX_UI_Click	
 	1650679582	Player_Reload			\Default Work Unit\Player_Reload	
+	1755524482	Event_Alert_Major			\Default Work Unit\Event_Alert_Major	
 	2130607615	Robot_Shoot			\Default Work Unit\Robot_Shoot	
 	2147561130	Player_Walk			\Default Work Unit\Player_Walk	
-	2704182005	Event_Minor			\Default Work Unit\Event_Minor	
 	2770458161	Robot_Hurt			\Default Work Unit\Robot_Hurt	
+	2941777918	Event_Alert_Minor			\Default Work Unit\Event_Alert_Minor	
 	3290572544	SFX_Environment_Wind_Stop			\Default Work Unit\SFX_Environment_Wind_Stop	
 	3328773773	Bullet_Impact_Mud			\Default Work Unit\Bullet_Impact_Mud	
 	3481114272	Robot_Die			\Default Work Unit\Robot_Die	
 	3555070956	SFX_Environment_Wind_Start			\Default Work Unit\SFX_Environment_Wind_Start	
 	3629196698	Player_Land			\Default Work Unit\Player_Land	
+	3666448085	Environment_Event			\Default Work Unit\Environment_Event	
 	4004702906	Player_Shoot			\Default Work Unit\Player_Shoot	
 
 Switch Group	ID	Name			Wwise Object Path	Notes

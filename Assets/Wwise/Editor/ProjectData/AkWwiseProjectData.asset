@@ -31,7 +31,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 1716856a51622242a946789ddc168529
     GuidInternal: 
-    m_lastTime: -8585804288894775808
+    m_lastTime: -8585804210304775808
     List:
     - name: Music
       guid: b5210697ff0dbd44beb9035ef41243c3
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 7db2b3ac555d7d44a275ce60f295652b
     GuidInternal: 
-    m_lastTime: -8585804297934775808
+    m_lastTime: -8585804210304775808
     List:
     - name: Bullet_Impact_Metal
       guid: 94d5a775b590bd4f9693f9eb73c2d6cb
@@ -94,30 +94,42 @@ MonoBehaviour:
       maxAttenuation: 50
       maxDuration: 0.678739
       minDuration: 0.406473
-    - name: Event_Major
+    - name: Environment_Event
+      guid: d357dd7a55dae6488c6fe1e7310d32da
+      id: 3666448085
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Environment_Event
+        ObjectType: 3
+      Path: Default Work Unit/Environment_Event
+      maxAttenuation: 0
+      maxDuration: Infinity
+      minDuration: 16.719
+    - name: Event_Alert_Major
       guid: b4663e003959cf47bfae839d1ab26b8f
-      id: 448103969
+      id: 1755524482
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Event_Major
+      - ElementName: Event_Alert_Major
         ObjectType: 3
-      Path: Default Work Unit/Event_Major
+      Path: Default Work Unit/Event_Alert_Major
       maxAttenuation: 0
-      maxDuration: Infinity
-      minDuration: 16.719
-    - name: Event_Minor
+      maxDuration: 4.749479
+      minDuration: 4.388889
+    - name: Event_Alert_Minor
       guid: b3326432510b2a4ba759770b5919d11b
-      id: 2704182005
+      id: 2941777918
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Event_Minor
+      - ElementName: Event_Alert_Minor
         ObjectType: 3
-      Path: Default Work Unit/Event_Minor
+      Path: Default Work Unit/Event_Alert_Minor
       maxAttenuation: 0
-      maxDuration: Infinity
-      minDuration: 16.719
+      maxDuration: 4.85914
+      minDuration: 4.85914
     - name: Music_EndGame_Start
       guid: 7663e880dbafd04eaacc4779c0e1e767
       id: 2469185595

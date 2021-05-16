@@ -16,8 +16,9 @@ namespace AK
         static const AkUniqueID BULLET_IMPACT_METAL = 1321907086U;
         static const AkUniqueID BULLET_IMPACT_MUD = 3328773773U;
         static const AkUniqueID BULLET_IMPACT_WOOD = 988755994U;
-        static const AkUniqueID EVENT_MAJOR = 448103969U;
-        static const AkUniqueID EVENT_MINOR = 2704182005U;
+        static const AkUniqueID ENVIRONMENT_EVENT = 3666448085U;
+        static const AkUniqueID EVENT_ALERT_MAJOR = 1755524482U;
+        static const AkUniqueID EVENT_ALERT_MINOR = 2941777918U;
         static const AkUniqueID MUSIC_ENDGAME_START = 2469185595U;
         static const AkUniqueID MUSIC_GAMEPLAY_DANGER_START = 2528424500U;
         static const AkUniqueID MUSIC_GAMEPLAY_DANGER_STOP = 532737960U;
