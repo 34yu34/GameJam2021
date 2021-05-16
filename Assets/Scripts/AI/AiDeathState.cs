@@ -8,9 +8,7 @@ public class AiDeathState : AiState
 
     private Timestamp _timestamp;
 
-    private void Start()
-    {
-    }
+    private Timestamp _spawn_timestamp;
 
     public override AiState NextState()
     {
@@ -22,15 +20,19 @@ public class AiDeathState : AiState
         if (_timestamp == null)
         {
             _timestamp = Timestamp.In(5f);
+            _spawn_timestamp = Timestamp.In(2);
             NavMeshAgent.ResetPath();
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+        }
+
+        if (_spawn_timestamp.HasPassed())
+        {
+
         }
 
         if (_timestamp.HasPassed())
         {
             Destroy(this.gameObject);
         }
-
     }
-
 }
