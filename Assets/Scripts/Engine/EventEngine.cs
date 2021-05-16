@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Assets.Scripts.Engine.Events;
 using UnityEngine;
 
 public class EventEngine : MonoBehaviour
@@ -19,6 +18,14 @@ public class EventEngine : MonoBehaviour
     private int _current_event_index = 0;
 
     private Event _current_event;
+
+    private void Start()
+    {
+        foreach (var @event in _event_dictionary)
+        {
+            @event.ResetEvent();
+        }
+    }
 
     public void SetEventEngineSettings(EventEngineSettingDto settings)
     {
@@ -43,7 +50,7 @@ public class EventEngine : MonoBehaviour
 
         if (!_next_event_timestamp.HasPassed())
         {
-            return new EventResponse()
+            return new EventResponse
             {
                 EventWasTriggered = false
             };
@@ -110,9 +117,10 @@ public class EventEngine : MonoBehaviour
 
         var current_index = 0;
 
-        var event_ranges = availableEvents
-                                            .Select(@event => CreateEventRangeFromEvent(@event, ref current_index))
-                                            .ToList();
+        var event_ranges =
+            availableEvents
+                .Select(@event => CreateEventRangeFromEvent(@event, ref current_index))
+                .ToList();
 
         // current index is now equal to max + 1
         // Random.Range is (Inclusive, Exclusive)
@@ -148,6 +156,14 @@ public class EventEngine : MonoBehaviour
 
         public Event Event { get; set; }
     }
+}
+
+public class EventEngineSettingDto
+{
+    public int MinSecondsUntilEvent { get; set; }
+    public int MaxSecondsUntilEvent { get; set; }
+    public int MajorEventMinIndex { get; set; }
+    public int MajorEventMaxIndex { get; set; }
 }
 
 public class EventResponse
