@@ -4,6 +4,10 @@
 		<WorkUnit Name="Default Work Unit" ID="{ACB3B27D-5D55-447D-A275-CE60F295652B}" PersistMode="Standalone">
 			<ChildrenList>
 				<Event Name="SFX_UI_Click" ID="{94F2681E-EC44-49C9-B95A-412BCD3E4EF6}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="21"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Action Name="" ID="{CE766C10-4888-44F9-8172-7330E844BE4B}" ShortID="41313767">
 							<ReferenceList>
@@ -15,6 +19,10 @@
 					</ChildrenList>
 				</Event>
 				<Event Name="Music_Start" ID="{0353D59C-795A-43C0-860B-3966276A3265}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="12"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Action Name="" ID="{89BFBC98-D2F0-4B35-9B16-D78500ABDD4A}" ShortID="758821054">
 							<PropertyList>
@@ -48,6 +56,10 @@
 					</ChildrenList>
 				</Event>
 				<Event Name="SFX_Environment_Wind_Start" ID="{E0A6299D-5248-4D8C-942F-CAED7EAC4F23}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="21"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Action Name="" ID="{C66F4DE2-D933-4D4B-AA04-0E28FC2778BA}" ShortID="943955090">
 							<ReferenceList>
@@ -59,6 +71,10 @@
 					</ChildrenList>
 				</Event>
 				<Event Name="SFX_Environment_Wind_Stop" ID="{82848DC8-5E86-423F-BCB6-DF084766371E}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="21"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Action Name="" ID="{2D60CC58-266D-47CA-9817-F66741E80697}" ShortID="203485355">
 							<PropertyList>
@@ -74,6 +90,10 @@
 					</ChildrenList>
 				</Event>
 				<Event Name="Music_Gameplay_Danger_Start" ID="{E4DAE587-2795-4495-847A-7AA716D50F07}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="12"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Action Name="" ID="{0DB42D5B-C87A-483A-9292-47F363F60BEC}" ShortID="716021764">
 							<ReferenceList>
@@ -85,6 +105,10 @@
 					</ChildrenList>
 				</Event>
 				<Event Name="Music_Gameplay_Danger_Stop" ID="{9555B552-0C0A-49C9-96B2-E47AA790EA5D}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="12"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Action Name="" ID="{F2CFF715-D3D5-4E1B-840A-1F89BC93B7F0}" ShortID="487674624">
 							<PropertyList>
@@ -100,6 +124,10 @@
 					</ChildrenList>
 				</Event>
 				<Event Name="Music_EndGame_Start" ID="{80E86376-AFDB-4ED0-AACC-4779C0E1E767}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="12"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Action Name="" ID="{A5BB6CAD-39DE-47BE-9F39-33797678436E}" ShortID="616887012">
 							<PropertyList>
@@ -140,6 +168,274 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="EndGame_Loop" ID="{BBAA9CB1-9932-4793-9CB9-D267FDCE9BF6}" WorkUnitID="{C7795D99-0DEF-462C-A7B8-BD78ACFFEDDB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Bullet_Impact_Metal" ID="{75A7D594-90B5-4FBD-9693-F9EB73C2D6CB}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="1"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{213C2608-E3A0-47C0-B783-A6AA3E381D4F}" ShortID="114387495">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bullet_Impact_Metal" ID="{D2B139D7-7D9E-4F28-8EF4-3F1CC1BC0D78}" WorkUnitID="{D8370ECC-D58C-484B-A44A-CE3A1A329F03}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Bullet_Impact_Mud" ID="{DC31CF67-0111-4568-89E8-F360973517C4}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="1"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{10912F6C-2587-4377-B2B7-2A58879A10D2}" ShortID="173356353">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bullet_Impact_Mud" ID="{3A109CB6-C15A-4F23-9083-CE4B6811386E}" WorkUnitID="{D8370ECC-D58C-484B-A44A-CE3A1A329F03}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Bullet_Impact_Wood" ID="{C0EC5EA2-677E-43E0-93AB-72691AAB711D}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="1"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{BB6C903B-5007-4AE8-A555-3EB7741E7FE3}" ShortID="734377442">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bullet_Impact_Wood" ID="{23CC2679-F66D-436D-AD23-23002B93603A}" WorkUnitID="{D8370ECC-D58C-484B-A44A-CE3A1A329F03}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Event_Minor" ID="{326432B3-0B51-4B2A-A759-770B5919D11B}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{BA91CB03-BE06-42AF-BC28-C449456BE49D}" ShortID="562894207">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Evenement Mineur" ID="{D7C49A26-9838-430D-B031-63829D1A219C}" WorkUnitID="{D8370ECC-D58C-484B-A44A-CE3A1A329F03}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4C966E69-B8BF-47D6-9B93-9E2E6B989121}" ShortID="133926790">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Voice_Events" ID="{65DBE48F-61F2-493E-838F-51B96DD375C7}" WorkUnitID="{D8370ECC-D58C-484B-A44A-CE3A1A329F03}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FFCB1D0C-0288-4236-A682-D2FEE5580C6C}" ShortID="156475597">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Events" ID="{469647D7-DC3B-4874-8DD5-823007008471}" WorkUnitID="{D8370ECC-D58C-484B-A44A-CE3A1A329F03}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Event_Major" ID="{003E66B4-5939-47CF-BFAE-839D1AB26B8F}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{3E3CD86E-ADF6-4729-9651-71B06D42C2B0}" ShortID="1005652143">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Evenement Majeur" ID="{D0F785AD-D4F1-4CEA-A534-B33F1384590C}" WorkUnitID="{D8370ECC-D58C-484B-A44A-CE3A1A329F03}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{303A4609-BB2B-42CD-BA6E-6C3A54F95195}" ShortID="419061485">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Voice_Events" ID="{65DBE48F-61F2-493E-838F-51B96DD375C7}" WorkUnitID="{D8370ECC-D58C-484B-A44A-CE3A1A329F03}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C0891E48-DD23-4D9A-AB9C-A102991F7725}" ShortID="112564866">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Events" ID="{469647D7-DC3B-4874-8DD5-823007008471}" WorkUnitID="{D8370ECC-D58C-484B-A44A-CE3A1A329F03}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Player_Walk" ID="{5AA29913-0C4F-4987-A85B-92E83EAB0404}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{A077E2C3-97A3-4269-B7ED-FD74A2FF8973}" ShortID="68690409">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Player_Footsteps" ID="{BA2CC90B-E647-45C9-939A-569F5BBC5FF9}" WorkUnitID="{D8370ECC-D58C-484B-A44A-CE3A1A329F03}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Player_Shoot" ID="{FE3910F7-E903-43CD-A172-E1843CB367D5}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{1140423E-663B-4B24-A012-5783E42CA756}" ShortID="190226786">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Player_Shoot" ID="{D60E46E0-702A-49AE-8AFF-990F899FB70D}" WorkUnitID="{D8370ECC-D58C-484B-A44A-CE3A1A329F03}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Player_Heal" ID="{AFBC1413-C3A8-430F-969C-5272E54A9500}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{CAA405F1-10BA-4192-855A-9CD8509AC1AA}" ShortID="794434825">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Player_Heal" ID="{66F4EEC2-29C2-4FD1-AE48-4D1263350AD6}" WorkUnitID="{D8370ECC-D58C-484B-A44A-CE3A1A329F03}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Player_Hurt" ID="{84E4D1B0-307E-43A2-897D-0689F50B0315}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{C5809855-FBFD-47FB-81C2-D0F59C113E2A}" ShortID="749961994">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Player_Hurt" ID="{9C2200B4-D8E7-44C5-8A53-D0C9FE7F911A}" WorkUnitID="{D8370ECC-D58C-484B-A44A-CE3A1A329F03}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Player_Jump" ID="{E0AED598-DBDA-46FF-BB7D-866C1E253354}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{97F17B38-A156-49C0-A9E8-120D11164F3E}" ShortID="1067262348">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Player_Jump" ID="{85893B8E-4B86-4919-881E-A5C15A0FFAD3}" WorkUnitID="{D8370ECC-D58C-484B-A44A-CE3A1A329F03}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Player_Land" ID="{E56AB195-FD6A-4074-A88A-9F61B6A8ED1C}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{6BF7E798-ACB0-4012-8C0F-A26923C40EB4}" ShortID="521330777">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Player_Land" ID="{E3D0AB82-D068-4DAF-AC69-53912A6CB775}" WorkUnitID="{D8370ECC-D58C-484B-A44A-CE3A1A329F03}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Player_Reload" ID="{77473506-157D-40A1-BEFC-B7D504967ECB}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{9B7F51A8-BE1B-4223-813B-AB050566217F}" ShortID="66034605">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Player_Reload" ID="{A17850E9-67B6-4256-A53D-5C8464662BB3}" WorkUnitID="{D8370ECC-D58C-484B-A44A-CE3A1A329F03}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Robot_Die" ID="{66995C22-8221-4640-8184-2119CE098424}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="15"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{1186AC85-6A0F-423A-9E07-CE0D3458E166}" ShortID="422854359">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Robot_Die" ID="{9D193268-DACA-4B00-83DC-482A1403CF31}" WorkUnitID="{D8370ECC-D58C-484B-A44A-CE3A1A329F03}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Robot_Shoot" ID="{3F729627-6F54-4EFA-8332-5557B89CBBE6}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="15"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{1EDF1281-192F-42B9-94F4-332145439984}" ShortID="907498284">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Robot_GunShoot_Pistol" ID="{BAF6B853-2711-4051-BA1D-4A767A9D7C60}" WorkUnitID="{D8370ECC-D58C-484B-A44A-CE3A1A329F03}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Robot_Hurt" ID="{B9DEDE5D-0552-4BEA-A454-958DDCF55DEC}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="15"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{E2D66203-5CC0-4740-914A-F192E31ABC77}" ShortID="639109761">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Robot_Hurt" ID="{DB482129-4AC9-43B2-9E17-795FA7AE3661}" WorkUnitID="{D8370ECC-D58C-484B-A44A-CE3A1A329F03}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Robot_Walk" ID="{13284BAE-862A-47C1-B276-04E9FC048922}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="15"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{0080A953-7B78-4414-B15C-611BE5C85472}" ShortID="72314869">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Robot_Walk" ID="{AB8FE523-0925-4F48-8A12-9B7F2B5AF5C9}" WorkUnitID="{D8370ECC-D58C-484B-A44A-CE3A1A329F03}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
