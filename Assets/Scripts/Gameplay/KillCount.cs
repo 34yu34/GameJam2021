@@ -7,6 +7,14 @@ public class KillCount : MonoBehaviour
     private int _kills;
     public int Kills => _kills;
 
+    public string DisplayCurrent
+    {
+        get
+        {
+            return Kills + " Kills";
+        }
+    }
+
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);

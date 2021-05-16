@@ -1,6 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
+using System;
 
 public class GameTimer : MonoBehaviour
 {
@@ -9,6 +9,15 @@ public class GameTimer : MonoBehaviour
 
     private float _timestamp_end;
     public float TimestampEnd => _timestamp_end;
+
+    public string DisplayCurrent
+    {
+        get
+        {
+            var time = (Time.time - TimestampBegin);
+            return TimeSpan.FromSeconds(time).ToString("mm\\:ss");
+        }
+    }
 
     // Start is called before the first frame update
     void Start()

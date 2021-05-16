@@ -35,7 +35,7 @@ public class DeathScreen : MonoBehaviour
     private void set_kills()
     {
         var killCounter = GameObject.Find("KillCounter").GetComponent<KillCount>();
-        _kills.text = killCounter.Kills + " Kills";
+        _kills.text = killCounter.DisplayCurrent;
         Destroy(killCounter.gameObject);
     }
 }
