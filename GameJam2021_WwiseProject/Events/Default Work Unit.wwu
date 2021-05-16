@@ -462,6 +462,21 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Pick_Ammo" ID="{09827D15-59EC-4CA2-8761-9B15C3B3C658}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="21"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{EC8488DD-BBA8-497F-A6D6-48319572C975}" ShortID="804236509">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ammo_Take" ID="{096093FE-835C-4FF3-9BD2-83AAF4BE1E13}" WorkUnitID="{D8370ECC-D58C-484B-A44A-CE3A1A329F03}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

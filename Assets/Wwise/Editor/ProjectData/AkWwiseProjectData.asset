@@ -31,7 +31,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 1716856a51622242a946789ddc168529
     GuidInternal: 
-    m_lastTime: -8585804198464775808
+    m_lastTime: -8585804134104775808
     List:
     - name: Music
       guid: b5210697ff0dbd44beb9035ef41243c3
@@ -56,7 +56,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 7db2b3ac555d7d44a275ce60f295652b
     GuidInternal: 
-    m_lastTime: -8585804198644775808
+    m_lastTime: -8585804134104775808
     List:
     - name: Bullet_Impact_Metal
       guid: 94d5a775b590bd4f9693f9eb73c2d6cb
@@ -178,6 +178,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Pick_Ammo
+      guid: 157d8209ec59a24c87619b15c3b3c658
+      id: 3543958079
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Pick_Ammo
+        ObjectType: 3
+      Path: Default Work Unit/Pick_Ammo
+      maxAttenuation: 0
+      maxDuration: 0.48517
+      minDuration: 0.48517
     - name: Player_Heal
       guid: 1314bcafa8c30f43969c5272e54a9500
       id: 780312891

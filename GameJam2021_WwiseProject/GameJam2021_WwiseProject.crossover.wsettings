@@ -5,6 +5,7 @@
 			<PropertyList>
 				<Property Name="Event Action List\{003E66B4-5939-47CF-BFAE-839D1AB26B8F}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{0353D59C-795A-43C0-860B-3966276A3265}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{09827D15-59EC-4CA2-8761-9B15C3B3C658}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{13284BAE-862A-47C1-B276-04E9FC048922}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{326432B3-0B51-4B2A-A759-770B5919D11B}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{3F729627-6F54-4EFA-8332-5557B89CBBE6}\x64_Expand States" Type="string" Value=""/>
@@ -51,6 +52,7 @@
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}"/>
 				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="rii/VhOfJUONmn/oEW330wH/////////mPWehXlvhUuc7P+qAPCVjwH/////////"/>
 				<Property Name="Interactive Music\x64_{020FB4BB-C44E-4656-AA95-354830DE8FB8} - SegmentEditorZoomInfo" Type="string" Value="KyzY4xEmAUAAAAAAAADwP8s9jbDc0xRAAAAAAAAA8D8AAAAAAMCSQAAAAAAAAAAA"/>
+				<Property Name="Interactive Music\x64_{1F669E53-A1BF-4897-9FBA-46E54C7A7B18} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwPwAAAAAAMEdAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\x64_{60252920-A945-4AD4-8881-E459B9EBD6C4} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwP4c+1a8pjkpAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\x64_{78EFB06D-B5E5-41DC-B09E-7EA40FF8A8AE} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwP5SRxBV08idAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\x64_{8EB7C31E-D765-456E-9680-9E7472034F83} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwP8L1KFyPQiZAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>

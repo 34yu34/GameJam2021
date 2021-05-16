@@ -16,6 +16,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3290572544	SFX_Environment_Wind_Stop			\Default Work Unit\SFX_Environment_Wind_Stop	
 	3328773773	Bullet_Impact_Mud			\Default Work Unit\Bullet_Impact_Mud	
 	3481114272	Robot_Die			\Default Work Unit\Robot_Die	
+	3543958079	Pick_Ammo			\Default Work Unit\Pick_Ammo	
 	3555070956	SFX_Environment_Wind_Start			\Default Work Unit\SFX_Environment_Wind_Start	
 	3629196698	Player_Land			\Default Work Unit\Player_Land	
 	3666448085	Environment_Event			\Default Work Unit\Environment_Event	
@@ -51,7 +52,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	263917526	Environment_Sandstorm	Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\.cache\Mac\SFX\Events\Environment_Sandstorm_6AC9F016.wem		\Actor-Mixer Hierarchy\Default Work Unit\Events\Events\Environment_Sandstorm		3072208
 	269762572	Robot_GunShoot_Pistol_2	Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\.cache\Mac\SFX\Robot_GunShoot_Pistol\Robot_GunShoot_Pistol_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Robot\Robot_GunShoot_Pistol\Robot_GunShoot_Pistol_2		224432
 	271386171	Player_Reload	Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\.cache\Mac\SFX\Player_Reload_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Reload		213844
-	293363968	Environment_Lava	Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\.cache\Mac\SFX\Events\Environment_Lava_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Events\Events\Environment_Lava		2688144
 	314140635	Bullet_Impact_Metal	Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\.cache\Mac\SFX\Bullet_Impact_Metal\Bullet_Impact_Metal_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bullet_Impact\Bullet_Impact_Metal\Bullet_Impact_Metal		102544
 	321299980	Robot_Hurt	Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\.cache\Mac\SFX\Robot_Hurt\Robot_Hurt_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Robot\Robot_Hurt\Robot_Hurt		292444
 	343787144	Robot_Die	Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\.cache\Mac\SFX\Robot_Die\Robot_Die_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Robot\Robot_Die\Robot_Die		159244
@@ -60,6 +60,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	406122204	Bullet_Impact_Mud	Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\.cache\Mac\SFX\Bullet_Impact_Mud\Bullet_Impact_Mud_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bullet_Impact\Bullet_Impact_Mud\Bullet_Impact_Mud		24144
 	411246786	Player_GunShoot_AssaultRifle_2	Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\.cache\Mac\SFX\Player_GunShoot_AssaultRifle\Player_GunShoot_AssaultRifle_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Shoot\Player_GunShoot_AssaultRifle\Player_GunShoot_AssaultRifle_2		406456
 	422573147	Player_Hurt_1	Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\.cache\Mac\SFX\Player_Hurt\Player_Hurt_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Hurt\Player_Hurt_1		86944
+	424589097	Ammo_Take	Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\.cache\Mac\SFX\Ammo_Take_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ammo_Take		42936
 	444562783	Player_Footsteps_4	Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\.cache\Mac\SFX\Player_Footsteps\Player_Footsteps_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Footsteps\Player_Footsteps_4		54144
 	451136198	Player_Hurt_2	Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\.cache\Mac\SFX\Player_Hurt\Player_Hurt_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Hurt\Player_Hurt_2		90596
 	451466327	Robot_GunShoot_Pistol_1	Y:\Documents\GitHub\GameJam2021\GameJam2021_WwiseProject\.cache\Mac\SFX\Robot_GunShoot_Pistol\Robot_GunShoot_Pistol_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Robot\Robot_GunShoot_Pistol\Robot_GunShoot_Pistol_1		192144
