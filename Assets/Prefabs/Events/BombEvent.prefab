@@ -46,3 +46,5 @@ MonoBehaviour:
   _probability_weight: 1
   _duration_in_seconds: 0
   _explosion_prefab: {fileID: 100000, guid: 15ca5b8fa431dc04291a79cadcd19874, type: 3}
+  _explosion_radius_knockback: 200
+  _explosion_knockback_power: 750
