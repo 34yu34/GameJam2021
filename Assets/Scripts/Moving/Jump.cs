@@ -5,16 +5,38 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class Jump : MonoBehaviour
 {
+    [SerializeField] 
+    private float _jump_speed;
+
+    private bool ShouldJump;
+
     private Rigidbody _rb;
-    void Start()
+    public Rigidbody Rb => _rb ??= GetComponent<Rigidbody>();
+
+    public void SetJump()
     {
-        _rb = GetComponent<Rigidbody>();
+        ShouldJump = true;
     }
 
-    public void JumpObject(float jumpspeed = 5)
+    private void TryJump()
     {
-        var vel = _rb.velocity;
-        vel.y = jumpspeed;
-        _rb.velocity = vel;
+        ShouldJump = false;
+
+        if (!Physics.Raycast(transform.position + new Vector3(0, 0.1f, 0), Vector3.down, out _, 0.5f))
+        {
+            return;
+        }
+
+        var vel = Rb.velocity;
+        vel.y = _jump_speed;
+        Rb.velocity = vel;
+    }
+
+    public void FixedUpdate()
+    {
+        if (ShouldJump)
+        {
+            TryJump();
+        }
     }
 }

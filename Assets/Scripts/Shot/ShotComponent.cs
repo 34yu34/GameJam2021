@@ -1,5 +1,7 @@
 using UnityEngine;
+using NaughtyAttributes;
 
+[RequireComponent(typeof(MunitionComponent))]
 public class ShotComponent : MonoBehaviour
 {
     [SerializeField] 
@@ -8,32 +10,74 @@ public class ShotComponent : MonoBehaviour
     [SerializeField] 
     private int _damage;
 
+    private bool _should_shoot;
+    
     [SerializeField]
     private ParticleSystem _shot_effect;
 
     [SerializeField]
     private Projectile _projectile;
 
-    private void Update()
+    [SerializeField]
+    private float _reload_time;
+
+    private Timestamp _reload_timestamp;
+
+    private GunHolderScript _gun_holder;
+
+    [SerializeField]
+    [Required]
+    private Transform _aim_camera_object;
+
+    private MunitionComponent _munitions;
+    public MunitionComponent Munitions => _munitions ??= gameObject.GetComponent<MunitionComponent>();
+
+    private void Start()
     {
-        if (Input.GetButtonDown("Fire1"))
+        _gun_holder = GetComponentInParent<GunHolderScript>();
+        _reload_timestamp = Timestamp.Now();
+    }
+
+    public void SetShoot()
+    {
+        _should_shoot = true;
+    }
+
+    private void FixedUpdate()
+    {
+        if (_should_shoot)
         {
-            Shoot();
+            shoot();
         }
     }
 
-    private void Shoot()
+    private void shoot()
     {
-        CreateShotEffect();
+        _should_shoot = false;
 
-        if (!Physics.Raycast(transform.position, transform.forward, out var hit, _range))
+        if (!_reload_timestamp.HasPassed())
         {
             return;
         }
-        
-        create_projectile(hit);
 
-        hit.rigidbody.GetComponent<Targetable>()?.Hit(new HitInfoDto
+        if (!Munitions.TryShoot())
+        {
+            Reload();
+            return;
+        }
+
+        CreateShotEffect();
+
+        if (!Physics.Raycast(_aim_camera_object.position, _aim_camera_object.forward, out var hit, _range))
+        {
+            create_projectile(_aim_camera_object.position + _aim_camera_object.forward * _range);
+
+            return;
+        }
+        
+        create_projectile(hit.point);
+
+        hit.rigidbody?.GetComponent<Targetable>()?.Hit(new HitInfoDto
         {
             Damage = _damage,
             HitPosition = hit.point,
@@ -42,21 +86,45 @@ public class ShotComponent : MonoBehaviour
 
     }
 
-    private void create_projectile(RaycastHit hit)
+    public void Reload()
+    {
+        if (Munitions.IsFull())
+        {
+            return;
+        }
+
+        _reload_timestamp = Timestamp.In(_reload_time);
+
+        Munitions.Reload();
+        _gun_holder?.Reload();
+    }
+
+    private void create_projectile(Vector3 target_pos)
     {
         var projectile = Instantiate(_projectile);
-        projectile.transform.position = transform.position;
+
+        projectile.transform.position = this.transform.position;
+
         projectile.transform.LookAt(transform.position + transform.forward);
 
-        projectile.Launch(transform.forward, hit.point);
+        projectile.Launch(transform.forward, target_pos);
     }
 
     private void CreateShotEffect()
     {
+        if(_shot_effect == null)
+        {
+            return;
+        }
         var obj = Instantiate(_shot_effect);
+        
+        obj.transform.parent = transform;
+        obj.transform.localPosition = Vector3.zero;
         obj.transform.position = transform.position;
         obj.transform.LookAt(transform.position + transform.forward);
+        
         obj.Play();
+        
         Destroy(obj.gameObject, 0.2f);
     }
 }

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8331741670495918723}
   - component: {fileID: 5945866074155066238}
+  - component: {fileID: 8494117597758508880}
   m_Layer: 0
   m_Name: Bush2
   m_TagString: Untagged
@@ -42,10 +43,24 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
+  m_Radius: 0.11
+  m_Height: 1.33
   m_Direction: 1
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0.26, z: 0}
+--- !u!136 &8494117597758508880
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9023285707605265085}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.46
+  m_Height: 0.52
+  m_Direction: 1
+  m_Center: {x: 0.06, y: 0.61, z: 0}
 --- !u!1001 &1934473740935350609
 PrefabInstance:
   m_ObjectHideFlags: 0

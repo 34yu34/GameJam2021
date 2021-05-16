@@ -1,8 +1,13 @@
 using NaughtyAttributes;
+using UnityEngine.Events;
 using UnityEngine;
 
 public class Damageable : MonoBehaviour
 {
+    private UnityEvent _on_death = new UnityEvent();
+
+    public UnityEvent OnDeath => _on_death;
+
     [SerializeField]
     private int _max_health;
 
@@ -11,11 +16,11 @@ public class Damageable : MonoBehaviour
     [ShowNonSerializedField]
     private int _currentHealth;
 
-    private int CurrentHealth
+    public int CurrentHealth
     {
         get => _currentHealth;
 
-        set => _currentHealth = Mathf.Clamp(value, 0, _max_health);
+        private set => _currentHealth = Mathf.Clamp(value, 0, _max_health);
     }
 
     private void Start()
@@ -26,6 +31,12 @@ public class Damageable : MonoBehaviour
     public void TakeDamage(int damage)
     {
         this.CurrentHealth -= damage;
+        CheckAlive();
+    }
+
+    public void Heal(int amount)
+    {
+        this.CurrentHealth += amount;
     }
 
     private void CheckAlive()
@@ -35,11 +46,7 @@ public class Damageable : MonoBehaviour
             return;
         }
 
-        Kill();
+        _on_death.Invoke();
     }
 
-    private void Kill()
-    {
-        Destroy(gameObject);
-    }
 }
