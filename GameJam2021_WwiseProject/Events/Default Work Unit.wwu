@@ -442,6 +442,26 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Sandstorm_Stop" ID="{4D0A2F14-DFD1-4161-B9F2-C8C0B6870B36}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{2CFD3E3F-34ED-44B8-BF71-43C1E4010930}" ShortID="53924922">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Environment_Sandstorm" ID="{90941DD3-830F-48C5-B173-079523A9A4C9}" WorkUnitID="{D8370ECC-D58C-484B-A44A-CE3A1A329F03}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

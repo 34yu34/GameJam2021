@@ -7,6 +7,7 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Player_Land" ID="{E56AB195-FD6A-4074-A88A-9F61B6A8ED1C}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Player_Reload" ID="{77473506-157D-40A1-BEFC-B7D504967ECB}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Sandstorm_Stop" ID="{4D0A2F14-DFD1-4161-B9F2-C8C0B6870B36}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="SFX_Environment_Wind_Stop" ID="{82848DC8-5E86-423F-BCB6-DF084766371E}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Player_Heal" ID="{AFBC1413-C3A8-430F-969C-5272E54A9500}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Player_Hurt" ID="{84E4D1B0-307E-43A2-897D-0689F50B0315}" WorkUnitID="{ACB3B27D-5D55-447D-A275-CE60F295652B}" Filter="7" Origin="Manual"/>
