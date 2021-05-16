@@ -14,16 +14,17 @@ public class Targetable : MonoBehaviour
 
     public void Hit(HitInfoDto hitInfoDto)
     {
-        CreateHitEffect(hitInfoDto);
+        CreateHitEffect(hitInfoDto, hitEffect);
 
         Damageable.TakeDamage(hitInfoDto.Damage);
     }
-    private void CreateHitEffect(HitInfoDto hitInfoDto)
+    public static void CreateHitEffect(HitInfoDto hitInfoDto, ParticleSystem hitEffect = null)
     {
         if (hitEffect == null)
         {
-            return;
+            hitEffect = ShotManager.Instance.BasicEffect;
         }
+
         var obj = Instantiate(hitEffect);
         obj.transform.position = hitInfoDto.HitPosition;
         obj.transform.LookAt(hitInfoDto.Origin);

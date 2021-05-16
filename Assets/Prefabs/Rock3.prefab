@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!135 &8316606636397340021
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416319210342374345}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.2
+  m_Center: {x: 0, y: 0.5, z: 0.1}
 --- !u!1 &2942221122792418205
 GameObject:
   m_ObjectHideFlags: 0
@@ -100,10 +113,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock3
       objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: 38f3c81e8691f864398c3d7da8e950be, type: 3}
+      propertyPath: m_Name
+      value: Rock3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38f3c81e8691f864398c3d7da8e950be, type: 3}
 --- !u!4 &8286917233585945002 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 38f3c81e8691f864398c3d7da8e950be, type: 3}
+  m_PrefabInstance: {fileID: 8398001832618532417}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &416319210342374345 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 38f3c81e8691f864398c3d7da8e950be, type: 3}
   m_PrefabInstance: {fileID: 8398001832618532417}
   m_PrefabAsset: {fileID: 0}
