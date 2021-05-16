@@ -5,20 +5,21 @@ using UnityEngine;
 
 public class ShootInput : MonoBehaviour
 {
-    private ShotComponent shotComponent;
+    private ShotComponent _shotComponent;
+    public ShotComponent ShotComponent => _shotComponent ??= GetComponentInChildren<ShotComponent>();
 
     private void Start()
     {
-        shotComponent = GetComponentInChildren<ShotComponent>();
+        _shotComponent = GetComponentInChildren<ShotComponent>();
 
-        Debug.Assert(shotComponent != null, "Object must have a gun");
+        Debug.Assert(_shotComponent != null, "Object must have a gun");
     }
 
     private void Update()
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            shotComponent.SetShoot();
+            ShotComponent.SetShoot();
         }
     }
 

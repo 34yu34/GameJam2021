@@ -1,6 +1,7 @@
 using UnityEngine;
 using NaughtyAttributes;
 
+[RequireComponent(typeof(MunitionComponent))]
 public class ShotComponent : MonoBehaviour
 {
     [SerializeField] 
@@ -22,6 +23,10 @@ public class ShotComponent : MonoBehaviour
     [Required]
     private Transform _aim_camera_object;
 
+    private MunitionComponent _munitions;
+    public MunitionComponent Munitions => _munitions ??= gameObject.GetComponent<MunitionComponent>();
+
+
     public void SetShoot()
     {
         _should_shoot = true;
@@ -38,6 +43,11 @@ public class ShotComponent : MonoBehaviour
     private void shoot()
     {
         _should_shoot = false;
+
+        if (!Munitions.Shoot())
+        {
+            return;
+        }
 
         CreateShotEffect();
 

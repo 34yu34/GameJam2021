@@ -14,11 +14,16 @@ public class Spawn : MonoBehaviour
     private int _health_to_give;
     public int HealthToGive => _health_to_give;
 
+    [SerializeField] 
+    private float _lifetime;
+    public float Lifetime => _lifetime;
+
 
     private void  Start()
     {
         var collider = GetComponent<BoxCollider>();
         collider.isTrigger = true;
+        Destroy(gameObject, Lifetime);
     }
 
     private void OnTriggerEnter(Collider collider)
@@ -30,7 +35,10 @@ public class Spawn : MonoBehaviour
             return;
         }
 
-        obj.GetComponent<Damageable>().Heal(_health_to_give);
+        obj.Damageable.Heal(HealthToGive);
+        obj.ShootInput.ShotComponent.Munitions.GiveAmmo(MunitionToGive);
+
+        Destroy(this.gameObject);
     }
     
 }

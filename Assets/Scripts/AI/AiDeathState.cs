@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AiDeathState : AiState
 {
+ 
     public override int StateId => 2;
 
     private Timestamp _timestamp;
