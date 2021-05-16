@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D8370ECC-D58C-484B-A44A-CE3A1A329F03}" SchemaVersion="94">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{D8370ECC-D58C-484B-A44A-CE3A1A329F03}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="UI_Click" ID="{C2EE27FD-3389-4617-A9D8-364C6796CA2A}" ShortID="295730700">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{936A9443-84BD-4C57-8CD5-A39BF34B9920}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE01C93-6A74-4202-BB67-97FB4B19AA42}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="UI_Click" ID="{553537BE-483B-49FC-9E8B-9D1B3CCF2784}" ShortID="35067713">
+							<Language>SFX</Language>
+							<AudioFile>UI_Click.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="UI_Click" ID="{553537BE-483B-49FC-9E8B-9D1B3CCF2784}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Environment_Wind" ID="{2F0022B1-D0DB-476D-AE51-08E1C94CBFB9}" ShortID="792266994">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{936A9443-84BD-4C57-8CD5-A39BF34B9920}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE01C93-6A74-4202-BB67-97FB4B19AA42}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Environment_Wind" ID="{49657FD7-8745-480C-8D96-413BF271C565}" ShortID="203681696">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="3.66666666666667"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="3.20833333333333"/>
+								<Property Name="LoopBegin" Type="Real64" Value="3.81944444444444"/>
+								<Property Name="LoopEnd" Type="Real64" Value="84.7916666666667"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Environment_Wind.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Environment_Wind" ID="{49657FD7-8745-480C-8D96-413BF271C565}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

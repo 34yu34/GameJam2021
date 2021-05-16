@@ -1,0 +1,246 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cdb5f1780d2d41a0a7be8cf4bed4390, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 1b723becaefb4c4a9b405cf0453bed97
+    GuidInternal: 
+    m_lastTime: -8585804472094775808
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 931ce0bf746a0242bb6797fb4b19aa42
+    GuidInternal: 
+    m_lastTime: -8585804472094775808
+    List: []
+  BankWwu:
+  - PhysicalPath: SoundBanks/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 1716856a51622242a946789ddc168529
+    GuidInternal: 
+    m_lastTime: -8585804375034775808
+    List:
+    - name: Main
+      guid: a0d62f507bc14f4fbfffdf51d44fd441
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Main
+        ObjectType: 7
+      Path: Default Work Unit/Main
+  EventWwu:
+  - PhysicalPath: Events/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 7db2b3ac555d7d44a275ce60f295652b
+    GuidInternal: 
+    m_lastTime: -8585804375484775808
+    List:
+    - name: Music_EndGame_Start
+      guid: 7663e880dbafd04eaacc4779c0e1e767
+      id: 2469185595
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music_EndGame_Start
+        ObjectType: 3
+      Path: Default Work Unit/Music_EndGame_Start
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Music_Gameplay_Danger_Start
+      guid: 87e5dae495279544847a7aa716d50f07
+      id: 2528424500
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music_Gameplay_Danger_Start
+        ObjectType: 3
+      Path: Default Work Unit/Music_Gameplay_Danger_Start
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Music_Gameplay_Danger_Stop
+      guid: 52b555950a0cc94996b2e47aa790ea5d
+      id: 532737960
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music_Gameplay_Danger_Stop
+        ObjectType: 3
+      Path: Default Work Unit/Music_Gameplay_Danger_Stop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Music_Start
+      guid: 9cd553035a79c043860b3966276a3265
+      id: 3725903807
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music_Start
+        ObjectType: 3
+      Path: Default Work Unit/Music_Start
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SFX_Environment_Wind_Start
+      guid: 9d29a6e048528c4d942fcaed7eac4f23
+      id: 3555070956
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX_Environment_Wind_Start
+        ObjectType: 3
+      Path: Default Work Unit/SFX_Environment_Wind_Start
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SFX_Environment_Wind_Stop
+      guid: c88d8482865e3f42bcb6df084766371e
+      id: 3290572544
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX_Environment_Wind_Stop
+        ObjectType: 3
+      Path: Default Work Unit/SFX_Environment_Wind_Stop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: SFX_UI_Click
+      guid: 1e68f29444ecc949b95a412bcd3e4ef6
+      id: 1452887354
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX_UI_Click
+        ObjectType: 3
+      Path: Default Work Unit/SFX_UI_Click
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 1
+  RtpcWwu:
+  - PhysicalPath: Game Parameters/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 8bcd570e4c317c4b916b11b2f4249bd4
+    GuidInternal: 
+    m_lastTime: -8585804386554775808
+    List:
+    - name: PlayerHealth
+      guid: eaf4756dfe93494283bf451d97c0a474
+      id: 151362964
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PlayerHealth
+        ObjectType: 13
+      Path: Default Work Unit/PlayerHealth
+  StateWwu:
+  - PhysicalPath: States/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 3d82143a07619446bcbc2dbec7f308c1
+    GuidInternal: 
+    m_lastTime: -8585804383704775808
+    List:
+    - name: Music
+      guid: 3fa02f4f64ebd943b68381d8f1a5edd5
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 9
+      Path: Default Work Unit/Music
+      values:
+      - name: Gameplay
+        guid: ec2e1f00f6fd354f82268faa8e06d1dc
+        id: 89505537
+        PathAndIcons:
+        - ElementName: Gameplay
+          ObjectType: 8
+      - name: MainMenu
+        guid: bdf6f6fab1160843b4fd87aba5c63406
+        id: 3604647259
+        PathAndIcons:
+        - ElementName: MainMenu
+          ObjectType: 8
+      - name: None
+        guid: e389b5a96274334d865ba6f2e1cc4bdc
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Score
+      guid: 5afac8521639d04793dd101dfdbe5e9a
+      id: 2398231425
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Score
+        ObjectType: 9
+      Path: Default Work Unit/Score
+      values:
+      - name: High
+        guid: 78a821d23fb31142b628de364799f6b2
+        id: 3550808449
+        PathAndIcons:
+        - ElementName: High
+          ObjectType: 8
+      - name: Low
+        guid: 9dcd8c9921168d48a42bac2a0cfda229
+        id: 545371365
+        PathAndIcons:
+        - ElementName: Low
+          ObjectType: 8
+      - name: Medium
+        guid: 4b10b420a0667748836b28f5c3e776a0
+        id: 2849147824
+        PathAndIcons:
+        - ElementName: Medium
+          ObjectType: 8
+      - name: None
+        guid: c1c57472d32bd44f8d100b1e872e8f75
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+  SwitchWwu:
+  - PhysicalPath: Switches/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 4003b3dfe014624f8c321135a51a7ae6
+    GuidInternal: 
+    m_lastTime: -8585804384414775808
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 3c437f095e2405449f94c51281d8401a
+    GuidInternal: 
+    m_lastTime: -8585804472094775808
+    List: []
+  ExpandedItems:
+  - /GameJam2021_WwiseProject
+  - /GameJam2021_WwiseProject/Events
+  - /GameJam2021_WwiseProject/Events/Default Work Unit
+  autoPopulateEnabled: 1
+  CurrentPluginConfig: 
