@@ -9,9 +9,9 @@ public class CratterCoverManager : MonoBehaviour
     
     void Start()
     {
-        foreach(var sphere_collider in GetComponentsInChildren<SphereCollider>())
+        foreach(var dmg_over_time in GetComponentsInChildren<DamageOverTime>())
         {
-            _cratter_cover_list.Add(sphere_collider.gameObject);
+            _cratter_cover_list.Add(dmg_over_time.gameObject);
         }
     }
 

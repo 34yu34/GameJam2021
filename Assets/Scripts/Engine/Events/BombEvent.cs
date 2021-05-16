@@ -12,15 +12,25 @@ public class BombEvent : Event
     private Player PlayerInstance => _player ??= FindObjectOfType<Player>();
     public override bool IsMajor => true;
 
+    private GameObject _furthest_crater;
+
     public override void DoEvent()
     {
         Debug.Log($"{this.GetType().Name} on DoEvent");
 
-        var furthest_crater = CratterManager.GetFurthestCratterFrom(PlayerInstance.transform.position);
+        _furthest_crater = CratterManager.GetFurthestCratterFrom(PlayerInstance.transform.position);
 
-        if(furthest_crater != null)
+        Invoke("explode_furthest_crater", 5);
+    }
+
+    private void explode_furthest_crater()
+    {
+        Debug.Log($"{this.GetType().Name} on explode");
+
+        if (_furthest_crater != null)
         {
-            Destroy(furthest_crater);
+            _furthest_crater.GetComponent<Collider>().isTrigger = true;
+            _furthest_crater.GetComponent<Renderer>().enabled = false;
         }
     }
 
