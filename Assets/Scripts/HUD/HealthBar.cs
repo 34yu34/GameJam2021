@@ -38,6 +38,8 @@ public class HealthBar : MonoBehaviour
         resize_health_bar();
 
         _last_health_known_to_human_kind = Damageable.CurrentHealth;
+
+        AkSoundEngine.SetRTPCValue("PlayerHealth", Damageable.CurrentHealth);
     }
 
     private void resize_health_bar()

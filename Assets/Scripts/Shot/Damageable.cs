@@ -30,6 +30,15 @@ public class Damageable : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        if (gameObject.GetComponent<Player>() != null)
+        {
+            AkSoundEngine.PostEvent("Player_Hurt", gameObject);
+        }
+        else if (gameObject.GetComponent<EnemyBehaviour>() != null)
+        {
+            AkSoundEngine.PostEvent("Robot_Hurt", gameObject);
+        }
+
         this.CurrentHealth -= damage;
         CheckAlive();
     }
