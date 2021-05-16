@@ -54,7 +54,8 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void Start()
     {
-        _aiState = gameObject.AddComponent<AiCalmState>();
+        _aiState = gameObject.AddComponent<AiSeek>();
+        //_aiState = gameObject.AddComponent<AiCalmState>();
         _is_dead = false;
         add_death_listener();
     }
