@@ -1,5 +1,33 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!136 &5747907235542517401
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7751824911285062873}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.11
+  m_Height: 1.33
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.26, z: 0}
+--- !u!136 &7892773004794786443
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7751824911285062873}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.46
+  m_Height: 0.52
+  m_Direction: 1
+  m_Center: {x: 0.06, y: 0.61, z: 0}
 --- !u!1 &9023285707605265085
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,10 +144,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush2
       objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: cdb22f9f5c3bb7045905f6db933306d6, type: 3}
+      propertyPath: m_Name
+      value: Bush2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb22f9f5c3bb7045905f6db933306d6, type: 3}
 --- !u!4 &2112778539592363706 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cdb22f9f5c3bb7045905f6db933306d6, type: 3}
+  m_PrefabInstance: {fileID: 1934473740935350609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7751824911285062873 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: cdb22f9f5c3bb7045905f6db933306d6, type: 3}
   m_PrefabInstance: {fileID: 1934473740935350609}
   m_PrefabAsset: {fileID: 0}
