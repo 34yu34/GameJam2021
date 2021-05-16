@@ -43,6 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 062bba8da7a431246a3a63974b4fcede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _probability_weight: 1
+  _probability_weight: 2
   _duration_in_seconds: 0
   _explosion_prefab: {fileID: 100000, guid: 15ca5b8fa431dc04291a79cadcd19874, type: 3}
+  _explosion_radius_knockback: 200
+  _explosion_knockback_power: 5
