@@ -40,6 +40,10 @@ public class EnemyBehaviour : MonoBehaviour
     private float _roam_time;
     public float RoamTime => _roam_time;
 
+    [SerializeField]
+    private bool _seeking = true;
+    public bool Seeking => _seeking;
+
 
     private Player _player;
     public GameObject Player => (_player ??= FindObjectOfType<Player>()).gameObject;
@@ -54,8 +58,14 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void Start()
     {
-        _aiState = gameObject.AddComponent<AiSeek>();
-        //_aiState = gameObject.AddComponent<AiCalmState>();
+        if (_seeking)
+        {
+            _aiState = gameObject.AddComponent<AiSeek>();
+        }
+        else
+        {
+            _aiState = gameObject.AddComponent<AiCalmState>();
+        }
         _is_dead = false;
         add_death_listener();
     }
