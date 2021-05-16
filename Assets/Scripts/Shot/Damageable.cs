@@ -34,6 +34,11 @@ public class Damageable : MonoBehaviour
         CheckAlive();
     }
 
+    public void Heal(int amount)
+    {
+        this.CurrentHealth += amount;
+    }
+
     private void CheckAlive()
     {
         if (this.CurrentHealth != 0)

@@ -78,7 +78,8 @@ MonoBehaviour:
   _vision_angle: 50
   _shot_distance: 7
   _shot_cooldown: 2
-  _player: {fileID: 0}
+  _roam_distance: 10
+  _roam_time: 10
 --- !u!54 &4254726130396731685
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -166,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbe8ed3194a31704f95912a552799b16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEffect: {fileID: 0}
+  hitEffect: {fileID: 1302120397210508001, guid: 60fb48db7226192408442ef259c93670, type: 3}
 --- !u!1001 &3723229057351359882
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -174,6 +175,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7752225709043471218}
     m_Modifications:
+    - target: {fileID: 1677206980391772012, guid: 73a093f6541e5794f9c5994b6c7ff30d, type: 3}
+      propertyPath: _has_infinite_ammo
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2519506405129742660, guid: 73a093f6541e5794f9c5994b6c7ff30d, type: 3}
       propertyPath: _aim_camera_object
       value: 

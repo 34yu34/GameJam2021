@@ -222,8 +222,8 @@ ModelImporter:
       name: RobotArmature|Robot_Punch
       takeName: RobotArmature|Robot_Punch
       internalID: 0
-      firstFrame: 0
-      lastFrame: 20
+      firstFrame: 4
+      lastFrame: 4
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

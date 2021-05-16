@@ -11,6 +11,12 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     private Damageable _damageable_component;
+    public Damageable Damageable => _damageable_component ??= GetComponent<Damageable>();
+
+    private ShootInput _shoot_input;
+    public ShootInput ShootInput => _shoot_input ??= GetComponent<ShootInput>();
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +25,7 @@ public class Player : MonoBehaviour
 
     private void add_death_listener()
     {
-        _damageable_component = GetComponent<Damageable>();
-        _damageable_component.OnDeath.AddListener(death);
+        Damageable.OnDeath.AddListener(death);
     }
 
     private void death()
@@ -28,11 +33,5 @@ public class Player : MonoBehaviour
         GameObject.Find("GameTimer").GetComponent<GameTimer>().StopTimer();
         SceneManager.LoadScene("Death");
         return;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

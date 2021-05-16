@@ -91,6 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2519506405129742663}
   - component: {fileID: 2519506405129742660}
+  - component: {fileID: 1677206980391772012}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -130,3 +131,16 @@ MonoBehaviour:
   _shot_effect: {fileID: 8036483352958626291, guid: 6a07ba3b7e98a58489043a63fb5d53f5, type: 3}
   _projectile: {fileID: 9093462148266488815, guid: 7cf658e823ed44347b880577a13c0bd8, type: 3}
   _aim_camera_object: {fileID: 0}
+--- !u!114 &1677206980391772012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2519506405129742662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ac8b8e6c279e084daed4c79fad4cf37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _max_ammo: 100

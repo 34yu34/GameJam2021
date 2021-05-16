@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -31,22 +32,30 @@ public class EnemyBehaviour : MonoBehaviour
     private float _shot_cooldown;
     public float ShotCooldown => _shot_cooldown;
 
+    [SerializeField]
+    private float _roam_distance;
+    public float RoamDistance => _roam_distance;
 
     [SerializeField]
-    private GameObject _player;
+    private float _roam_time;
+    public float RoamTime => _roam_time;
 
-    public GameObject Player => _player;
+
+    private Player _player;
+    public GameObject Player => (_player ??= FindObjectOfType<Player>()).gameObject;
 
     private AiState _aiState;
     public AiState CurrentAiState => _aiState;
 
     private Damageable _damageable_component;
 
+    private bool _is_dead;
+
 
     private void Start()
     {
-        _player = GameObject.Find("Player");
         _aiState = gameObject.AddComponent<AiCalmState>();
+        _is_dead = false;
         add_death_listener();
     }
 
@@ -64,6 +73,12 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void death()
     {
-        _aiState = gameObject.AddComponent<AiDeathState>();
+        if (_is_dead)
+        {
+            return;
+        }
+
+        _aiState = GetComponent<AiDeathState>() ?? gameObject.AddComponent<AiDeathState>();
+        _is_dead = true;
     }
 }
