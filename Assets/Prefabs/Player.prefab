@@ -290,6 +290,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sprint_speed: 4.5
   _normal_speed: 2
+  _slow_sprint_speed: 1
+  _slow_speed: 0.5
   _time_to_sprint_speed: 0.5
 --- !u!114 &2844436848525014091
 MonoBehaviour:
@@ -764,7 +766,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2844436847507411009}
     m_Modifications:
-    - target: {fileID: 3520864931530317546, guid: 10a36f84b16da8249b272f3b3106e8eb, type: 3}
+    - target: {fileID: 1677206980391772012, guid: 73a093f6541e5794f9c5994b6c7ff30d, type: 3}
+      propertyPath: _magazine_size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2519506405129742660, guid: 73a093f6541e5794f9c5994b6c7ff30d, type: 3}
+      propertyPath: _aim_camera_object
+      value: 
+      objectReference: {fileID: 2844436847507411009}
+    - target: {fileID: 2519506405129742662, guid: 73a093f6541e5794f9c5994b6c7ff30d, type: 3}
       propertyPath: m_Name
       value: GunM1911
       objectReference: {fileID: 0}
