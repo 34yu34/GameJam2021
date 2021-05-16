@@ -23,6 +23,7 @@ public class AiDeathState : AiState
         {
             _timestamp = Timestamp.In(5f);
             NavMeshAgent.ResetPath();
+            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
         }
 
         if (_timestamp.HasPassed())
