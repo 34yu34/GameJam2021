@@ -42,6 +42,8 @@ public class BombEvent : Event
 
         var explosion = Instantiate(_explosion_prefab, _furthest_crater.transform);
 
+        explosion.transform.position += Vector3.up * _furthest_crater.transform.localScale.y / 2;
+
         Knock_back_player(explosion);
 
     }
