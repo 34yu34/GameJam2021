@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,9 +15,7 @@ public class DeathScreen : MonoBehaviour
     {
         var game_timer = GameObject.Find("GameTimer").GetComponent<GameTimer>();
         var time = game_timer.TimestampEnd - game_timer.TimestampBegin;
-        var min = (int)(time / 60f);
-        var sec = Mathf.Floor(time - 60*min);
-        _time.text = min + ":" + sec;
+        _time.text = TimeSpan.FromSeconds(time).ToString("mm\\:ss");
         Destroy(game_timer.gameObject);
 
         var killCounter = GameObject.Find("KillCounter").GetComponent<KillCount>();
