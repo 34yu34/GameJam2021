@@ -6,6 +6,8 @@ namespace Assets.Scripts.Engine.Events
     {
         public override bool IsMajor => false;
 
+        public override string SoundName => "SolarStorm";
+
         public override void DoEvent()
         {
             Debug.Log($"{this.GetType().Name}WEIGHT: [{this.ProbabilityWeight}]");
