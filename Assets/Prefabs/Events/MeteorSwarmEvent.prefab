@@ -45,4 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _probability_weight: 2
   _duration_in_seconds: 25
-  _meteorswarm_shader: {fileID: 0}
+  _meteorswarm_shader: {fileID: 2100000, guid: f2bfb2eceb27199429b9444a12b1a105, type: 2}
