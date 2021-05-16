@@ -8,18 +8,18 @@ public class AIShootingState : AiState
     private ShotComponent _shooter;
     public ShotComponent Shooter => _shooter ??= GetComponentInChildren<ShotComponent>();
 
-    public Timestamp _timestamp;
+    public Timestamp _next_shooting_timestamp;
 
     public override int StateId => 3;
 
     private void Start()
     {
-        _timestamp = Timestamp.Back(10);
+        _next_shooting_timestamp = Timestamp.Back(10);
     }
 
     public override AiState NextState()
     {
-        if (!_timestamp.HasPassed())
+        if (!_next_shooting_timestamp.HasPassed())
         {
             return this;
         }
@@ -31,11 +31,11 @@ public class AIShootingState : AiState
     {
         NavMeshAgent.ResetPath();
 
-        if (_timestamp.HasPassed() && Vector3.Distance(EnemyBehaviour.Player.transform.position, transform.position) < EnemyBehaviour.ShotDistance)
+        if (_next_shooting_timestamp.HasPassed() && Vector3.Distance(EnemyBehaviour.Player.transform.position, transform.position) < EnemyBehaviour.ShotDistance)
         {
             transform.LookAt(EnemyBehaviour.Player.transform.position);
             Shooter.SetShoot();
-            _timestamp = Timestamp.In(EnemyBehaviour.ShotCooldown);
+            _next_shooting_timestamp = Timestamp.In(EnemyBehaviour.ShotCooldown);
         }
 
     }
