@@ -31,6 +31,9 @@ public class Player : MonoBehaviour
     private void death()
     {
         GameObject.Find("GameTimer").GetComponent<GameTimer>().StopTimer();
+
+        AkSoundEngine.SetRTPCValue("PlayerHealth", Damageable.MaxHealth);
+
         SceneManager.LoadScene("Death");
         return;
     }

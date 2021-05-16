@@ -4,6 +4,10 @@
 		<WorkUnit Name="Default Work Unit" ID="{C7795D99-0DEF-462C-A7B8-BD78ACFFEDDB}" PersistMode="Standalone">
 			<ChildrenList>
 				<MusicSwitchContainer Name="Music_Switch_Container" ID="{7089A386-BC2F-4A6D-9B83-260B3692EDB4}" ShortID="62707501">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="12"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{936A9443-84BD-4C57-8CD5-A39BF34B9920}"/>
@@ -322,6 +326,7 @@
 				</MusicSwitchContainer>
 				<MusicPlaylistContainer Name="Gameplay_DangerLoop" ID="{CCF14923-A714-4C24-9E3E-04AC20A16970}" ShortID="812582933">
 					<PropertyList>
+						<Property Name="Color" Type="int16" Value="12"/>
 						<Property Name="Lowpass" Type="int16">
 							<RTPCList>
 								<RTPC Name="" ID="{82CF83AD-123A-4342-9DB9-B3FB4EEFE9AD}" ShortID="632815069">
@@ -350,6 +355,7 @@
 								</RTPC>
 							</RTPCList>
 						</Property>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-2</Value>
@@ -484,6 +490,10 @@
 					</Playlist>
 				</MusicPlaylistContainer>
 				<Folder Name="EndGame" ID="{6CAAA5C7-533C-4F30-8D25-E3BA411F11D0}" ShortID="880929878">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="12"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<MusicSwitchContainer Name="EndGame_Switch_Container" ID="{A830916A-C7C5-46D7-AB31-62952472DD0D}" ShortID="287389940">
 							<ReferenceList>

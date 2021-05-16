@@ -30,6 +30,8 @@ public class Jump : MonoBehaviour
         var vel = Rb.velocity;
         vel.y = _jump_speed;
         Rb.velocity = vel;
+
+        AkSoundEngine.PostEvent("Player_Jump", gameObject);
     }
 
     public void FixedUpdate()

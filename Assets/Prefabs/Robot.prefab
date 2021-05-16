@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 495743127747932906}
   - component: {fileID: 566158689430199963}
   - component: {fileID: 3612264291331866877}
+  - component: {fileID: 2800259765978305287}
   m_Layer: 0
   m_Name: Robot
   m_TagString: Untagged
@@ -168,6 +169,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 1302120397210508001, guid: 60fb48db7226192408442ef259c93670, type: 3}
+--- !u!114 &2800259765978305287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4254726130396731687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1907f9fb6772349db9c7bd2c89307a8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3723229057351359882
 PrefabInstance:
   m_ObjectHideFlags: 0

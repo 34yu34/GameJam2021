@@ -33,6 +33,12 @@ public class Move : MonoBehaviour
 
     public Vector3 Direction { get; set; }
 
+
+    [SerializeField]
+    private float _walk_sfx_speed = 2f;
+
+    private float _time_since_walk_sfx = Mathf.Infinity;
+
     public void Start()
     {
         set_acceleration();
@@ -77,6 +83,22 @@ public class Move : MonoBehaviour
     public void SetNormalSpeed()
     {
         _is_slowed = false;
+    }
+
+
+    private void Update()
+    {
+        if (Input.GetAxisRaw("Horizontal") > Mathf.Epsilon ||
+            Input.GetAxisRaw("Vertical") > Mathf.Epsilon)
+        {
+            _time_since_walk_sfx += Time.deltaTime;
+
+            if (_time_since_walk_sfx > (_walk_sfx_speed / _current_speed))
+            {
+                AkSoundEngine.PostEvent("Player_Walk", gameObject);
+                _time_since_walk_sfx = 0f;
+            }
+        }
     }
 
     private void FixedUpdate()

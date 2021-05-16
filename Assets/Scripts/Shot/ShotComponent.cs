@@ -66,6 +66,8 @@ public class ShotComponent : MonoBehaviour
             return;
         }
 
+        AkSoundEngine.PostEvent("Player_Shoot", gameObject);
+
         CreateShotEffect();
 
         if (!Physics.Raycast(_aim_camera_object.position, _aim_camera_object.forward, out var hit, _range))
