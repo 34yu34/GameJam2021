@@ -57,13 +57,13 @@ public class MunitionComponent : MonoBehaviour
 
     public void Reload()
     {
-        var needed_ammo = MagazineSize - CurrentAmmo;
+        var needed_ammo = (MagazineSize - CurrentAmmo);
 
-        var ammo_to_add = Mathf.Clamp(needed_ammo, 0 , _leftover_ammo);
+        var ammo_to_add = Mathf.Clamp(needed_ammo, 0 , LeftOverAmmo);
 
         LeftOverAmmo -= ammo_to_add;
 
-        CurrentAmmo = MagazineSize;
+        CurrentAmmo = CurrentAmmo + ammo_to_add;
     }
 
     public void GiveAmmo(int ammout)
