@@ -34,4 +34,5 @@ public class BombEvent : Event
         return CratterManager.HasCraterLeft();
     }
 
+    public override void ResetEvent() { }
 }
