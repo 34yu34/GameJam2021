@@ -60,8 +60,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _munition_to_give: 24
   _health_to_give: 0
+  _stamina_to_give: 0
   _lifetime: 120
-  _weight: 5
+  _weight: 10
   _is_eternal: 0
 --- !u!95 &1190099143227817164
 Animator:

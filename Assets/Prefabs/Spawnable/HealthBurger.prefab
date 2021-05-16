@@ -59,10 +59,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _munition_to_give: 0
-  _health_to_give: 25
+  _health_to_give: 50
   _stamina_to_give: 100
   _lifetime: 120
-  _weight: 5
+  _weight: 10
   _is_eternal: 0
 --- !u!1001 &3683814430165920572
 PrefabInstance:

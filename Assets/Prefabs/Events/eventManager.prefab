@@ -46,11 +46,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d283e45d7cc93d4fa2428ebea8f6842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minSecondsUntilEvent: 120
-  _maxSecondsUntilEvent: 180
+  _minSecondsUntilEvent: 30
+  _maxSecondsUntilEvent: 60
   _majorEventMinIndex: 3
-  _majorEventMaxIndex: 4
-  time_of_warning: 25
+  _majorEventMaxIndex: 5
+  time_of_warning: 15
 --- !u!114 &3417018554349410137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,8 +65,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _event_dictionary:
   - {fileID: 6624048978926332797, guid: 23e31f4a16741b440a2b09eea670713f, type: 3}
+  - {fileID: 0}
   - {fileID: 5948563354555309462, guid: 9ac3829331bda5d42b2da7741bad9e8b, type: 3}
-  - {fileID: 2415852697353501278, guid: 968b7ad64aa3b4a49b7645046073a741, type: 3}
 --- !u!114 &4745678716931538165
 MonoBehaviour:
   m_ObjectHideFlags: 0
