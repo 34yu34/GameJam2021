@@ -16,6 +16,9 @@ public class Player : MonoBehaviour
     private ShootInput _shoot_input;
     public ShootInput ShootInput => _shoot_input ??= GetComponent<ShootInput>();
 
+    private StaminaComponent _stamina;
+    public StaminaComponent Stamina => _stamina ??= GetComponent<StaminaComponent>();
+
 
     // Start is called before the first frame update
     void Start()

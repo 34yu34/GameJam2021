@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4247f651c7bc4145b37d8a7d7e4442b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawn_chances: 0.4
+  _nothing_weight: 10
   _spawnables:
   - {fileID: 1190099144213314130, guid: 4744d8827b4b4ff41be0030e8be9980f, type: 3}
   - {fileID: 4787687355983359497, guid: e6c4248b2f1c3274793bc5ac473eee9b, type: 3}

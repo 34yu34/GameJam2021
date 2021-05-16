@@ -14,9 +14,18 @@ public class Spawn : MonoBehaviour
     private int _health_to_give;
     public int HealthToGive => _health_to_give;
 
+    [SerializeField]
+    private float _stamina_to_give;
+    public float StaminaToGive => _stamina_to_give;
+
     [SerializeField] 
     private float _lifetime;
     public float Lifetime => _lifetime;
+
+    [SerializeField]
+    [NaughtyAttributes.MinMaxSlider(0, 10)]
+    private int _weight = 3;
+    public int Weight => _weight;
 
     [SerializeField]
     bool _is_eternal = false;
@@ -42,6 +51,7 @@ public class Spawn : MonoBehaviour
 
         obj.Damageable.Heal(HealthToGive);
         obj.ShootInput.ShotComponent.Munitions.GiveAmmo(MunitionToGive);
+        obj.Stamina.GiveStamina(StaminaToGive);
 
         Destroy(this.gameObject);
     }
