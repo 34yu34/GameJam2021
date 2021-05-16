@@ -36,6 +36,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void Start()
     {
+        _player = GameObject.Find("Player");
         _aiState = gameObject.AddComponent<AiCalmState>();
         add_death_listener();
     }
