@@ -14,15 +14,15 @@ public class MunitionComponent : MonoBehaviour
     private int _magazine_size;
     public int MagazineSize => _magazine_size;
 
+    [SerializeField]
+    private bool _has_infinite_ammo;
 
     private int _leftover_ammo;
     public int LeftOverAmmo
     {
         get => _leftover_ammo;
-
         set => _leftover_ammo = Mathf.Clamp(value, 0, MaxAmmo);
     }
-
 
     private int _current_ammo;
     public int CurrentAmmo
@@ -38,15 +38,20 @@ public class MunitionComponent : MonoBehaviour
         LeftOverAmmo = _max_ammo;
     }
 
-    public bool Shoot()
+    public bool TryShoot()
     {
+        if (_has_infinite_ammo)
+        {
+            return true;
+        }
+
         if (CurrentAmmo > 0)
         {
             CurrentAmmo -= 1;
             return true;
         }
         
-        Reload();
+
         return false;
     }
 
@@ -59,11 +64,15 @@ public class MunitionComponent : MonoBehaviour
         LeftOverAmmo -= ammo_to_add;
 
         CurrentAmmo = MagazineSize;
-
     }
 
     public void GiveAmmo(int ammout)
     {
         LeftOverAmmo += ammout;
+    }
+
+    public bool IsFull()
+    {
+        return CurrentAmmo == MagazineSize;
     }
 }

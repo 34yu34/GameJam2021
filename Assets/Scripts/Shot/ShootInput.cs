@@ -21,6 +21,11 @@ public class ShootInput : MonoBehaviour
         {
             ShotComponent.SetShoot();
         }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ShotComponent.Reload();
+        }
     }
 
 }
