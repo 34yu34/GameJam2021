@@ -44,10 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d283e45d7cc93d4fa2428ebea8f6842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minSecondsUntilEvent: 60
-  _maxSecondsUntilEvent: 90
-  _majorEventMinIndex: 3
-  _majorEventMaxIndex: 5
+  _minSecondsUntilEvent: 10
+  _maxSecondsUntilEvent: 10
+  _majorEventMinIndex: 1
+  _majorEventMaxIndex: 1
 --- !u!114 &3417018554349410137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,5 +61,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _event_dictionary:
-  - {fileID: 5948563354555309462, guid: 9ac3829331bda5d42b2da7741bad9e8b, type: 3}
   - {fileID: 6624048978926332797, guid: 23e31f4a16741b440a2b09eea670713f, type: 3}

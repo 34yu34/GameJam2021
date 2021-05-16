@@ -3,7 +3,7 @@ using UnityEngine;
 public class DamageOverTime : MonoBehaviour
 {
     [SerializeField]
-    private int _seconds_between_hits = 2;
+    private float _seconds_between_hits = 2;
 
     [SerializeField]
     private int _damage_dealt = 20;
