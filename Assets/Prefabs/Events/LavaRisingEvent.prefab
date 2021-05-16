@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8c1bff9aea0afa4488d22ec371e9305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _probability_weight: 1
+  _probability_weight: 3
   _duration_in_seconds: 0
   _max_event_occurrences: 3
   _lava_rising_duration: 15
