@@ -27,7 +27,6 @@ public class ConstantSpawn : MonoBehaviour
     {
         if (_timestamp.HasPassed())
         {
-            Debug.Log("timeout");
             _timestamp = Timestamp.In(_delay);
 
             if(_current_spawn == null)
