@@ -21,6 +21,7 @@ public class BombEvent : Event
     private float _explosion_knockback_power = 5f;
 
     public override string SoundName => "NuclearExplosion";
+    public override string Name => "Nuclear Bomb";
 
     public override void DoEvent()
     {

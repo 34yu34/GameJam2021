@@ -7,6 +7,7 @@ namespace Assets.Scripts.Engine.Events
         public override bool IsMajor => false;
 
         public override string SoundName => "SolarStorm";
+        public override string Name => "SolarStorm";
 
         public override void DoEvent()
         {

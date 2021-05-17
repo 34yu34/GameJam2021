@@ -73,16 +73,19 @@ public class DeathScreen : MonoBehaviour
     {
         if (_score == -1)
         {
+            AkSoundEngine.SetState("Score", "Low");
             return -1;
         }
 
         if (_score < _min_score_for_medium_result)
         {
+            AkSoundEngine.SetState("Score", "Medium");
             return 0;
         }
 
         if (_score < _min_score_for_expert_result)
         {
+            AkSoundEngine.SetState("Score", "High");
             return 1;
         }
 

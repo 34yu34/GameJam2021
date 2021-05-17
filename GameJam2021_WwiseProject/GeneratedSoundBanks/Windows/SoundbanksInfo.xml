@@ -22,6 +22,7 @@
 				<Event Id="3666448085" Name="Environment_Event" ObjectPath="\Events\Default Work Unit\Environment_Event" DurationType="Mixed" DurationMin="11.719000" DurationMax="Infinite"/>
 				<Event Id="1755524482" Name="Event_Alert_Major" ObjectPath="\Events\Default Work Unit\Event_Alert_Major" DurationType="OneShot" DurationMin="4.388889" DurationMax="4.749479"/>
 				<Event Id="2941777918" Name="Event_Alert_Minor" ObjectPath="\Events\Default Work Unit\Event_Alert_Minor" DurationType="OneShot" DurationMin="4.859140" DurationMax="4.859140"/>
+				<Event Id="3543958079" Name="Pick_Ammo" ObjectPath="\Events\Default Work Unit\Pick_Ammo" DurationType="OneShot" DurationMin="0.485170" DurationMax="0.485170"/>
 				<Event Id="780312891" Name="Player_Heal" ObjectPath="\Events\Default Work Unit\Player_Heal" DurationType="OneShot" DurationMin="2.470133" DurationMax="3.493296"/>
 				<Event Id="1068092414" Name="Player_Hurt" ObjectPath="\Events\Default Work Unit\Player_Hurt" DurationType="OneShot" DurationMin="0.752435" DurationMax="1.145827"/>
 				<Event Id="1305133589" Name="Player_Jump" ObjectPath="\Events\Default Work Unit\Player_Jump" DurationType="OneShot" DurationMin="0.266077" DurationMax="0.376289"/>
@@ -103,10 +104,6 @@
 					<ShortName>Player_Reload.wav</ShortName>
 					<Path>SFX/Player_Reload_10C4C929.wem</Path>
 				</File>
-				<File Id="293363968" Language="SFX">
-					<ShortName>Events\Environment_Lava.wav</ShortName>
-					<Path>SFX/Events/Environment_Lava_10C4C929.wem</Path>
-				</File>
 				<File Id="314140635" Language="SFX">
 					<ShortName>Bullet_Impact_Metal\Bullet_Impact_Metal.wav</ShortName>
 					<Path>SFX/Bullet_Impact_Metal/Bullet_Impact_Metal_10C4C929.wem</Path>
@@ -138,6 +135,10 @@
 				<File Id="422573147" Language="SFX">
 					<ShortName>Player_Hurt\Player_Hurt_1.wav</ShortName>
 					<Path>SFX/Player_Hurt/Player_Hurt_1_10C4C929.wem</Path>
+				</File>
+				<File Id="424589097" Language="SFX">
+					<ShortName>Ammo_Take.wav</ShortName>
+					<Path>SFX/Ammo_Take_10C4C929.wem</Path>
 				</File>
 				<File Id="444562783" Language="SFX">
 					<ShortName>Player_Footsteps\Player_Footsteps_4.wav</ShortName>

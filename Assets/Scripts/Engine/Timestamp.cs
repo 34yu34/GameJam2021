@@ -31,4 +31,6 @@ public class Timestamp
     {
         return _timestamp < Time.time;
     }
+
+    public float Value => _timestamp;
 }

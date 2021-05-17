@@ -23,6 +23,7 @@ namespace AK
         static const AkUniqueID MUSIC_GAMEPLAY_DANGER_START = 2528424500U;
         static const AkUniqueID MUSIC_GAMEPLAY_DANGER_STOP = 532737960U;
         static const AkUniqueID MUSIC_START = 3725903807U;
+        static const AkUniqueID PICK_AMMO = 3543958079U;
         static const AkUniqueID PLAYER_HEAL = 780312891U;
         static const AkUniqueID PLAYER_HURT = 1068092414U;
         static const AkUniqueID PLAYER_JUMP = 1305133589U;

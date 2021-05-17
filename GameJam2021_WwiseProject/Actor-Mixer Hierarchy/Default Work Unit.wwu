@@ -461,7 +461,7 @@
 									<Grouping>
 										<SwitchRef Name="Lava" ID="{BFA017B7-ECA2-4272-80AA-B322906EDD15}"/>
 										<ItemList>
-											<ItemRef Name="Environment_Lava" ID="{2E19349E-8EE7-411C-82F3-56D98296484C}"/>
+											<ItemRef Name="Environment_Earthquake" ID="{84726713-318E-4375-937F-E2ABD72D5EBD}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
@@ -486,6 +486,11 @@
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="Color" Type="int16" Value="1"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -1600,6 +1605,11 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1807,6 +1817,29 @@
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>
+				<Sound Name="Ammo_Take" ID="{096093FE-835C-4FF3-9BD2-83AAF4BE1E13}" ShortID="518353306">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="21"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{936A9443-84BD-4C57-8CD5-A39BF34B9920}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BFE01C93-6A74-4202-BB67-97FB4B19AA42}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ammo_Take" ID="{8FC58752-161F-4857-8D40-C8FD417A5A7F}" ShortID="424589097">
+							<Language>SFX</Language>
+							<AudioFile>Ammo_Take.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ammo_Take" ID="{8FC58752-161F-4857-8D40-C8FD417A5A7F}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

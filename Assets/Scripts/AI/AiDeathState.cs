@@ -28,6 +28,8 @@ public class AiDeathState : AiState
             Destroy(gameObject.GetComponent<Targetable>());
             Destroy(gameObject.GetComponent<Collider>());
 
+            AkSoundEngine.PostEvent("Robot_Die", gameObject);
+
             var killCounter = GameObject.Find("KillCounter").GetComponent<KillCount>();
             if (killCounter != null) killCounter.AddKill();
         }
