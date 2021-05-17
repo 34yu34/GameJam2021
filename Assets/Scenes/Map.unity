@@ -364,6 +364,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: eventManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2071808668624017951, guid: 9826b55a9b9c3a143beedbab997bbcb2, type: 3}
+      propertyPath: _majorEventMinIndex
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3417018554349410137, guid: 9826b55a9b9c3a143beedbab997bbcb2, type: 3}
       propertyPath: _event_dictionary.Array.size
       value: 4
