@@ -20,10 +20,15 @@ public class Spawner : MonoBehaviour
     [SerializeField]
     public GameObject _enemy;
 
+    [SerializeField]
+    private float _min_linear_distance_from_player = 50;
+
+    private Transform _player_transform;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        _player_transform = FindObjectOfType<Player>().transform;
     }
 
     // Update is called once per frame
@@ -31,23 +36,22 @@ public class Spawner : MonoBehaviour
     {
         if (_timestamp == null)
         {
-            _timestamp = Timestamp.In(_frequence);
+            reset_timestamp();
         }
 
         if (_timestamp.HasPassed() && transform.childCount <= _numberMaxOfEnemy)
         {
-            for(int i = 0; i < 100; i++)
+            if((transform.position - _player_transform.position).magnitude < _min_linear_distance_from_player)
             {
-                Debug.DrawLine(transform.position, transform.position 
-                    + new Vector3(Random.Range(-_radiusSpawnable, _radiusSpawnable), 0f, Random.Range(-_radiusSpawnable, _radiusSpawnable)), 
-                    Color.red, 1f);
+                reset_timestamp();
             }
+
+            _timestamp = Timestamp.In(_frequence);
 
             var spawn_position = transform.position + new Vector3(Random.Range(-_radiusSpawnable, _radiusSpawnable), 0f ,Random.Range(-_radiusSpawnable, _radiusSpawnable));
 
             if (!Physics.Raycast(spawn_position, Vector3.down, out var hit))
             {
-                Debug.Log("spawner didn't see any ground!");
                 return;
             }
             
@@ -59,5 +63,10 @@ public class Spawner : MonoBehaviour
                 _timestamp = null;
             }
         }
+    }
+
+    private void reset_timestamp()
+    {
+        _timestamp = Timestamp.In(_frequence);
     }
 }
