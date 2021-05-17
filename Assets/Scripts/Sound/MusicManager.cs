@@ -22,38 +22,42 @@ public class MusicManager : MonoBehaviour
 
     private void CheckToChangeMusic(Scene newScene, LoadSceneMode arg1) //Called by event on LoadScene (to modify music according to scene)
     {
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
         if (currentSceneIndex == mainMenuBuildIndex)
         {
             AkSoundEngine.SetState("Music", "MainMenu");
 
-            if (lastSceneIndex != gameplayBuildIndex)
-                shouldCallMusicStart = true;
-            else
-                shouldCallMusicStart = false;
+            shouldCallMusicStart = lastSceneIndex != gameplayBuildIndex;
         }
         else if (currentSceneIndex == gameplayBuildIndex)
         {
             AkSoundEngine.SetState("Music", "Gameplay");
 
-            if (lastSceneIndex != mainMenuBuildIndex)
-                shouldCallMusicStart = true;
-            else
-                shouldCallMusicStart = false;
+            shouldCallMusicStart = lastSceneIndex != mainMenuBuildIndex;
         }
         else if (currentSceneIndex == deathScreenBuildIndex)
         {
             AkSoundEngine.PostEvent("Music_EndGame_Start", gameObject);
             shouldCallMusicStart = false;
         }
+        else
+        {
+            shouldCallMusicStart = false;
+        }
 
         if (currentSceneIndex != lastSceneIndex)
         {
             if (currentSceneIndex == gameplayBuildIndex)
+            {
                 AkSoundEngine.PostEvent("Music_Gameplay_Danger_Start", gameObject);
+                AkSoundEngine.PostEvent("SFX_Environment_Wind_Start", gameObject);
+            }
             else
+            {
                 AkSoundEngine.PostEvent("Music_Gameplay_Danger_Stop", gameObject);
+                AkSoundEngine.PostEvent("SFX_Environment_Wind_Stop", gameObject);
+            }
         }
 
         if (shouldCallMusicStart)

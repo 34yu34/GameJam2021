@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 2265845452516601390}
   - component: {fileID: 1183127546527518633}
   - component: {fileID: 4472732491480875442}
-  - component: {fileID: 4120252380454525983}
   m_Layer: 0
   m_Name: LavaPlane
   m_TagString: Lava
@@ -142,15 +141,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 20, z: 10}
   m_Center: {x: 0, y: -10, z: 0}
---- !u!114 &4120252380454525983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7847573194331701640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4958394a790bdb742a3f43dd620b224b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

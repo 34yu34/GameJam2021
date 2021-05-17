@@ -68,8 +68,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/Bullet_Impact_Metal
       maxAttenuation: 50
-      maxDuration: 0.722
-      minDuration: 0.445449
+      maxDuration: 0.772
+      minDuration: 0.495449
     - name: Bullet_Impact_Mud
       guid: 67cf31dc1101684589e8f360973517c4
       id: 3328773773
@@ -80,8 +80,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/Bullet_Impact_Mud
       maxAttenuation: 50
-      maxDuration: 0.34041
-      minDuration: 0.222725
+      maxDuration: 0.44041
+      minDuration: 0.322725
     - name: Bullet_Impact_Wood
       guid: a25eecc07e67e04393ab72691aab711d
       id: 988755994
@@ -92,8 +92,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/Bullet_Impact_Wood
       maxAttenuation: 50
-      maxDuration: 0.678739
-      minDuration: 0.406473
+      maxDuration: 0.778739
+      minDuration: 0.506473
     - name: Environment_Event
       guid: d357dd7a55dae6488c6fe1e7310d32da
       id: 3666448085
@@ -105,7 +105,7 @@ MonoBehaviour:
       Path: Default Work Unit/Environment_Event
       maxAttenuation: 0
       maxDuration: Infinity
-      minDuration: 11.719
+      minDuration: 16.719
     - name: Event_Alert_Major
       guid: b4663e003959cf47bfae839d1ab26b8f
       id: 1755524482
@@ -368,8 +368,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/SFX_UI_Click
       maxAttenuation: 0
-      maxDuration: 1
-      minDuration: 1
+      maxDuration: 3.961667
+      minDuration: 3.961667
   RtpcWwu:
   - PhysicalPath: Game Parameters/Default Work Unit.wwu
     ParentPhysicalPath: 
